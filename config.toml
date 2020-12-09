@@ -1,0 +1,7 @@
+baseURL = "http://students.cs.ucl.ac.uk"
+languageCode = "en-gb"
+title = "NudgeMe"
+theme = "cupper-hugo-theme"
+
+[params]
+description = "NudgeMe, a privacy focused wellbeing tracker."
