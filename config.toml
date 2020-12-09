@@ -1,4 +1,4 @@
-baseURL = "http://students.cs.ucl.ac.uk"
+baseURL = "http://students.cs.ucl.ac.uk/2020/group26"
 languageCode = "en-gb"
 title = "NudgeMe"
 theme = "cupper-hugo-theme"
