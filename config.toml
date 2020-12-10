@@ -5,3 +5,18 @@ theme = "cupper-hugo-theme"
 
 [params]
 description = "NudgeMe, a privacy focused wellbeing tracker."
+
+[[menu.nav]]
+name = "Home"
+url = "/"
+weight = 1
+
+# [[menu.nav]]
+# name = "Blog"
+# url = "/post/"
+# weight = 2
+
+[[menu.nav]]
+name = "About"
+url = "/about/"
+weight = 4
