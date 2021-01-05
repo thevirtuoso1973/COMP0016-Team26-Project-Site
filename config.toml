@@ -31,14 +31,49 @@ link = "plugins/google-map/map.js"
 # weight = 1
 
 [[menu.main]]
-URL = "about"
-name = "About"
+URL = "requirements"
+name = "Requirements"
 weight = 2
 
 [[menu.main]]
-URL = "portfolio"
-name = "Portfolio"
+URL = "research"
+name = "Research"
+weight = 3
+
+[[menu.main]]
+URL = "ui-design"
+name = "UI Design"
 weight = 4
+
+[[menu.main]]
+URL = "system-design"
+name = "System Design"
+weight = 5
+
+[[menu.main]]
+URL = "implementation"
+name = "Implementation"
+weight = 6
+
+[[menu.main]]
+URL = "testing"
+name = "Testing"
+weight = 7
+
+[[menu.main]]
+URL = "evaluation"
+name = "Evaluation"
+weight = 8
+
+[[menu.main]]
+URL = "appendices"
+name = "Appendices"
+weight = 9
+
+[[menu.main]]
+URL = "about"
+name = "About"
+weight = 10
 
 # default parameters
 [params]
