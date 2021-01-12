@@ -15,6 +15,26 @@ about:
     label : "Get to know the team"
     URL : "about"
 
+# team
+team:
+  enable: true
+  title : "The Team"
+  team_member:
+    - title : "Chris Tomy"
+      image : "images/team/member-1.jpg"
+      designation : "Team Lead & Full Stack Developer"
+
+    - title : "Saachi Pahwa"
+      image : "images/team/member-2.jpeg"
+      designation : "Mobile/iOS Developer"
+
+# video
+video:
+  enable: true
+  title: "Project Video"
+  # Needs to be an embeddable link
+  url: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+
 # skill
 skill:
   enable : true
