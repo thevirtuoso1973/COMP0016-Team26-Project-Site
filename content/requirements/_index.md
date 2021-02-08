@@ -52,16 +52,16 @@ To create the personas, we began with some rough ideas of who our potential user
 
 Here are the personas that we created:
 Naima Sultana
-![Persona 1](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/personas/naima_persona.png "Naima Sultana")
+![Persona 1](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/requirements/naima_persona.png "Naima Sultana")
 
 Dorris Dibb
-![Persona 2](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/personas/dorris_persona.png "Dorris Dibb")
+![Persona 2](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/requirements/dorris_persona.png "Dorris Dibb")
 
 John Smith
-![Persona 3](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/personas/john_persona.png "John Smith")
+![Persona 3](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/requirements/john_persona.png "John Smith")
 
 # Use cases
-
+![Use case](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/requirements/use_case.png "user")
 
 # MoSCoW list
 ## Function requirements
