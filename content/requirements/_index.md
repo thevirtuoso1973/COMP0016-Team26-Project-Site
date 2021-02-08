@@ -80,7 +80,7 @@ The wellbeing score must be gathered at 12 pm on a Sunday.
 
 ### Should have
 
-It should passively gather movement data from the pedometer and cross reference this against a self reported wellbeing score
+It should passively gather movement data from the pedometer and cross reference this against a self reported wellbeing score.
 
 ### Could have
 The system could have options for connecting it's well-being score to other systems including wearables.
