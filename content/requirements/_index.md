@@ -1,7 +1,7 @@
 ---
 title: "Requirements"
 description: "Requirements gathering and list"
-layout: requirements
+layout: figma_page
 date: 2021-01-05
 image: "images/clients-logo/carefulai.png"
 draft: false
