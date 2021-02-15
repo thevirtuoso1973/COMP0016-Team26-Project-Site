@@ -17,7 +17,7 @@ The version that we were given was version 2: NudgeMe. NudgeMe is instead aimed 
 In CarerCare, there was also a server to which the wellbeing scores of different regions, from users who chose to send them, were visually represented on a map. NudgeMe also had to have this feature, as the NHS would benefit from being able to monitor the wellbeing of people across the country and especially how it is being affected by the pandemic. 
 
 # Project Goals
-The aim is to create an application that enourages people to look after themselves, especially in this time where people are isolated and their mental wellbeing is suffering as a result.
+The aim is to create an application that encourages people to look after themselves, especially in this time where people are isolated and their mental wellbeing is suffering as a result.
 
 The ways in which we were asked to do this is:
     - allowing users to keep a weekly record of their wellbeing
@@ -93,4 +93,3 @@ The system should be designed for a user between 13 and 99.
 The target user is a person who wishes to share their wellbeing with others.
 
 # User flow
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F53Di5ADgodaHYWmMHXB8xv%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
