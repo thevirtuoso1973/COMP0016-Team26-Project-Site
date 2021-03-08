@@ -56,29 +56,32 @@ skill:
       progress : "20%"
       color : "#bdecf6"
 
-# NOTE: could use this as a timeline instead
-# experience:
-#   enable : true
-#   title : "Experience"
-#   item:
-#     - logo : "images/experience/icon-1.png"
-#       title : "Junior UX Designer"
-#       company : "WEBEX"
-#       duration : "Jan 2007 - Feb 2009"
+# NOTE: using this as a timeline
+experience:
+  enable : true
+  title : "Development Timeline"
+  item:
+    - logo : "images/experience/icon-1.png"
+      title : "Initial Designs & Working Prototype"
+      duration : "5 Oct 2020 - Dec 2020"
 
-#     - logo : "images/experience/icon-2.png"
-#       title : "UX & UI Designer"
-#       company : "AUGMEDIX"
-#       duration : "Mar 2009 - Aug 2014"
+    - logo : "images/experience/icon-2.png"
+      title : "Refined & Developed Extra Features"
+      duration : "Jan 2021 - 8 March 2021"
 
-#     - logo : "images/experience/icon-1.png"
-#       title : "Senior UI Designer"
-#       company : "THEMEFISHER"
-#       duration : "Sep 2014 - Present"
+    - logo : "images/experience/icon-3.png"
+      title : "Deliverables & Handover"
+      duration : "8 March 2021 - 24 March 2021"
+
+# image of gantt chart
+image:
+  enable: true
+  title: "Gantt Chart"
+  image: "images/ganttChart-1.png"
 
 # service
 service:
-  enable : true
+  enable : false
   title : "Services"
   item:
     - title : "UI Design"
@@ -98,7 +101,7 @@ service:
 
 # portfolio
 portfolio:
-  enable : true
+  enable : false
   title : "Portfolio"
   item_show : 5
   # portfolio item comes from 'data/portfolio.yml' item.
