@@ -3,14 +3,17 @@ title: "Research"
 description: "Researching ideas."
 date: 2021-03-01
 draft: false
+layout: single
 ---
+
 # Related Projects Review
 
 There are 2 phone applications that bore a resemblance to our NudgeMe requirements. 
 
 One is a free mental wellbeing app called *MyPossibleSelf*, available on both iOS and Android. 
 
-## “MyPossibleSelf”
+## “MyPossibleSelf”
+
 ### Mental health/wellbeing phone app available on Android and iOS. 
 
 It tracks daily mood and allows users to document how they are feeling using tags. 
