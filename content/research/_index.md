@@ -137,11 +137,13 @@ In Util:
     * It only provides access to the cumulative steps through a stream.  
     * At first, to access weekly steps, we used logic from this blog post https://blog.maskys.com/implementing-a-daily-step-count-pedometer-in-flutter/ that essentially logs the step count stream once a week, and calculates the weekly steps by negating the count last week from the count this week. However, this did not work on Android devices so we simplified the logic and adapted it for our use. 
 
+*Still need to finish writing about the rest*
+
 * Permission handler 
 
 * Contacts services/Flutter SMS:  
 
-Sentry? or we can talk about Sentry elsewhere 
+* Sentry? or we can talk about Sentry elsewhere 
 
 In data-related: 
 
