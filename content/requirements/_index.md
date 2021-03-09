@@ -16,7 +16,6 @@ The version that we were given was version 2: NudgeMe. NudgeMe is instead aimed 
 
 In CarerCare, there was also a server to which the wellbeing scores of different regions, from users who chose to send them, were visually represented on a map. NudgeMe also had to have this feature, as the NHS would benefit from being able to monitor the wellbeing of people across the country and especially how it is being affected by the pandemic. 
 
-
 ## Project Goals
 The aim is to create an application that encourages people to look after themselves, especially in this time where people are isolated and their mental wellbeing is suffering as a result.
 
@@ -53,16 +52,16 @@ To create the personas, we began with some rough ideas of who our potential user
 
 Here are the personas that we created:
 Naima Sultana
-![Persona 1](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/requirements/naima_persona.png "Naima Sultana")
+![Persona 1](naima_persona.png "Naima Sultana")
 
 Dorris Dibb
-![Persona 2](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/requirements/dorris_persona.png "Dorris Dibb")
+![Persona 2](dorris_persona.png "Dorris Dibb")
 
 John Smith
-![Persona 3](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/requirements/john_persona.png "John Smith")
+![Persona 3](john_persona.png "John Smith")
 
 ## Use cases
-![Use case](https://github.com/thevirtuoso1973/COMP0016-Team26-Project-Site/static/images/requirements/use_case.png "user")
+![Use case](use_case.png "user")
 
 ## MoSCoW list
 ### Function requirements
