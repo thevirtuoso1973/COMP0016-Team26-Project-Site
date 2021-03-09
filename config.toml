@@ -4,6 +4,11 @@ summaryLength = "10"
 title = "NudgeMe"
 theme = "kross-hugo"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # allow raw HTML
+
 # css plugins
 [[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
