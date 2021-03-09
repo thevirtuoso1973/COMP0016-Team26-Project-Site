@@ -152,18 +152,20 @@ In data-related:
 - [Provider](https://pub.dev/packages/provider)
 
 - [Shared preferences](https://pub.dev/packages/shared_preferences)
+    - We chose to use the shared preferences database as it is an extremely popular flutter package for storing data (over 2600 likes) and suited our needs. Data is stored and accessed using keys.
 
 In UI: 
 
 - [Flutter charts](https://pub.dev/packages/charts_flutter)
-    
     - Write about why we used flutter charts instead of [FL chart](https://pub.dev/packages/fl_chart) if there was a particular reason
 
 - [Introduction screen](https://pub.dev/packages/introduction_screen)
-    - This introduction screen format seemed suitable for our onboarding process, as it was popular, looked nice and seemed simple.
-    - Note: we did enounter issues with the amount of widgets we needed being cut off on some smaller screens, so we [forked the repo](https://github.com/saachipahwa/introduction_screen) and added a scroll bar where this happened . 
+    - We chose this package because this introduction screen format seemed suitable for our onboarding process as it was popular, looked nice and seemed simple.
+    - Note: we did encounter issues with widgets being cut off on smaller screens, so we [forked the repo](https://github.com/saachipahwa/introduction_screen) and added a scroll bar where this happened . 
 
 - [Highlighter coachmark](https://pub.dev/packages/highlighter_coachmark)
+    - These coach marks are the slides in the tutorials that play when users finish the introduction screen and view the main app pages for the first time, and when they press the information button on the wellbeing page. 
+    - We chose this package instead of Tutorial Coach Mark, despite this one having more likes, because Highlighter Coach Mark had a simpler look that better suited what we wanted. 
 
 - [QR flutter](https://pub.dev/packages/qr_flutter)
 
