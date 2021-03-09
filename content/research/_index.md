@@ -62,19 +62,19 @@ Provides the following:
 
 Our review: 
 
-- Only 3 tabs makes it easy to navigate 
+- Only 3 tabs makes it easy to navigate.
 
 - App is free but requires owning a Fitbit watch which ranges from £80-120. 
 
 - They store personally identifiable health data which is unethical and off-putting. 
 
-- Not possible to track different variables on the same graph 
+- Not possible to track different variables on the same graph.
 
-- Only made for physical wellbeing, not made with mental wellbeing in mind 
+- Only made for physical wellbeing, not made with mental wellbeing in mind.
 
 - Presents exercise as a competition rather than something for yourself. This is not effective for people who just need to be encouraged to move at all. 
 
-- Weight loss tracking can endanger people who suffer from disordered eating/
+- Weight loss tracking can endanger people who suffer from disordered eating.
 
  INSERT 2 SCREENSHOTS OF FITBIT APP
 
@@ -122,17 +122,18 @@ The other two options were Dart/Flutter and React Native. While both seemed like
 
 The image below is our pubspec.yaml file. This contains the names and versions of all the Flutter libraries that we used, separated into the categories util, data-related and UI. 
 
+```
 INSERT SCREENSHOT/CODE FROM PUBSPEC.YAML
-
+```
 The most significant _libraries_ we used include the following. 
 
 In Util: 
     
-- Flutter local notifications 
+- [Flutter local notifications](https://pub.dev/packages/flutter_local_notifications)
 
     - Most popular flutter library used to implement push notifications on both platforms (has over 1400 likes).  
 
-- Pedometer 
+- [Pedometer](https://pub.dev/packages/pedometer)
 
     - We used this package to count the user’s steps as this was the only prominent way of using a pedometer in a flutter app that I could find.  
     - It only provides access to the cumulative steps through a stream.  
@@ -140,26 +141,31 @@ In Util:
 
 *Still need to finish writing about the rest*
 
-- Permission handler 
-- Contacts services/Flutter SMS:  
+- [Permission handler](https://pub.dev/packages/permission_handler)
 
-- Sentry? or we can talk about Sentry elsewhere 
+- [Contacts services](https://pub.dev/packages/contacts_service)/[Flutter SMS](https://pub.dev/packages/flutter_sms)  
+
+- [Sentry](https://pub.dev/packages/sentry)? or we can talk about Sentry elsewhere 
 
 In data-related: 
 
-- Provider 
+- [Provider](https://pub.dev/packages/provider)
 
-- Shared preferences 
+- [Shared preferences](https://pub.dev/packages/shared_preferences)
 
 In UI: 
 
-- Flutter charts 
+- [Flutter charts](https://pub.dev/packages/charts_flutter)
+    
+    - Write about why we used flutter charts instead of [FL chart](https://pub.dev/packages/fl_chart) if there was a particular reason
 
-- Introduction screen 
+- [Introduction screen](https://pub.dev/packages/introduction_screen)
+    - This introduction screen format seemed suitable for our onboarding process, as it was popular, looked nice and seemed simple.
+    - Note: we did enounter issues with the amount of widgets we needed being cut off on some smaller screens, so we [forked the repo](https://github.com/saachipahwa/introduction_screen) and added a scroll bar where this happened . 
 
-- Highlighter coachmark 
+- [Highlighter coachmark](https://pub.dev/packages/highlighter_coachmark)
 
-- QR flutter  
+- [QR flutter](https://pub.dev/packages/qr_flutter)
 
 ## References 
 
