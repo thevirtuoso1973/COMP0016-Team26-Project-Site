@@ -44,7 +44,7 @@ Our review:
 
 - Free services become in-app purchases after a period of time. This is not widely accessible.
 
-INSERT 3 SCREENSHOTS OF MYPOSSIBLESELF
+![MPS](MPS.png "MyPossibleSelf")
 
 
 The second is a free app available on both iOS and Android that connects to the popular fitness smart-watch, the FitBit.
@@ -76,7 +76,8 @@ Our review:
 
 - Weight loss tracking can endanger people who suffer from disordered eating.
 
- INSERT 2 SCREENSHOTS OF FITBIT APP
+![Fitbit 1](fitbit1.png "Fitbit stats")
+![Fitbit 2](fitbit2.png "Fitbit extra")
 
 ## Technology Review
 
