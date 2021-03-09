@@ -28,12 +28,25 @@ recorded wellbeing score is randomized before it is sent 30% of the time.
 
 ### Architecture of NudgeMe
 
-See the embedded Figma at the top of the page for a more convenient way to zoom 
-in and read the diagram.
+_See the embedded Figma at the top of the page for a more convenient way to zoom 
+in and read the diagram._
 
 <img src="https://user-images.githubusercontent.com/46009390/110238878-dd728500-7f3b-11eb-9c0d-6eb785270703.png"
 alt="Architecture diagram of NudgeMe" 
 width="960"/>
+
+#### 1. Wellbeing Visualization (& Core Features)
+
+The end user interacts with the mobile app (built with Flutter) on
+Android or iOS. Any data stored on device is done so using SQLite or
+`SharedPreferences`, using the 
+[shared_preferences Flutter package](https://pub.dev/packages/shared_preferences).
+`SharedPreferences` is a key-value store inspired by Android's implementation
+(but works cross-platform due to the Flutter package). This offers us convenient
+storage of simple data (e.g. persistent configuration flags). We use the SQLite
+database for structured data.
+
+#### 2. Network Sharing
 
 ## Sequence Diagram
 
