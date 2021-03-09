@@ -66,7 +66,11 @@ John Smith
 
 ## Use cases
 
+Our use case diagram:
+
 ![Use case](use_case.png "user")
+
+Our use case table can be found [on Google Drive](https://drive.google.com/file/d/1ByhhvDdvM3YLbZacD7vf7w1CJf-8_3VT/view?usp=sharing).
 
 ## MoSCoW list
 ### Function requirements
