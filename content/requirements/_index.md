@@ -51,16 +51,21 @@ From this survey, we analysed the closed questions and confirmed interest in the
 To create the personas, we began with some rough ideas of who our potential users could be (e.g. carers under duress), but after clarifying the requirements with our client, we discovered the application is aimed for use by the entire British population, between age 13 to 99, who have been affected due to lockdown. Therefore, we tried to capture a variety of different personality types that would benefit from an wellbeing app, without being too generic or unspecific.
 
 Here are the personas that we created:
+
 Naima Sultana
+
 ![Persona 1](naima_persona.png "Naima Sultana")
 
 Dorris Dibb
+
 ![Persona 2](dorris_persona.png "Dorris Dibb")
 
 John Smith
+
 ![Persona 3](john_persona.png "John Smith")
 
 ## Use cases
+
 ![Use case](use_case.png "user")
 
 ## MoSCoW list
