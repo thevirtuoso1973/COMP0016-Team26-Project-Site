@@ -121,12 +121,55 @@ In our team, two people used Windows laptops and one person had a MacBook so, in
 
 The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance (1). Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
 
-The image below is our pubspec.yaml file. This contains the names and versions of all the Flutter libraries that we used, separated into the categories util, data-related and UI. 
+The code below is from our pubspec.yaml file. This contains the names and versions of all the Flutter libraries that we used, separated into the categories util, data-related and UI. 
 
 ```
-INSERT SCREENSHOT/CODE FROM PUBSPEC.YAML
-```
-The most significant _libraries_ we used include the following. 
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # util
+  http: ^0.12.2
+  flutter_local_notifications: ^3.0.2
+  pedometer: ^2.0.2
+  timezone: ^0.5.9 # needed for scheduling notifications
+  workmanager: ^0.2.3
+  pdf: ^1.13.0
+  printing: ^3.7.2
+  clock: ^1.0.1 # useful for testing
+  permission_handler: ^5.0.1+1
+  encrypt: ^4.1.0 # high-level API
+  pointycastle: ^2.0.1 # used for keygen
+  random_string: ^2.1.0
+  qr_code_scanner: ^0.3.0
+  cron: ^0.2.4
+  sentry_flutter: ^4.0.4 # error monitoring
+  url_launcher: ^5.7.10
+  uni_links: ^0.4.0
+  share: ^0.6.5+4
+  settings_ui: ^0.6.0
+  contacts_service: ^0.4.6
+  flutter_sms: ^2.1.1
+
+  # data-related
+  provider: ^5.0.0
+  shared_preferences: ^0.5.12+4
+  sqflite: ^1.3.2+1
+
+  # UI
+  charts_flutter: ^0.9.0
+  introduction_screen: #forked the intro screen package to add a scrollbar
+    git:
+      url: https://github.com/saachipahwa/introduction_screen.git
+  highlighter_coachmark:  ^0.0.3
+  qr_flutter: ^3.2.0 # generates a QR code
+  liquid_pull_to_refresh: ^2.0.0
+  convex_bottom_bar: ^2.6.0
+  sleek_circular_slider: ^1.2.0+web
+  flutter_slidable: ^0.5.7
+  ```
+
+The _most significant libraries_ we used include the following. 
 
 In Util: 
     
