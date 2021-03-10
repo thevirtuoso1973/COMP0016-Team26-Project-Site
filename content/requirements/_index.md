@@ -101,3 +101,5 @@ The system could have options for for gathering user-defined preferences for for
 The system should be designed for a user between 13 and 99.
 The target user is a person who wishes to share their wellbeing with others.
 
+
+## User flow:
