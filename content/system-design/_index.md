@@ -148,7 +148,21 @@ Note that as described previously, the mobile client checks for pending messages
 every 15 minutes, so it's only a convenient coincidence that in the diagram
 Alice made this check directly after Bob sent his message.
 
-## Class Diagram
+## Backend UML Class Diagram
+
+Although Go has limited OOP features compared to some languages, it still supports
+interfaces. Here I define an interface of a `DataSource` which has the methods I
+need to interact with the database. This is easier to work with than only using
+raw SQL.
+Below the interface are two implementations (or 'realizations' in UML terms) of 
+the interface. `MyDB` holds a connection to a database and is the actual one we
+use wheras the other is a mocked database object which we use in unit testing.
+
+<img src="https://user-images.githubusercontent.com/46009390/111036466-3b5d0c00-8417-11eb-954e-d84d13f0a195.png"
+alt="UML Diagram of back-end database"
+/>
+
+_Note: the data types used in the diagram are from Go._
 
 ## Data Storage
 
