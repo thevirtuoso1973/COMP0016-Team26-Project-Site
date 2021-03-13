@@ -30,19 +30,24 @@ This was a cross-platform mobile app that tracks user’s wellbeing, plots it ag
 
 We conducted a survey of structured questions to confirm these requirements were in the user's interests and to adapt them based on feebdack. The questions we asked in the survey and the response consisted of the following:
 
-1. Would you find it useful to monitor your wellbeing over time 
-    92.3% yes, 7.7% no, 0% not sure
+| Questions                                                                                           |  Open/Closed            |  Options                  |
+|-----------------------------------------------------------------------------------------------------|-------------------------|---------------------------|
+| Would you find it useful to monitor your wellbeing over time?                                       | Closed                  | Yes, No, Not sure         |
+| Would you find it useful for others (e.g. friends/family) to monitor your wellbeing over time?      | Closed                  | Yes, No, Not sure         | 
+| How likely would you be to monitor your wellbeing?                                                  | Closed                  | Daily, Weekly, in between |
+| During the first lockdown, what did you do to keep your mental health stable?                       | Open                    | n/a                       |
 
-2. Would you find it useful for others (e.g. friends/family) to monitor your wellbeing over time? 
-    76.9% yes, 15.4% no, 7.7% no
+| Questions 1 and 2                                                                              | Yes  | No   | Not sure |
+|------------------------------------------------------------------------------------------------|------|------|----------|
+| Would you find it useful to monitor your wellbeing over time?                                  | 92.3 | 7.7  | 0        |
+| Would you find it useful for others (e.g. friends/family) to monitor your wellbeing over time? | 76.9 | 15.4 | 7.7      |
 
-3. How likely would you be to monitor your wellbeing?  
+| Questions 3                                        | Weekly    | Daily     | In between |
+|----------------------------------------------------|-----------|-----------|------------|
+| How likely would you be to monitor your wellbeing? | 30.8      | 53.8      | 15.4       |
 
-    30.8% every day, 53.8% once a week, 15.4% more than once a week but not every day
-
-4. (Open) During the first lockdown, what did you do to keep your mental health stable (e.g. yoga, painting, video calling friends)? 
         
-Common answers to 4 were texting/calling friends, types of exercise, cooking, various types of arts and crafts.
+Common answers to Question 4 were texting/calling friends, types of exercise, cooking, various types of arts and crafts.
 
 From this survey, we analysed the closed questions and confirmed interest in the initial requirements. We brainstormed additional features to incorporate activities mentioned in the responses to question 4, and landed on peer-to-peer wellbeing sharing feature within the app, as this would allow people to share their wellbeing with their friends or support network easily and privately.
 
@@ -83,32 +88,27 @@ width="700"/>
 Our use case table can be found [on Google Drive](https://drive.google.com/file/d/1ByhhvDdvM3YLbZacD7vf7w1CJf-8_3VT/view?usp=sharing).
 
 ## MoSCoW list
-### Function requirements
-#### Must have
-The system must have same functionality as version 1 omitting the the networks that uses previous look at access via the app. This is to ensure that the application is more generic. 
 
-The system must have have a user interface which is the same for both Android and iOS. 
+| Functional Requirement                                                                              | Must/Should/Could have? |
+|-----------------------------------------------------------------------------------------------------|-------------------------|
+| The system must have the same functionality as version 1, omitting features no longer relevant.[^1] | Must have               |
+| The system must have the same interface on Android & iOS.                                           | Must have               |
+| Well documented codebase.                                                                           | Must have               |
+| Easily maintainable codebase.                                                                       | Must have               |
+| Nudge user to share their graph as a PDF if their score falls twice over any two weeks.             | Must have               |
+| Also nudge user if there is no step count in over two days.                                         | Must have               |
+| The weekly wellbeing score must be gathered from the user at Sunday 12pm (by default).              | Must have               |
+| Ask the user for consent to collect their wellbeing data.                                           | Must have               |
+| If consented, share the user's wellbeing data by POSTing to a server.                               | Must have               |
+| Passively collect movement data from pedometer.                                                     | Should have             |
+| Display a graph that cross references pedometer and wellbeing data.                                 | Should have             |
+| Allow users to *securely* send their wellbeing data to other users (e.g. through e2e encryption).   | Could have              |
+| Facilitate adding users to their network in a convenient way, considering lockdown/remote work.     | Could have              |
+| Allow users to nudge other users through the app.                                                   | Could have              |
 
-The system must have a code base that is well documented and annotated and easily maintainable.
-
-People must be nudged to share their wellbeing score as a pdf/jpeg is their score falls twice over any two week period. This will be facilitated. They will also be encouraged to do the same if there is no pedometer reading over two days. 
-
-On a Monday each week they must be asked if they to share their average wellbeing score (in a locally differentially private manner) with a central wellbeing hub. This hub will request put requests in the same manner as the previous App.
-
-The wellbeing score must be gathered at 12 pm on a Sunday.
-
-#### Should have
-
-It should passively gather movement data from the pedometer and cross reference this against a self reported wellbeing score.
-
-#### Could have
-The system could have options for connecting it's well-being score to other systems including wearables.
-
-The system could have options for for gathering user-defined preferences for for web sites sounds videos and and text that is meaning for to their general well-being.
-
-### Non-functional requirements
-#### Should have
-The system should be designed for a user between 13 and 99.
-The target user is a person who wishes to share their wellbeing with others.
+| Non functional Requirements                                                                         | Must/Should/Could have? |
+|-----------------------------------------------------------------------------------------------------|-------------------------|
+| Design the system for a user aged between 13 & 99.                                                  | Should have             |
+| Present an accessible color scheme to those who are colorblind.                                     | Could have              |
 
 ## User flow:
