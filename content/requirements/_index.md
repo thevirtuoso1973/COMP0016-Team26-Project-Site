@@ -111,4 +111,9 @@ Our use case table can be found [on Google Drive](https://drive.google.com/file/
 | Design the system for a user aged between 13 & 99.                                                  | Should have             |
 | Present an accessible color scheme to those who are colorblind.                                     | Could have              |
 
+[^1]: Since we were adapting the application for a wider audience (general UK population),
+      and for a different purpose (to assist the public in maintaining their wellbeing),
+      some of the features designed specifically for carers in the Welsh area were no
+      longer relevant.
+      
 ## User flow:
