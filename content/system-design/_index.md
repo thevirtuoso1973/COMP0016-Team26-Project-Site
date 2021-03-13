@@ -29,7 +29,7 @@ recorded wellbeing score is randomized before it is sent 30% of the time.
 ### Architecture of NudgeMe
 
 _See the embedded Figma at the top of the page for a more convenient way to zoom
-in and read the diagram._
+in and read this diagram._
 
 <img src="https://user-images.githubusercontent.com/46009390/110238878-dd728500-7f3b-11eb-9c0d-6eb785270703.png"
 alt="Architecture diagram of NudgeMe" 
@@ -64,17 +64,77 @@ To share data between mobile clients, we designed an infrastructure that passes
 data/'messages'[^2]. This is then used along with client-side asymmetric key
 encryption to support E2E encrypted message passing between users of our app.
 
+_Whenever, the term 'app' or application is used, we are referring to the end user
+mobile application built in Flutter._
+
 ##### Message Passing
 
-TODO
+_The specific endpoints mentioned in this section are found in the README.md of the 
+codebase._
+
+Mobile clients running NudgeMe are considered to be users. 
+
+Users make themselves known to the server by POSTing to an endpoint during the 
+initial setup. This request will contain the user's identifier (which is a random,
+unique string) along with a random password, generated on device. For future 
+requests, the user must send this password to authenticate themselves.
+(This is to prevent anyone from requesting data which is not meant for them.)
+
+Users can add each other in two ways, but these are specific to the use of
+encryption, so will be described in the next section.
+
+Now, if User 1 wishes to send data to User 2, User 1 sends POSTs to an
+endpoint on the server with the following contained in the JSON
+request data:
+1. Sender's identifier
+2. Receiver's identifier
+3. Sender's password 
+4. The data itself
+
+This will be stored in a database of pending messages.
+
+Periodically, users POST to another endpoint requesting any pending messages.
+This will occur every 15 minutes (due to restrictions on how often we can
+execute background code on device). So for example, User 2 will send this
+request and receive the data User 1 has sent. Note that the data is stored
+as a JSON data type in the database, so the data format is easy to change
+and is determined by the clients, not the server.
 
 ##### Asymmetric/Public Key Encryption
 
-TODO
+Our app uses [public key encryption](https://en.wikipedia.org/wiki/Public-key_cryptography)
+to provide confidentiality, so end users
+do not have to trust in the server. They would only have to trust that the
+mobile application correctly implements the cryptographic procedures, which is
+easy to verify since our app is open source[^3].
+
+During initialization of the app, an RSA public/private key pair is generated
+and stored locally for that user.
+
+To encrypt data to be sent to another user, the receiver's public key is needed.
+This is the main purpose of requiring users to add each other; it is a way to
+exchange identity strings and public keys.
+To add someone to your network, you could scan their QR code, or click on their
+add friend link which they will send you, but these are implementation details.
+
+Now assuming User 1 has added User 2, before sending the request to the server
+the mobile client can encrypt the data using User 2's public key.
+Note that this isn't necessary, it is up to the mobile clients to determine
+if they wish to encrypt or not. Currently, I use two features of the app to demonstrate
+these two options, sending wellbeing data uses encryption but sending step goals
+does not. However they both use the message passing infrastructure.
+
+This decouples the client from the server and makes it easier to change either of
+them if needed.
 
 [^2]: In the context of this architecture, the term 'messages' just refers to some
       data that some client wishes to send to another, and which they have both
       agreed the format of.
+
+[^3]: The server is also open source, however, there is no guarantee for the user
+      that a server is actually running the code that it claims to run.
+      On the other hand, you can always inspect a mobile application running
+      locally on your device.
 
 ## Sequence Diagram
 
