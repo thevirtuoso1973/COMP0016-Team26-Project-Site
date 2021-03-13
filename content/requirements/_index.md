@@ -47,28 +47,38 @@ Common answers to 4 were texting/calling friends, types of exercise, cooking, va
 From this survey, we analysed the closed questions and confirmed interest in the initial requirements. We brainstormed additional features to incorporate activities mentioned in the responses to question 4, and landed on peer-to-peer wellbeing sharing feature within the app, as this would allow people to share their wellbeing with their friends or support network easily and privately.
 
 ## Personas
-
 To create the personas, we began with some rough ideas of who our potential users could be (e.g. carers under duress), but after clarifying the requirements with our client, we discovered the application is aimed for use by the entire British population, between age 13 to 99, who have been affected due to lockdown. Therefore, we tried to capture a variety of different personality types that would benefit from an wellbeing app, without being too generic or unspecific.
 
 Here are the personas that we created:
 
 Naima Sultana
 
-![Persona 1](naima_persona.png "Naima Sultana")
+<img src="https://user-images.githubusercontent.com/55795994/111051715-27cc9800-844d-11eb-9c74-27e1a9cc0eb7.png" 
+alt="Naima persona" 
+width="700"/>
+
 
 Dorris Dibb
 
-![Persona 2](dorris_persona.png "Dorris Dibb")
+<img src="https://user-images.githubusercontent.com/55795994/111051710-256a3e00-844d-11eb-8c50-0cfa0a56c516.png" 
+alt="Dorris persona" 
+width="700"/>
+
 
 John Smith
 
-![Persona 3](john_persona.png "John Smith")
+<img src="https://user-images.githubusercontent.com/55795994/111051714-27340180-844d-11eb-8971-709f0b8fe731.png" 
+alt="Dorris persona" 
+width="700"/>
+
 
 ## Use cases
 
 Our use case diagram:
 
-![Use case](use_case.png "user")
+<img src="https://user-images.githubusercontent.com/55795994/111051716-28652e80-844d-11eb-8024-02f8d6425a73.png" 
+alt="Dorris persona" 
+width="700"/>
 
 Our use case table can be found [on Google Drive](https://drive.google.com/file/d/1ByhhvDdvM3YLbZacD7vf7w1CJf-8_3VT/view?usp=sharing).
 
@@ -100,6 +110,5 @@ The system could have options for for gathering user-defined preferences for for
 #### Should have
 The system should be designed for a user between 13 and 99.
 The target user is a person who wishes to share their wellbeing with others.
-
 
 ## User flow:
