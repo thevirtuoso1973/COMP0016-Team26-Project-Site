@@ -7,7 +7,7 @@ date: 2021-03-09
 draft: false
 ---
 
-# Client-side
+# Mobile/Client-side Features
 
 Below are details of how we implemented key parts of the mobile application.
 
@@ -99,6 +99,111 @@ This is the implementation of `_fromWidgetKey()`:
       image, but `Image` is an actual image asset.
 
 ## Public Key Cryptography
+
+### Key Generation & Storage
+
+We used the [pointycastle](https://pub.dev/packages/pointycastle) library
+to generate the RSA keypair. `PointyCastle` is a Dart port of a well-known
+crypto library called `BouncyCastle` so we concluded that `PointyCastle` would
+be a good choice.
+
+It is simple to generate the keypair:
+
+``` dart
+
+    final keyPair = await compute<SecureRandom, AsymmetricKeyPair<RSAPublicKey, RSAPrivateKey>>(
+        generateRSAKeyPair, _getSecureRandom());
+
+```
+
+This gives us key objects `RSAPublicKey` and `RSAPrivateKey`. However, we need
+to store this persistently so to do this we manually encode the keys into
+a [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format string. We 
+can then store this string using `SharedPreferences`.
+
+To store the keys in PEM, the middle section consists of the base64 of the ASN.1 sequence
+of components, defined in the appendix of [RFC 8017](https://tools.ietf.org/html/rfc8017#appendix-A).
+We use the [PKCS#1](https://en.wikipedia.org/wiki/PKCS_1) definition of RSA.
+
+#### Public Key - PEM Format
+
+The RFC specifies how the keys should be identified in ASN.1:
+``` 
+
+    RSAPublicKey ::= SEQUENCE {
+        modulus           INTEGER,  -- n
+        publicExponent    INTEGER   -- e
+    }
+
+```
+
+This tells us the order of the components expected. We can use
+`ASN1Sequence` from `pointycastle` to then encode the appropriate sequence of 
+bytes and wrap the base64 encoded string in the PEM header/footer:
+
+``` dart
+
+    String encodePublicKeyInPem(RSAPublicKey key) {
+        final asn = ASN1Sequence();
+
+        // convert and add the two attributes of the key
+        asn.add(ASN1Integer(key.modulus));
+        asn.add(ASN1Integer(key.exponent));
+
+        final bytes = asn.encode()
+        final base64Data = base64.encode(bytes);
+        return '-----BEGIN RSA PUBLIC KEY-----\n$base64Data\n-----END RSA PUBLIC KEY-----';
+    }
+
+```
+
+#### Private Key - PEM Format
+
+```
+
+    RSAPrivateKey ::= SEQUENCE {
+        version           Version,
+        modulus           INTEGER,  -- n
+        publicExponent    INTEGER,  -- e
+        privateExponent   INTEGER,  -- d
+        prime1            INTEGER,  -- p
+        prime2            INTEGER,  -- q
+        exponent1         INTEGER,  -- d mod (p-1)
+        exponent2         INTEGER,  -- d mod (q-1)
+        coefficient       INTEGER,  -- (inverse of q) mod p
+        otherPrimeInfos   OtherPrimeInfos OPTIONAL
+    }
+
+```
+
+This is similar to the public key storage, except we compute the `exponent1`,
+`exponent2` and the `coefficient` using the above expressions, instead of directly
+using attributes of the key.
+
+``` dart
+
+    String encodePrivateKeyInPem(RSAPrivateKey key) {
+        final asn = ASN1Sequence();
+
+        asn.add(ASN1Integer(BigInt.zero)); // version
+        asn.add(ASN1Integer(key.n)); // modulus
+        asn.add(ASN1Integer(key.exponent)); // public exponent
+        asn.add(ASN1Integer(key.privateExponent));
+        asn.add(ASN1Integer(key.p));
+        asn.add(ASN1Integer(key.q));
+        asn.add(ASN1Integer(key.privateExponent % (key.p - BigInt.one))); // exp1
+        asn.add(ASN1Integer(key.privateExponent % (key.q - BigInt.one))); // exp2
+        asn.add(ASN1Integer(key.q.modInverse(key.p))); // coefficient
+
+        final base64Data = base64.encode(asn.encode());
+        return '-----BEGIN RSA PRIVATE KEY-----\n$base64Data\n-----END RSA PRIVATE KEY-----';
+    }
+
+```
+
+### Encryption/Decryption
+
+TODO
 
 ## Database & Notifier/Listener Abstraction
 
