@@ -136,7 +136,17 @@ them if needed.
       On the other hand, you can always inspect a mobile application running
       locally on your device.
 
-## Sequence Diagram
+##### Sequence Diagram
+
+Here is the sequence diagram for Bob sending Alice wellbeing data.
+
+<img src="https://user-images.githubusercontent.com/46009390/111034657-9b9b8000-840e-11eb-8c2e-7cf230c3b103.png"
+alt="Sequence diagram of wellbeing sharing"
+/>
+
+Note that as described previously, the mobile client checks for pending messages
+every 15 minutes, so it's only a convenient coincidence that in the diagram
+Alice made this check directly after Bob sent his message.
 
 ## Class Diagram
 
