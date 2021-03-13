@@ -156,7 +156,7 @@ need to interact with the database. This is easier to work with than only using
 raw SQL.
 Below the interface are two implementations (or 'realizations' in UML terms) of 
 the interface. `MyDB` holds a connection to a database and is the actual one we
-use wheras the other is a mocked database object which we use in unit testing.
+use whereas the other is a mocked database object which we use in unit testing.
 
 <img src="https://user-images.githubusercontent.com/46009390/111036466-3b5d0c00-8417-11eb-954e-d84d13f0a195.png"
 alt="UML Diagram of back-end database"
@@ -166,5 +166,13 @@ _Note: the data types used in the diagram are from Go._
 
 ## Data Storage
 
-### Schema
+The mobile app stores data through a SQLite database on the device whereas the back-end 
+stores data through a MySQL database.
 
+### Back-end Schema/ER Diagram
+
+<img src="https://user-images.githubusercontent.com/46009390/111037852-dfe24c80-841d-11eb-8b73-bce6b650202f.png"
+alt="ER diagram of the back-end database."/>
+
+The scores table is where we store data used for the wellbeing visualization.
+The other tables are used for network sharing.
