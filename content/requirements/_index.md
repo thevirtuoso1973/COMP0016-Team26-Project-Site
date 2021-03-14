@@ -62,21 +62,16 @@ To create the personas, we tried to capture a variety of different personality t
 
 Here are the personas that we created:
 
-Naima Sultana
 
 <img src="https://user-images.githubusercontent.com/55795994/111051715-27cc9800-844d-11eb-9c74-27e1a9cc0eb7.png" 
 alt="Naima persona" 
 width="700"/>
 
 
-Dorris Dibb
-
 <img src="https://user-images.githubusercontent.com/55795994/111051710-256a3e00-844d-11eb-8c50-0cfa0a56c516.png" 
 alt="Dorris persona" 
 width="700"/>
 
-
-John Smith
 
 <img src="https://user-images.githubusercontent.com/55795994/111051714-27340180-844d-11eb-8971-709f0b8fe731.png" 
 alt="Dorris persona" 
