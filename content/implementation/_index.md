@@ -244,6 +244,9 @@ mobile client.
 
 ### Singleton Design Pattern
 
+Although the singleton pattern is sometimes criticized, it is quite suitable for
+the purpose of limiting the application to a single database connection.
+
 ### Data Class Style for Rows
 
 ### Database as a ChangeNotifier
