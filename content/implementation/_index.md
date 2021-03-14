@@ -534,11 +534,58 @@ func handleAddFriend(c echo.Context) error {
 }
 ```
 
-## Caching Wellbeing Data
+## Caching Data - Mutexes & Goroutines
 
 For the wellbeing visualization, we need to query the contents of the database
 to get the stored wellbeing data. However, instead of performing this (relatively
 expensive) database query everytime someone GETs our visualization, we cache the
-relevant data.
+relevant data. We use Go templates for the visualization page, so we can cache
+the inputs to the template which are:
 
-TODO
+``` go
+// data required by the map.html template
+type MapTemplate struct {
+  MAPDATA string
+  SUPCODE string
+}
+```
+
+So the idea is we have some `MapTemplate` that we will use every time
+a user requests the map, while also periodically updating it.
+(Since new wellbeing data may have been sent to us, the server.) However, this actually
+introduces some potential concurrency bugs, which we will fix by using a mutex:
+``` go
+type SafeMapTemplate struct {
+  // mutex that should be acquired before modifying `mapT`:
+  mu   sync.Mutex
+  // data required by map.html
+  mapT MapTemplate
+}
+
+var mapTemplate SafeMapTemplate = SafeMapTemplate{}
+```
+
+We update `mapTemplate` with the following function:
+``` go
+// updates safeMapTemplate every `duration`
+func updateTemplateCache(db *sql.DB, duration time.Duration) {
+  // get the new data needed for map.html template
+  mapT := getMapTemplate(db, false)
+
+  // acquire the mutex
+  mapTemplate.mu.Lock()
+  // assign the new data
+  mapTemplate.mapT = *mapT
+  // release the mutex
+  mapTemplate.mu.Unlock()
+
+  // sleep for some time before recursively calling ourself
+  time.Sleep(duration)
+  updateTemplateCache(db, duration)
+}
+```
+
+Which we can launch in a goroutine with 
+`go updateTemplateCache(mainDb, time.Duration(2) * time.Minute)`.
+Note that I retrieve the new data (`mapT`) *before* acquiring the mutex for a slight 
+performance improvement.
