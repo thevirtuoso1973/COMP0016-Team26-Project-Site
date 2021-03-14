@@ -21,27 +21,45 @@ width="700"/>
 
 Within these sketches, I primarily focused on implementing the Design Principles of Visibility, Feedback and Mapping.  
 
-The menu design of sketches 1, 4, 5 (and maybe 6) implement the principle of _Feedback_ well, as the selected page is made clear from the state of the icons. However, they also suffer from _Visibility_ and _Affordance_ issues. 
+<img width="242" alt="sketch 1" src="https://user-images.githubusercontent.com/55795994/111073444-9f92d500-84d6-11eb-9618-785f087c71e4.png">
+
+<img width="227" alt="sketch4" src="https://user-images.githubusercontent.com/55795994/111073449-a15c9880-84d6-11eb-8a50-e9b490f165fa.png">
+
+<img width="250" alt="sketch5" src="https://user-images.githubusercontent.com/55795994/111073445-9f92d500-84d6-11eb-9c7e-5b4c96a48329.png">
+
+The menu design of sketches 1, 4, 5 (and maybe 6) (all shown above) implement the principle of _Feedback_ well, as the selected page is made clear from the state of the icons. However, they also suffer from _Visibility_ and _Affordance_ issues. 
 * In 1, the selected page icon an icon rather than a circle, however hiding the icons of the other pages in 1 lacks _Visibility_ so we did not proceed with this idea. 
 * In 5, the page icons open a labelled window that is placed on top of the home page, which can be closed using an x button and in 4, a drop-down menu opens text buttons with the selected page button highlighted. These are both good for feedback but require more taps to navigate away from the home page than a navigation bar. This is not ideal and violates the _Affordance_ principle, as the home page is not the most important or interactive page. 
 
-Sketches 2, 4 and 6 maintain _Simplicity_ and _Visibility_ in the sense that they keep the number of features and the amount of text to a minimum which makes it obvious what is supposed to be done on the home page (a Wellbeing Checkup because at the time, we did not know that the checkup was going to be accessed through a notification). 
+<img width="223" alt="sketch 2" src="https://user-images.githubusercontent.com/55795994/111073443-9e61a800-84d6-11eb-8ce4-2fd25165ec9b.png">
+
+<img width="227" alt="sketch 4" src="https://user-images.githubusercontent.com/55795994/111073449-a15c9880-84d6-11eb-8a50-e9b490f165fa.png">
+
+<img width="200" alt="sketch 6" src="https://user-images.githubusercontent.com/55795994/111073441-9d307b00-84d6-11eb-82a1-fe60f9efb8c9.png">
+
+Sketches 2, 4 and 6 (above) maintain _Simplicity_ and _Visibility_ in the sense that they keep the number of features and the amount of text to a minimum which makes it obvious what is supposed to be done on the home page (a Wellbeing Checkup because at the time, we did not know that the checkup was going to be accessed through a notification). 
 * The placement of the menu on these pages are ordinary and due to the simplicity of the pages, it is obvious that the buttons are page menu despite there not being a ‘Menu’ label. 
 * The menu design, however, in sketches 2 and 3 suffer from a lack of _Visibility_ and _Feedback_, as the menu icons are identical and do not describe which page they correspond to. Therefore, regardless of which icon is selected, it is not clear which page is actually open. The icons in sketch 6 are much more descriptive. Therefore, we proceeded with simple menu placement: at the bottom of the page, and decided to use descriptive icons. 
-* Sketch 3 does not contain this _Simplicity_ or _Visibility_. The page is too cluttered to understand what can be done on this page. We did not proceed with any home page layout choices from sketch 3.
+
+
+
+* <img width="100" alt="sketch 3" src="https://user-images.githubusercontent.com/55795994/111073450-a28dc580-84d6-11eb-916b-e1107ddf13bd.png"> 
+* Sketch 3 (above) does not contain this _Simplicity_ or _Visibility_. The page is too cluttered to understand what can be done on this page. We did not proceed with any home page layout choices from sketch 3. 
+
 * The slider in sketch 4 makes it very clear to the user that they should rate their wellbeing so we kept the idea of a slider, as well as the minimum number of features, text and simple menu placement. We proceeded with this slider idea, however simplified it to a rating out of 10 as these were our Moscow requirements. 
 
 Some additional design principles we kept in mind whilst evaluating these sketches include _Mapping_ and _Consistency_. The menu design in sketch 3 suffers from a lack of _Mapping_ as the circular buttons feature requires the user to remember which number in the slideshow maps to each page but the vague identical nature of the menu buttons make this extremely difficult. In all these designs, the idea was to keep the menu identical on every page, in order to maintain the _Consistency_ principle.  
 
-Here is our final Figma, that implements the most successful parts of our sketches: 
+Below is our final Figma, that implements the most successful parts of our sketches: 
 
-* _Horizontal Navigation Bar Menu_ at the bottom of the page (from sketch 2) 
+* _Horizontal Navigation Bar Menu_ at the bottom of the page (from sketch 2) <img width="90" alt="sketch 2" src="https://user-images.githubusercontent.com/55795994/111073443-9e61a800-84d6-11eb-8ce4-2fd25165ec9b.png"> <img width="120" alt="nav bar" src="https://user-images.githubusercontent.com/55795994/111073929-b20e0e00-84d8-11eb-87ab-dd2e524ecfa8.png">
+ 
+* _Descriptive menu icons_ (resembling sketch 6) <img width="90" alt="sketch 6" src="https://user-images.githubusercontent.com/55795994/111073441-9d307b00-84d6-11eb-82a1-fe60f9efb8c9.png"> <img width="120" alt="nav bar" src="https://user-images.githubusercontent.com/55795994/111073929-b20e0e00-84d8-11eb-87ab-dd2e524ecfa8.png">
 
-* _Descriptive menu icons_ (resembling sketch 6)
+* _Highlighted icon_ for the selected page (from 2 and 3) <img width="80" alt="sketch2" src="https://user-images.githubusercontent.com/55795994/111073443-9e61a800-84d6-11eb-8ce4-2fd25165ec9b.png"> <img width="70" alt="sketch3" src="https://user-images.githubusercontent.com/55795994/111073450-a28dc580-84d6-11eb-916b-e1107ddf13bd.png">
 
-* _Highlighted icon_ for the selected page (from 2 and 3)
+* Using a _slider_ to rate wellbeing (from sketch 4) <img width="90" alt="sketch4" src="https://user-images.githubusercontent.com/55795994/111073449-a15c9880-84d6-11eb-8a50-e9b490f165fa.png"> <img width="90" alt="figma slide" src="https://user-images.githubusercontent.com/55795994/111073902-8ee35e80-84d8-11eb-83ae-4f98dfdef752.png">
 
-* Using a _slider_ to rate wellbeing (from sketch 4)
 
 Here is the UI Figma: 
 
