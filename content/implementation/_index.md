@@ -295,11 +295,87 @@ Future<int> insert(WellbeingItem item) async {
 [^3]: Note that it is null by default. It is not initialized yet in
       the line `static Database _database;`.
 
-### Database as a ChangeNotifier
+### Database State Management
 
 A crucial part of our implementation is how we handled the issue of state management
 at runtime. It was clear early on that we would deal with two types of state, *persistent*
-and temporary/in-memory state.
+and *temporary* state (also called *ephemeral state*). Persistent state would be 
+solved by using databases and temporary state could just be handled by `StatefulWidget`. 
+
+However, there is an important third type of state: *persistent state loaded into 
+memory*. This kind of state lead to problems where the underlying database (the persistent
+state) may be modified but the state currently used to draw the UI is not updated.
+As an example, suppose a screen displays the user's current username but then a
+pop-up screen allows the user to modify it. Once the user returns to the underlying
+screen Flutter would not rebuild the screen (if the code was implemented naïvely), 
+instead displaying stale data.
+
+One possible solution would be to constantly force the UI to rebuild the screen
+and fetch the latest data from the persistent storage, whenever the screen is displayed.
+However, this would lead to performance problems as Flutter relies on carefully
+choosing when to rebuild and only doing so when necessary.
+
+After watching [this talk from Google I/O](https://www.youtube.com/watch?v=d_m5csmrf7I) 
+on state management in Flutter, we refactored the code to use the *notifier/listener
+model*, which solved our state issue. This model specifies certain objects as
+notifiers which *notify* listeners of any changes to their state. This is facilitated
+by the `provider` package. 
+
+This is how we extend `ChangeNotifier`:
+``` dart
+class FriendDB extends ChangeNotifier {
+  // ... defining attributes here
+
+  Future<int> insert(Friend item) async {
+    // ... perform the insertion
+
+    // The insertion counts as something that modifies the state of this object,
+    // so we then notify any listeners.
+    notifyListeners();
+    
+    // return appropriate value
+  }
+  
+  // etc.
+```
+
+After extending `ChangeNotifier` we have access to `notifyListeners` which we call
+after we perform some operation that modifies the internal state. We do not have
+to call it for getters (and we shouldn't, for performance reasons).
+
+At the top level of the widget tree, we wrap our app in a `MultiProvider`:
+
+``` dart
+return MultiProvider(
+      // MultiProvider is a convenience widget to make multiple ChangeNotifiers
+      // available to descendant widgets
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => UserWellbeingDB(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => FriendDB(),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'NudgeMe',
+        // etc.
+```
+
+This allows descendant widgets to listen and access the databases, without concern
+of whether state should be updated or not, for example:
+
+``` dart
+FutureBuilder(
+  future:
+      // this implicitly listens to the database
+      Provider.of<UserWellbeingDB>(context).getLastNWeeks(1),
+  // etc.
+```
+
+This is the convenience of using the `provider` package. Now that we have defined
+our `ChangeNotifier`, the above code is all that is needed to automatically listen 
+and rebuild the UI if any changes to the database occur.
 
 ### Data Class Style for Rows
 
