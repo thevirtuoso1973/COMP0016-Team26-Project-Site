@@ -203,7 +203,39 @@ using attributes of the key.
 
 ### Encryption/Decryption
 
-TODO
+We store the public/private keys for the user as a string in `SharedPreferences`, so
+when we wish to decrypt a message, e.g. `ciphertextBase64`, we can do the following:
+
+``` dart
+
+    // load the public 
+    final pubKey = RSAKeyParser().parse(prefs.getString(RSA_PUBLIC_PEM_KEY))
+        as pointyCastle.RSAPublicKey;
+    final privKey = RSAKeyParser().parse(prefs.getString(RSA_PRIVATE_PEM_KEY))
+        as pointyCastle.RSAPrivateKey;
+
+    // create an Encrypter object that we can use to encrypt or decrypt
+    final encrypter = Encrypter(RSA(publicKey: pubKey, privateKey: privKey));
+
+    // decrypt some ciphertext string encoded in base64:
+    String plaintext = encrypter.decrypt64(ciphertextBase64);
+```
+
+For a given user, we store their friends' public keys in a database on their
+device. So performing encryption is very similar except we retrieve the public
+key from the database, and don't need to provide `Encrypter` with a private
+key.
+
+``` dart
+
+    // Parse `publicKey` attribute from `friend`, which is an object that stores
+    // the attributes of a row from the friend database.
+    final friendKey = 
+        RSAKeyParser().parse(friend.publicKey) as pointyCastle.RSAPublicKey;
+    final encrypter = Encrypter(RSA(publicKey: friendKey));
+    final ciphertextBase64 = encrypter.encrypt(plaintext).base64;
+
+```
 
 ## Database & Notifier/Listener Abstraction
 
