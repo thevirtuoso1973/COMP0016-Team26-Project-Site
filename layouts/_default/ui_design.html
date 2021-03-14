@@ -3,6 +3,22 @@
 {{ partial "page-title.html" . }}
 
 <section class="section">
+    <!-- Figma prototype -->
+    {{ if site.Data.system_design.figma.enable }}
+    {{ with site.Data.system_design.figma }}
+    <div class="container">
+        <div class="row">
+            <p>Here is the UI Figma: </p>
+            <iframe style="col align-self-center" width="1280" height="720"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FaZbMmOjtr98BkD7At9nS0h%2FNudge-Me-Prototype%3Fnode-id%3D16%253A116%26scaling%3Dscale-down"
+                allowfullscreen></iframe>
+            <spacer type="horizontal" width="100" height="100"> ♢ </spacer>
+
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    <!-- /figma -->
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center mb-4">
@@ -18,22 +34,5 @@
         </div>
     </div>
 </section>
-
-<!-- Figma prototype -->
-{{ if site.Data.requirements.figma.enable }}
-{{ with site.Data.requirements.figma }}
-<div class="container">
-    <div class="row">
-        <p>Here is the UI Figma: </p>
-        <iframe style="col align-self-center" width="1280" height="720"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FaZbMmOjtr98BkD7At9nS0h%2FNudge-Me-Prototype%3Fnode-id%3D16%253A116%26scaling%3Dscale-down"
-            allowfullscreen></iframe>
-        <spacer type="horizontal" width="100" height="100"> ♢ </spacer>
-
-    </div>
-</div>
-{{ end }}
-{{ end }}
-<!-- /figma -->
 
 {{ end }}
