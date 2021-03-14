@@ -441,8 +441,104 @@ class Friend implements Comparable {
 `Friend.fromMap` and `toMap` are straightforward methods that provide convenient
 conversions to and from the representation that SQLite works with.
 
+A notable method that uses this is `getFriends`:
+``` dart
+Future<List<Friend>> getFriends() async {
+    final db = await database;
+    
+    // retrieve all the rows:
+    List<Map> friendMaps = await db.query(_tableName, columns: _columns);
+    final itemList = friendMaps
+        // map each `Map` into a `Friend` object
+        .map((friendMap) => Friend.fromMap(friendMap))
+        .toList(growable: false);
+    return itemList;
+}
+```
+
 # Server-side
 
 Below are details of how we implemented key parts of the backend server.
 
+## Templating & Deeplinks
+
+We use Go templates to render HTML with dynamic content.
+
+One example of where it is used is in the creation of the page that allows
+users to add someone to their network. Below are explanations of why we needed
+this page and how we implemented it.
+
+### The Custom URL Scheme Problem (& Our Solution)
+
+We needed a way to allow a user to add someone else as a friend remotely. We had
+initially developed the QR code method, where users can scan their friends QR 
+code to add them. Then we realized that we could use deeplinking to pre-fill the 
+string that would be retrieved from a QR code. (One of the requirements was to 
+make it easy-to-use, so we couldn't rely on our users ability to copy and paste 
+strings.)
+
+So we defined a custom URL scheme like so:
+```
+nudgeme://addFriend?identifier="..."&pubKey="..."
+```
+
+After writing the relevant Flutter code, this did actually work - it correctly opened
+and pre-filled the strings (skipping the QR scanning step of the add friend page).
+However, there was a problem. Custom URL schemes are not recognised as clickable links
+by many messaging apps. So if a user sends this link to a friend, there is a high
+chance the messaging app will not allow them to click on the link (e.g. Whatsapp
+does not allow this).
+
+This is where the server is needed. If a website redirects a user to a custom URL scheme,
+the corresponding app will be opened as expected. So we can serve a web page that
+generates and redirects a user to our `nudgeme://` custom URL, thereby opening
+the NudgeMe mobile app and pre-filling the user details in the add friend page.
+
+This is where templating comes in.
+
+### Templating
+
+The HTML page is mostly static, except for the button that the user presses (since the URL
+to redirect to needs to be generated dynamically). Here is the relevant HTML, from
+`add_friend.html`:
+```html
+  <a href="nudgeme://addFriend?identifier={{ .Identifier }}&pubKey={{ .PubKey }}">
+      <button>Add to Network</button>
+  </a>
+```
+
+The Go server extracts the `identifier` and `pubKey` query parameters, creates a
+`struct` that holds these strings and passes it as the input when rendering the
+HTML template:
+``` go
+// data used in add_friend.html
+type AddFriendTemplate struct {
+  Identifier string
+  PubKey     string
+}
+
+func handleAddFriend(c echo.Context) error {
+  // extract the query paramters from the original HTTPS url that the user
+  // used to reach here
+  identifier := c.QueryParam("identifier")
+  pubKey := c.QueryParam("pubKey")
+
+  if isValidIDAndKey(identifier, pubKey) {
+    // render the add_friend.html template if the parameters were valid
+    return c.Render(http.StatusOK, "add_friend.html", AddFriendTemplate{
+      Identifier: identifier,
+      PubKey:     pubKey,
+    })
+  }
+  return c.String(http.StatusBadRequest, "That link doesn't look right.")
+}
+```
+
 ## Caching Wellbeing Data
+
+For the wellbeing visualization, we need to query the contents of the database
+to get the stored wellbeing data. However, instead of performing this (relatively
+expensive) database query everytime someone GETs our visualization, we cache the
+relevant data.
+
+TODO
