@@ -61,5 +61,3 @@ Below is our final Figma, that implements the most successful parts of our sketc
 * Using a _slider_ to rate wellbeing (from sketch 4) <img width="90" alt="sketch4" src="https://user-images.githubusercontent.com/55795994/111073449-a15c9880-84d6-11eb-8a50-e9b490f165fa.png"> <img width="90" alt="figma slide" src="https://user-images.githubusercontent.com/55795994/111073902-8ee35e80-84d8-11eb-83ae-4f98dfdef752.png">
 
 
-Here is the UI Figma: 
-
