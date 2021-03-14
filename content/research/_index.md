@@ -88,6 +88,7 @@ width="700"/>
 
 ## Technology Review
 <img width="600" alt="devices" src="https://user-images.githubusercontent.com/55795994/111075349-8fcbbe80-84df-11eb-9062-27ba0e450808.png">
+
 ### Solutions 
 
 Possible solutions include a web app or a phone app (for iOS and/or for Android).  

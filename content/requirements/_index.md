@@ -102,7 +102,7 @@ Below is our use case diagram. It contains every use case and the action that is
 
 <img width="800" alt="Screenshot 2021-03-14 at 14 15 23" src="https://user-images.githubusercontent.com/55795994/111071807-bda90700-84cf-11eb-8393-0e7e89b6c637.png">
 
-Our use case table can be found [on Google Drive](https://drive.google.com/file/d/1ByhhvDdvM3YLbZacD7vf7w1CJf-8_3VT/view?usp=sharing). This is 
+Our use case table can be found [on Google Drive](https://drive.google.com/file/d/1ByhhvDdvM3YLbZacD7vf7w1CJf-8_3VT/view?usp=sharing). 
 
 
 ## MoSCoW list
