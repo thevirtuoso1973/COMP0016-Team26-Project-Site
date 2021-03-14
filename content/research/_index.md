@@ -17,68 +17,73 @@ One is a free mental wellbeing app called *MyPossibleSelf*, available on both iO
 
 _Mental health/wellbeing phone app._
 
-It tracks daily mood and allows users to document how they are feeling using tags. 
+#### What is MyPossibleSelf?
 
-It also provides ‘series’ on factors that affect wellbeing, such as sleep, anxiety, work stress and depression. 
+It _tracks daily mood_ and allows users to _document_ how they are feeling using tags. It also provides _‘series’_ on factors that affect wellbeing, such as sleep, anxiety, work stress and depression. 
 
 These series include  
 
-- Quizzes 
+- Quizzes (e.g. "Exploring my anxiety")
 
-- Affirmations for different situations 
+- Affirmations for different situations e.g. feeling insecure, anxious etc.
 
 - Video guides containing tips. These are free for 1 month. 
 
 - Options to set reminders for themselves 
 
-- Options to track the factors mentioned (sleep, anxiety, exercise...) alongside mood 
+- Options to track the factors mentioned amove (sleep, anxiety, exercise...) alongside daily mood 
 
 - External resources.  
 
-Our review: 
+#### What we learned from MyPossibleSelf
 
-- Setting reminder notifications helps users to remember to use the app to track daily. 
+- Using notifications to remind users encourages consistent/daily use. This is useful for applications that rely on users logging how they are feeling.
 
-- Daily tracking 4 or 5 things can take up a lot of the user's time. 
+- Tracking 4 or 5 things daily can take up a lot of the user's time and energy, which can discourage users from using the app.
 
 - Too many colours and sections can be confusing. It is hard to remember the path to each section. 
 
 - Free services become in-app purchases after a period of time. This is not widely accessible.
 
-![MPS](MPS.png "MyPossibleSelf")
-
+<img src="https://user-images.githubusercontent.com/55795994/111070617-75d3b100-84ca-11eb-9bd2-4ea23d899fe9.png" 
+alt="MyPossibleSelf" 
+width="700"/>
 
 The second is a free app available on both iOS and Android that connects to the popular fitness smart-watch, the FitBit.
 
 ### FitBit: Health and Fitness
 _Steps and health tracker phone app._
 
-Tracks steps, bpm, sleep based on data from FitBit watch. Users can also track weight by logging it manually. 
+#### What is FitBit: Health and Fitness?
+It tracks steps, bpm, sleep based on data from FitBit watch. Users can also track weight by logging it manually. 
 
-Provides the following: 
+It provides the following: 
 
 - ‘Challenges’ e.g. certain number of steps or family step competitions
 - 'FitBit coach’: exercise videos involving cardio, yoga etc. 
 - ‘Guided programs’: courses to encourage more exercise or a change of habits e.g. ‘Habits for restful sleep: a 2 week course’ and ‘Simple Beginner Running: 3 week course’ 
 
-Our review: 
+#### What we learned from FitBit: Health and Fitness
 
-- Only 3 tabs makes it easy to navigate.
+- Having only 3 tabs makes it easy to navigate between sections.
 
-- App is free but requires owning a Fitbit watch which ranges from £80-120. 
+- The app is free but requires owning a Fitbit watch which ranges from £80-120. This is not widely accessible.
 
 - They store personally identifiable health data which is unethical and off-putting. 
 
-- Not possible to track different variables on the same graph.
+- It is not possible to track different variables on the same graph. Lacks _Affordance_.
 
-- Only made for physical wellbeing, not made with mental wellbeing in mind.
+- It seems as if it was only made to improve physical wellbeing and was not made with mental wellbeing in mind. This is because it presents exercise as a competition rather than self improvement. This is not effective for people who struggle with their mental health and just need to be encouraged to move at all. 
 
-- Presents exercise as a competition rather than something for yourself. This is not effective for people who just need to be encouraged to move at all. 
+- Weight loss tracking can endanger people who suffer from disordered eating. This may discourage this group of users from FitBit: Health and Fitness.
 
-- Weight loss tracking can endanger people who suffer from disordered eating.
+<img src="https://user-images.githubusercontent.com/55795994/111070611-710efd00-84ca-11eb-84b6-0640528ad65c.png" 
+alt="Fitbit 1" 
+width="700"/>
 
-![Fitbit 1](fitbit1.png "Fitbit stats")
-![Fitbit 2](fitbit2.png "Fitbit extra")
+<img src="https://user-images.githubusercontent.com/55795994/111070614-73715700-84ca-11eb-98ee-0cb5d571a19d.png" 
+alt="Fitbit 2" 
+width="700"/>
 
 ## Technology Review
 
@@ -86,15 +91,15 @@ Our review:
 
 Possible solutions include a web app or a phone app (for iOS and/or for Android).  
 
-We concluded that having a web app would not be very useful. Phone apps are more suitable for a wellbeing and exercise application, as most people carry their phones around all the time. Therefore:  
+We concluded that having a web app would not be very useful. Phone apps are more suitable for a wellbeing and exercise application as most people carry their phones around all the time. Therefore:
 
-A phone app can count steps whilst the application is not open (making the step levels much more accurate). Users would be unlikely to keep a web app open on their phone to allow step counter to count steps throughout their week. While having a web app would make NudgeMe accessible through more devices, desktop computers do not tend to contain pedometers or motion sensors so this would not be useful. 
+* A phone app _can count steps whilst the application is not open_ (making the step levels much more accurate). Users would be unlikely to keep a web app open on their phone to allow step counter to count steps throughout their week. While having a web app would make NudgeMe accessible through more devices, desktop computers do not tend to contain pedometers or motion sensors so this would not be useful. 
 
-Notifications on a phone app are more likely to be seen and addressed. Users would be unlikely to log their wellbeing into a web app without being prompted. 
+* _Notifications_ on a phone app are more likely to be seen and addressed. Users would be unlikely to log their wellbeing into a web app without being prompted. 
 
 ### Devices 
 
-Our app can be deployed to both Android and iOS phones, as most people have these devices. As shown in the graph below: <div id="mobile_os_combined-GB-monthly-202002-202102" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/os-market-share/mobile/united-kingdom">StatCounter Global Stats - OS Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_os_combined-GB-monthly-202002-202102&chartWidth=600"></script> 
+Our app can be deployed to both Android and iOS phones, as most people in the UK have these devices. As shown in the graph below: <div id="mobile_os_combined-GB-monthly-202002-202102" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/os-market-share/mobile/united-kingdom">StatCounter Global Stats - OS Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_os_combined-GB-monthly-202002-202102&chartWidth=600"></script> 
 
 We used a Windows and Mac laptop to develop on both and test on each of these platforms.
 
@@ -102,25 +107,25 @@ We used a Windows and Mac laptop to develop on both and test on each of these pl
 
 The nudge algorithm sends a Nudge notification if: 
 
-- Step levels have not increased in 48 hours 
+* Step levels have not increased in 48 hours 
 
-- Wellbeing levels have dropped twice in the last 3 weeks. 
+* Wellbeing levels have dropped twice in the last 3 weeks. 
 
-These time frames were chosen because they were specified by the client as Must Have requirements. *(link to Moscow?)*
+These time frames were chosen because they were specified by the client as [Must Have requirements](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/about/).
 
 ### Programming languages, Frameworks and Libraries 
 
 The _programming languages and frameworks_ that we considered using included: 
 
-- Javascript/React Native for both Android and iOS 
+- _Javascript/React Native_ for both Android and iOS 
 
-- Kotlin for Android, Swift ior iOS 
+- (Multiplatform) _Kotlin_ for shared business logic, _Kotlin/Swift_ for Android/iOS UI code
 
-- Dart/Flutter for both Android and iOS, which we used.
+- _Dart/Flutter_ for both Android and iOS, which we used.
 
-In our team, two people used Windows laptops and one person had a MacBook so, instead of creating two separate applications for both iOS and Android (for one of which, one person would be entirely responsible for), we thought it would be better to all work on one codebase that could be deployed to both platforms. This is the reason we did not decide to use Kotlin and Swift. 
+Multiplatform Kotlin development is a good choice for handling applications with complex logic, and constantly changing business requirements. The downside is the need to write custom UI code in Kotlin (for Android) and Swift (for iOS), which would require carefully co-ordinated UI designs between sub-teams. These two points directly oppose our actual development use cases: our requirements are (mostly) fixed, with (relatively) simple business logic yet it is a strong requirement to have high quality, consistent interfaces between platforms. 
 
-The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance (1). Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
+The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance [1]. Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
 
 The code below is from our pubspec.yaml file. This contains the names and versions of all the Flutter libraries that we used, separated into the categories util, data-related and UI. 
 
@@ -176,15 +181,14 @@ In Util:
     
 - [Flutter local notifications](https://pub.dev/packages/flutter_local_notifications)
 
-    - Most popular flutter library used to implement push notifications on both platforms (has over 1400 likes).  
+    * Most popular flutter library used to implement push notifications on both platforms (has over 1400 likes). 
+    * We chose this due to its popularity and clear, extensive documentation.  
 
 - [Pedometer](https://pub.dev/packages/pedometer)
 
     - We used this package to count the user’s steps as this was the only prominent way of using a pedometer in a flutter app that I could find.  
     - It only provides access to the cumulative steps through a stream.  
     -  At first, to access weekly steps, we used logic from [this blog post](https://blog.maskys.com/implementing-a-daily-step-count-pedometer-in-flutter/) that essentially logs the step count stream once a week, and calculates the weekly steps by negating the count last week from the count this week. However, this did not work on Android devices so we simplified the logic and adapted it for our use. 
-
-*Still need to finish writing about the rest*
 
 - [Permission handler](https://pub.dev/packages/permission_handler)
 
