@@ -219,6 +219,7 @@ when we wish to decrypt a message, e.g. `ciphertextBase64`, we can do the follow
 
     // decrypt some ciphertext string encoded in base64:
     String plaintext = encrypter.decrypt64(ciphertextBase64);
+
 ```
 
 For a given user, we store their friends' public keys in a database on their
@@ -240,12 +241,84 @@ key.
 ## Database & Notifier/Listener Model
 
 This section describes notable aspects of the SQLite database used for the
-mobile client.
+mobile client. We have two database helper classes that each manage their
+own database[^2].
+
+[^2]: The reason we have two databases on the mobile client is the convenience 
+      of splitting them into two separate files. In practice, they actually 
+      behave like two tables in a database.
 
 ### Singleton Design Pattern
 
 Although the singleton pattern is sometimes criticized, it is quite suitable for
 the purpose of limiting the application to a single database connection.
+
+Below is the code (from `user_model.dart`) that ensures only one instance of our 
+database helper class exists:
+
+``` dart
+
+    /// Singleton [ChangeNotifier] to read/write to DB.
+    /// Stores the user's wellbeing scores and steps.
+    class UserWellbeingDB extends ChangeNotifier {
+        // create a static instance of this class, by calling the
+        // private constructor
+        static final UserWellbeingDB _instance = UserWellbeingDB._();
+        static Database _database;
+
+        // private constructor, so other code cannot create a new instance:
+        UserWellbeingDB._(); 
+
+        // factory used here, so we don't return a new instance when other code
+        // calls UserWellbeingDB()
+        factory UserWellbeingDB() =>
+            _instance; 
+
+```
+
+Now that we've ensured that the *class* has only one instance, we also need
+to ensure that the *database connection itself* has only one instance internally.
+
+To do this, all methods of the database use a getter that lazily initializes[^3]
+or returns an existing instance of the `_database`:
+
+``` dart
+
+  /// getter that initializes or returns an existing database instance
+  Future<Database> get database async {
+    if (_database == null) {
+      // _init() opens a connection or creates a new database
+      _database = await _init();
+    }
+    return _database;
+  }
+
+```
+
+_Read [this](https://dev.to/newtonmunene_yg/dart-getters-and-setters-1c8f) if
+Dart's getter syntax is unfamiliar to you._
+
+Here is one of the database methods that uses this getter:
+
+``` dart
+
+  /// inserts a wellbeing record.
+  /// returns the id of the newly inserted record
+  Future<int> insert(WellbeingItem item) async {
+    // Note how I call the getter `database` instead of using `_database`:
+    final db = await database;
+
+    final id = await db.insert(_tableName, item.toMap());
+    notifyListeners();
+    return id;
+  }
+
+```
+
+`notifyListeners` will be explained in a following section.
+
+[^3]: Note that it is null by default. It is not initialized yet in
+      the line `static Database _database;`.
 
 ### Data Class Style for Rows
 
