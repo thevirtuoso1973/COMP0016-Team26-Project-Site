@@ -210,7 +210,19 @@ In UI:
 
 - [Introduction screen](https://pub.dev/packages/introduction_screen)
     - We chose this package because this introduction screen format seemed suitable for our onboarding process as it was popular, looked nice and seemed simple.
-    - Note: we did encounter issues with widgets being cut off on smaller screens, so we [forked the repo](https://github.com/saachipahwa/introduction_screen) and added a scroll bar where this happened . 
+    - We did encounter issues with widgets being cut off on smaller screens. We fixed this by [forking the repo](https://github.com/saachipahwa/introduction_screen) and wrapping the IntroContent (in the IntroPage file) with the Scrollbar widget. This widget presents a scrollbar on the side of the screen if there are widgets hidden from view.  
+    - Below is this code:
+    
+        ```
+        child: Scrollbar(
+                    isAlwaysShown: true,
+                    controller: _scrollController,
+                    child: SingleChildScrollView(
+                        controller: _scrollController,
+                        physics: const BouncingScrollPhysics(),
+                        child: IntroContent(page: page),
+        ```
+    - You can view this change on Github [here](https://github.com/saachipahwa/introduction_screen/commit/e08341c5d2955b24697c3fa4df2c766f1bc1701e).
 
 - [Highlighter coachmark](https://pub.dev/packages/highlighter_coachmark)
     - These coach marks are the slides in the tutorials that play when users finish the introduction screen and view the main app pages for the first time, and when they press the information button on the wellbeing page. 
