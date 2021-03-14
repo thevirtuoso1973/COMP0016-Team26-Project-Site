@@ -242,7 +242,8 @@ key.
 
 This section describes notable aspects of the SQLite database used for the
 mobile client. We have two database helper classes that each manage their
-own database[^2].
+own database[^2]. Both of these helper classes use the below ideas (Singleton,
+Data Class, etc.).
 
 [^2]: The reason we have two databases on the mobile client is the convenience 
       of splitting them into two separate files. In practice, they actually 
@@ -321,6 +322,67 @@ Here is one of the database methods that uses this getter:
       the line `static Database _database;`.
 
 ### Data Class Style for Rows
+
+Data classes are a feature found in some OOP languages like Kotlin, and we use this
+inspiration to manage insertion and retrieval from the database (although Dart
+does not have official language features for data classes).
+
+Here is the data class that represents a friend; the attributes correspond to the
+columns of the database that stores friends:
+
+``` dart
+
+/// Data class of a friend.
+/// Allows conversion from and to a map to work better with the SQL database.
+class Friend implements Comparable {
+  int id;
+  String name;
+  String identifier;
+  String publicKey;
+
+  /// json encoded string
+  String latestData;
+
+  /// 0 if unread, otherwise 1
+  int read;
+
+  /// nullable
+  int currentStepsGoal;
+
+  /// 1 if sent & active, 0 otherwise
+  int sentActiveGoal;
+
+  /// the step count value when a step goal was first started
+  int initialStepCount;
+
+  Friend({
+    this.id, // this should be left null so SQL will handle it
+    this.name,
+    this.identifier,
+    this.publicKey,
+    this.latestData,
+    this.read,
+    this.currentStepsGoal,
+    this.sentActiveGoal,
+    this.initialStepCount,
+  });
+
+  Friend.fromMap(Map<String, dynamic> map) {
+    // ...
+  }
+
+  Map<String, dynamic> toMap() {
+    // ...
+  }
+
+  /// unread Friends < read Friends
+  @override
+  int compareTo(other) {
+    // ...
+  }
+}
+
+```
 
 ### Database as a ChangeNotifier
 
