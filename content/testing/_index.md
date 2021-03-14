@@ -1,19 +1,26 @@
 ---
-title: "Testing"
-description: "How we carried out testing"
-layout: testing
-date: 2021-03-13
+title: "🧪 Testing"
+description: "Testing strategies for NudgeMe."
+layout: single
 image: "images/system-design/gears.png"
+date: 2021-03-09
 draft: false
 ---
 
-## User Acceptance Testing 
+# Unit Testing
 
-### Alpha testing 
+# Integration testing
+
+# Performance Testing & Profiling
+
+# User Acceptance Testing 
+
+## Alpha testing 
 
 Testers: 
 
 * Naima (19 yrs, Computer Science student) 
+
 * Vishnu (24 yrs, Software Engineer) 
 
 Feedback from testers: 
@@ -22,7 +29,7 @@ During the development process, Naima informed us of any bugs with the step coun
 
 Vishnu gave feedback about the minute drop down button of the notification time selector being confusing as previously, the single digit numbers were not formatted with preceding 0’s (the minute options included 1, 2, 3, 4, 5 etc. rather than 01, 02, 03, 04, 05 etc.). He expressed that it was not clear where users can scroll down and so we added a scroll bar to these pages. He also asked that we add the options to change data permissions in the Settings page, which we added after this feedback. 
 
-### Beta testing 
+## Beta testing 
 
 Testers: 
 
@@ -41,3 +48,6 @@ Anchal reported that she likes the bolded text on network page and the bump on t
 Manni stated it will encourage her to do more exercise and she likes the notification aspect as she thinks it will push her to move more. However, she also thought “the caption text is too small so I could not read support code text in the introduction screen about typing selfhelp.” She found the deep link text confusing and was sightly reluctant to send and she didn’t recognise the link. In future iterations, this could be replaced with a bit.ly link. 
 
 Feedback from Joseph, our project partner, was that on the step goal progress page, the man should be moving clockwise rather than anticlockwise (view the step goal progress [here](https://user-images.githubusercontent.com/55795994/108628127-f6197000-7450-11eb-8627-5a13b88993bd.mov)). We also considered making this change but had to prioritise some other changes first and in the end, did not have time. 
+
+
+
