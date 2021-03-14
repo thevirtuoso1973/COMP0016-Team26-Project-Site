@@ -8,13 +8,31 @@ draft: false
 ---
 
 ## Project Background & Client
+
 Our client is Dr Joseph Connor from CarefullAI and the NHS.
+
+<img src="https://user-images.githubusercontent.com/55795994/111075490-0d8fca00-84e0-11eb-9e38-16cd2f262421.png" 
+alt="ixn logo" 
+width="250"/>
 
 Version one of this project was called Carer Care. CarerCare was a wellbeing app made for carers in South Wales, that tracked their wellbeing and plotted it against their steps and the amount that they interacted with their support network. The aim of this app was to encourage carers to take care of their wellbeing.
 
 The version that we made is version 2: NudgeMe. NudgeMe is instead aimed at the _general UK public_, a change that was motivated by the COVID pandemic as it has greatly increased feelings of isolation and therefore has put the mental wellbeing of the general public at risk. We were asked to rebuild Version 1, focusing only wellbeing and steps as this was the most successful aspect of the previous version and to implement a feature where the user gets by a notification that ‘nudges’ them to go for a walk when their score starts to drop.
 
 In CarerCare, there was also a server to which the wellbeing scores of different regions, from users who chose to send them, were sent and these were used to visually represented scores on a map. NudgeMe also has this feature. We hope that the NHS will benefit from being able to monitor the wellbeing of people across the country and especially how it is being affected by the pandemic. 
+
+Below are 2 graphs that display the effect of lockdown on the mental health and wellbeing of UK adults [1].
+
+The graph below shows the increasing rates of loneliness and hopelessness in the UK since mid March 2020.
+<img src="https://user-images.githubusercontent.com/55795994/111076321-c6a3d380-84e3-11eb-8f10-a3ae00ad82e4.png" 
+alt="ixn logo" 
+width="600"/> 
+
+The graph below shows the decreasing levels of coping very or fairly well with pandemic-related stress.
+<img src="https://user-images.githubusercontent.com/55795994/111076384-0a96d880-84e4-11eb-8310-a52e5f590c65.png" 
+alt="ixn logo" 
+width="600"/> 
+
 
 ## Project Goals
 The aim of this project was to create an application that encourages people to look after themselves, especially in this time where people are isolated and their mental wellbeing is suffering as a result.
@@ -91,7 +109,7 @@ Our use case table can be found [on Google Drive](https://drive.google.com/file/
 
 | Functional Requirement                                                                              | Must/Should/Could have? |
 |-----------------------------------------------------------------------------------------------------|-------------------------|
-| The system must have the same functionality as version 1, omitting features no longer relevant.[^1] | Must have               |
+| The system must have the same functionality as version 1, omitting features no longer relevant. *   | Must have               |
 | The system must have the same interface on Android & iOS.                                           | Must have               |
 | Well documented codebase.                                                                           | Must have               |
 | Easily maintainable codebase.                                                                       | Must have               |
@@ -111,8 +129,8 @@ Our use case table can be found [on Google Drive](https://drive.google.com/file/
 | Design the system for a user aged between 13 & 99.                                                  | Should have             |
 | Present an accessible color scheme to those who are colorblind.                                     | Could have              |
 
-[^1]: Since we were adapting the application for a wider audience (general UK population),
-      and for a different purpose (to assist the public in maintaining their wellbeing),
-      some of the features designed specifically for carers in the Welsh area were no
-      longer relevant.
+\* Since we were adapting the application for a wider audience (general UK population), and for a different purpose (to assist the public in maintaining their wellbeing), some of the features designed specifically for carers in the Welsh area were no longer relevant.
 
+## References 
+
+(1) [Mental Health FoundationL 9 Month Study](https://www.mentalhealth.org.uk/news/nine-month-study-reveals-pandemics-worsening-emotional-impacts-uk-adults)
