@@ -54,8 +54,8 @@ built and drawn by Flutter.
 To convert an arbitrary widget to an image, it must first be wrapped around a
 `RepaintBoundary` widget. From the docs:
 
-> `RepaintBoundary`
 > Creates a widget that isolates repaints.
+> <cite>-- `RepaintBoundary`</cite>
 
 This then allows us to capture the state of the widget and convert it to an image.
 As usual in Flutter, we will use a key (which acts a bit like a pointer) so we

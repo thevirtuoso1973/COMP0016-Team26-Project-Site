@@ -174,12 +174,6 @@ body {
   justify-content: center
 }
 
-ol,
-ul {
-  list-style-type: none;
-  margin: 0
-}
-
 img {
   vertical-align: middle;
   border: 0
@@ -733,13 +727,38 @@ textarea.form-control {
 }
 
 blockquote {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #eaeaea;
-  border-left: 2px solid var(--primary-color);
-  font-style: italic;
-  font-size: 22px
+    border-left: 10px solid #F0F2F4;
+    margin: 1.7rem 0;
+    padding-left: 0.85rem;
 }
+
+blockquote p {
+    font-size: 1.1rem;
+    color: #999;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+table {
+    border: 1px solid #eaeaea;
+    table-layout: auto;
+}
+
+th {
+    background: #f7f7f7;
+    padding: 0.5rem;
+}
+
+td {
+    padding: 0.5rem;
+    border: 1px solid #eaeaea;
+}
+
 
 .content * {
   margin-bottom: 20px
