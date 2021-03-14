@@ -237,7 +237,16 @@ key.
 
 ```
 
-## Database & Notifier/Listener Abstraction
+## Database & Notifier/Listener Model
+
+This section describes notable aspects of the SQLite database used for the
+mobile client.
+
+### Singleton Design Pattern
+
+### Data Class Style for Rows
+
+### Database as a ChangeNotifier
 
 # Server-side
 
