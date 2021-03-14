@@ -13,6 +13,10 @@ There are 2 phone applications that bore a resemblance to our NudgeMe requiremen
 
 One is a free mental wellbeing app called *MyPossibleSelf*, available on both iOS and Android. 
 
+<img src="https://user-images.githubusercontent.com/55795994/111070617-75d3b100-84ca-11eb-9bd2-4ea23d899fe9.png" 
+alt="MyPossibleSelf" 
+width="700"/>
+
 ### MyPossibleSelf
 
 _Mental health/wellbeing phone app._
@@ -45,11 +49,12 @@ These series include
 
 - Free services become in-app purchases after a period of time. This is not widely accessible.
 
-<img src="https://user-images.githubusercontent.com/55795994/111070617-75d3b100-84ca-11eb-9bd2-4ea23d899fe9.png" 
-alt="MyPossibleSelf" 
-width="700"/>
 
 The second is a free app available on both iOS and Android that connects to the popular fitness smart-watch, the FitBit.
+
+<img src="https://user-images.githubusercontent.com/55795994/111070611-710efd00-84ca-11eb-84b6-0640528ad65c.png" 
+alt="Fitbit 1" 
+width="700"/>
 
 ### FitBit: Health and Fitness
 _Steps and health tracker phone app._
@@ -77,16 +82,12 @@ It provides the following:
 
 - Weight loss tracking can endanger people who suffer from disordered eating. This may discourage this group of users from FitBit: Health and Fitness.
 
-<img src="https://user-images.githubusercontent.com/55795994/111070611-710efd00-84ca-11eb-84b6-0640528ad65c.png" 
-alt="Fitbit 1" 
-width="700"/>
-
 <img src="https://user-images.githubusercontent.com/55795994/111070614-73715700-84ca-11eb-98ee-0cb5d571a19d.png" 
 alt="Fitbit 2" 
 width="700"/>
 
 ## Technology Review
-
+<img width="600" alt="devices" src="https://user-images.githubusercontent.com/55795994/111075349-8fcbbe80-84df-11eb-9062-27ba0e450808.png">
 ### Solutions 
 
 Possible solutions include a web app or a phone app (for iOS and/or for Android).  
@@ -113,7 +114,9 @@ The nudge algorithm sends a Nudge notification if:
 
 These time frames were chosen because they were specified by the client as [Must Have requirements](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/about/).
 
+
 ### Programming languages, Frameworks and Libraries 
+<img width="800" alt="languages and frameworks" src="https://user-images.githubusercontent.com/55795994/111075143-7fffaa80-84de-11eb-89bb-605b5fd841bb.png">
 
 The _programming languages and frameworks_ that we considered using included: 
 
@@ -127,7 +130,7 @@ Multiplatform Kotlin development is a good choice for handling applications with
 
 The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance [1]. Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
 
-The code below is from our pubspec.yaml file. This contains the names and versions of all the Flutter libraries that we used, separated into the categories util, data-related and UI. 
+The code below is from our `pubspec.yaml` file. This contains the names and versions of all the Flutter libraries that we used, separated into the categories util, data-related and UI. 
 
 ```
 dependencies:
@@ -181,10 +184,15 @@ In Util:
     
 - [Flutter local notifications](https://pub.dev/packages/flutter_local_notifications)
 
+    - <img src="https://user-images.githubusercontent.com/55795994/111074226-f1892a00-84d9-11eb-8026-2c63e4e54f18.png" alt="notification screenshot" width="250"/>
+
     * Most popular flutter library used to implement push notifications on both platforms (has over 1400 likes). 
     * We chose this due to its popularity and clear, extensive documentation.  
 
+        
 - [Pedometer](https://pub.dev/packages/pedometer)
+
+    - <img src="https://user-images.githubusercontent.com/55795994/111074369-812ed880-84da-11eb-9071-cfae7dd98922.png" alt="step progress circle" width="150"/>
 
     - We used this package to count the user’s steps as this was the only prominent way of using a pedometer in a flutter app that I could find.  
     - It only provides access to the cumulative steps through a stream.  
@@ -205,12 +213,19 @@ In data-related:
 
 In UI: 
 
-- [Flutter charts](https://pub.dev/packages/charts_flutter)
+- [Flutter charts](https://pub.dev/packages/charts_flutter)         
+
+    - <img src="https://user-images.githubusercontent.com/55795994/111074441-dbc83480-84da-11eb-924d-8ea915346dd8.png" alt="step progress circle" width="150"/>
+
     - Write about why we used flutter charts instead of [FL chart](https://pub.dev/packages/fl_chart) if there was a particular reason
 
 - [Introduction screen](https://pub.dev/packages/introduction_screen)
     - We chose this package because this introduction screen format seemed suitable for our onboarding process as it was popular, looked nice and seemed simple.
-    - We did encounter issues with widgets being cut off on smaller screens. We fixed this by [forking the repo](https://github.com/saachipahwa/introduction_screen) and wrapping the IntroContent (in the IntroPage file) with the Scrollbar widget. This widget presents a scrollbar on the side of the screen if there are widgets hidden from view.  
+    - We did encounter issues with widgets being cut off on smaller screens. We fixed this by [forking the repo](https://github.com/saachipahwa/introduction_screen) and wrapping the `IntroContent` (in the `IntroPage` file) with the `Scrollbar` widget. This widget presents a scrollbar on the side of the screen if there are widgets hidden from view. 
+    - Below is an example of a page with a scroll bar.
+
+        <img width="150" alt="scrollbar" src="https://user-images.githubusercontent.com/55795994/111074837-e4216f00-84dc-11eb-8ea7-ec7da22f4a80.png">
+
     - Below is this code:
     
         ```
@@ -225,6 +240,10 @@ In UI:
     - You can view this change on Github [here](https://github.com/saachipahwa/introduction_screen/commit/e08341c5d2955b24697c3fa4df2c766f1bc1701e).
 
 - [Highlighter coachmark](https://pub.dev/packages/highlighter_coachmark)
+
+        
+    * <img width="175" alt="coach mark" src="https://user-images.githubusercontent.com/55795994/111074901-32cf0900-84dd-11eb-8771-ce0b7e5febcb.png">
+
     - These coach marks are the slides in the tutorials that play when users finish the introduction screen and view the main app pages for the first time, and when they press the information button on the wellbeing page. 
     - We chose this package instead of Tutorial Coach Mark, despite this one having more likes, because Highlighter Coach Mark had a simpler look that better suited what we wanted. 
 
