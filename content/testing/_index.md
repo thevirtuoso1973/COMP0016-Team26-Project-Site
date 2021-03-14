@@ -27,18 +27,18 @@ Testers:
 
 * Vishnu (24 yrs, Software Engineer) 
 
-Feedback from testers: 
+Feedback from testers included: 
 
-During the development process, Naima informed us of any bugs with the step count and with her graph. She also gave feedback on the various colour changes for example with the wellbeing score circle on the home page and the change of navigation bar design.  
+* During the development process, Naima informed us of small bugs associated with the step count and the graph. She also provided feedback on the various colour changes, for example with the wellbeing score circle on the home page and the change of navigation bar design.  
 
-Vishnu gave feedback about the minute drop down button of the notification time selector being confusing as previously, the single digit numbers were not formatted with preceding 0’s (the minute options included 1, 2, 3, 4, 5 etc. rather than 01, 02, 03, 04, 05 etc.). He expressed that it was not clear where users can scroll down and so we added a scroll bar to these pages. He also asked that we add the options to change data permissions in the Settings page, which we added after this feedback. 
+* Vishnu responded about the minute and second drop down buttons (in the notification time selector), saying that it was confusing. This was because the single digit numbers were not formatted with preceding 0’s (the minute options included 1, 2, 3 etc. rather than 01, 02, 03 etc.). He also expressed that it was not clear where users can scroll down and suggested adding a scroll bar to make this more obvious. Additionally, he asked that we add the option to change the sharing data permissions after the introduction screen, so we added this to the Settings page.
 
 
-We sent several apks of NudgeM to our project partner Joseph Connor so he was providing constant feedback. This feedback was often in the form of small changes to the language we used in the application, particularly the introduction screen and the network page. In order to make this process simpler, we made figmas of these pages, which you can find here: [Introduction Screen Figma](https://www.figma.com/file/3pno0Tvp9M4BQ9K1p2zytV/NudgeMe-Intro-Screen), [Network Page Figma](https://www.figma.com/file/nZUDNKJuf0hcUDXRUVGJOD/Adding-friends). We used these to finalise the language before transferring the changes to the actual application in order to get on the same page and save time.
+We sent several apks of NudgeMe to our project partner Joseph Connor and he provided constant feedback. This feedback was often in the form of small changes to the language we used in the application, particularly the introduction screen and the network page. In order to make this process simpler, we made figmas of these pages, which you can find here: [Introduction Screen Figma](https://www.figma.com/file/3pno0Tvp9M4BQ9K1p2zytV/NudgeMe-Intro-Screen), [Network Page Figma](https://www.figma.com/file/nZUDNKJuf0hcUDXRUVGJOD/Adding-friends). We used these to finalise the language before transferring the changes to the actual application in order to get on the same page and save time.
 
 ## Beta testing 
 
-Once we finished NudgeMe, we downloaded the end product onto the phones of Vishnu, Anchal and Manni and asked them to provide any feedback. This might be useful for future developments of NudgeMe.
+Once we finished NudgeMe, we downloaded the end product onto the phones of Vishnu, Anchal and Manni and asked them to provide feedback. This might be useful for future developments of NudgeMe.
 
 Testers: 
 
@@ -48,15 +48,15 @@ Testers:
 
 * Manni (54 yrs, Pre-school teacher) 
 
-Feedback from testers:  
+Feedback from testers included:
 
-Vishnu responded with “The home page shouldn’t be called the home page because it is not the most important page.” Additionally, he thought that in the Support Code and Postcode sections of the settings page, the current postcode/support code should be presented as hint text in the textboxes, rather than separate text. Lastly, he thought a ‘send to all’ button on the network page could be a nice addition.  
+* Vishnu found the home page confusing. He believes the wellbeing page should be considered the home page as it is the most useful and important page. Additionally, he thought that in the Support Code and Postcode sections of the Settings page, the current postcode/support code should be presented as hint text in the textboxes. He also thought a ‘Send to All’ button on the network page could be a nice addition.  
 
-Anchal reported that she likes the bolded text on network page and the bump on the navigation bar that indicates which page is selected. She also loves the home screen as there is limited information so there is nothing confusing. She thinks seeing last week's score would encourage her to do better this week.  
+* Anchal reported that she likes the bolded text on network page as it makes the information easier to read and the bump on the navigation bar that indicates which page is selected. She also loves the home screen as there is limited information so there is nothing to confuse her, and she thinks the emphasis on last week's score will encourage her to do better this week.
 
-Manni stated it will encourage her to do more exercise and she likes the notification aspect as she thinks it will push her to move more. However, she also thought “the caption text is too small so I could not read support code text in the introduction screen about typing selfhelp.” She found the deep link text confusing and was sightly reluctant to send and she didn’t recognise the link. In future iterations, this could be replaced with a bit.ly link. 
+* Manni stated that NudgeMe will encourage her to do more exercise and that she likes the notification aspect as she thinks it will push her to move more. However, she also thought that the caption text is too small and she could not read support code text in the introduction screen about typing selfhelp. She found the text message containing the deep link confusing and was sightly reluctant to send it because she didn’t recognise the link. In future iterations, the text could be enlarged and the deep link could be replaced with a bit.ly link to address these comments.
 
-Feedback from Joseph (our project partner) included that on the step goal progress page, the man should be moving clockwise rather than anticlockwise (view the step goal progress [here](https://user-images.githubusercontent.com/55795994/108628127-f6197000-7450-11eb-8627-5a13b88993bd.mov)). We also considered making this change but had to prioritise some other changes first and in the end, did not have time.  
+Feedback from Joseph (our project partner) included that on the step goal progress page, the man should be moving clockwise rather than anticlockwise (view the step goal progress [here](https://user-images.githubusercontent.com/55795994/108628127-f6197000-7450-11eb-8627-5a13b88993bd.mov)). We had previously considered making this change but had to prioritise some other changes first and in the end, did not have time.  
 
 
 
