@@ -33,7 +33,7 @@ video:
   enable: true
   title: "Project Video"
   # Needs to be an embeddable link
-  url: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+  url: "https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ"
 
 # skill
 skill:
@@ -131,3 +131,27 @@ blog:
   enable : false
   title : "Blogs"
   # blog post comes from "content/blog" folder
+
+# client logo slider
+clients_logo_slider:
+  enable : true
+  item:
+    # it appears there's some minimum number of logos
+    # needed for it to actually appear
+    - logo : "images/clients-logo/carefulai.png"
+      URL : "https://www.carefulai.com/"
+
+    - logo : "images/clients-logo/IXN_NHS.jpg"
+      URL : "#"
+
+    - logo : "images/about/UCL-logo.jpg"
+      URL : "#"
+
+    - logo : "images/clients-logo/carefulai.png"
+      URL : "https://www.carefulai.com/"
+
+    - logo : "images/clients-logo/IXN_NHS.jpg"
+      URL : "#"
+
+    - logo : "images/about/UCL-logo.jpg"
+      URL : "#"
