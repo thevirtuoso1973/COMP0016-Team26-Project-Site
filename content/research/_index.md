@@ -129,7 +129,7 @@ The _programming languages and frameworks_ that we considered using included:
 
 Multiplatform Kotlin development is a good choice for handling applications with complex logic, and constantly changing business requirements. The downside is the need to write custom UI code in Kotlin (for Android) and Swift (for iOS), which would require carefully co-ordinated UI designs between sub-teams. These two points directly oppose our actual development use cases: our requirements are (mostly) fixed, with (relatively) simple business logic yet it is a strong requirement to have high quality, consistent interfaces between platforms. 
 
-The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance [1]. Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
+The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance[^1]. Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
 
 The code below is from our `pubspec.yaml` file. This contains the names and versions of all the Flutter libraries that we used, separated into the categories util, data-related and UI. 
 
@@ -214,10 +214,8 @@ In data-related:
 
 In UI: 
 
-- [Flutter charts](https://pub.dev/packages/charts_flutter)         
-
+- [Flutter charts](https://pub.dev/packages/charts_flutter)
     - <img src="https://user-images.githubusercontent.com/55795994/111074441-dbc83480-84da-11eb-924d-8ea915346dd8.png" alt="step progress circle" width="150"/>
-
     - Write about why we used flutter charts instead of [FL chart](https://pub.dev/packages/fl_chart) if there was a particular reason
 
 - [Introduction screen](https://pub.dev/packages/introduction_screen)
@@ -250,6 +248,31 @@ In UI:
 
 - [QR flutter](https://pub.dev/packages/qr_flutter)
 
+#### Back-end tech
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png" 
+alt="Node.js logo" 
+width="200" style="white-space: nowrap;"/>
+*versus*
+<img src="http://cdn.codesamplez.com/wp-content/uploads/2015/12/golang.png" 
+alt="Golang Mascot" 
+width="200" style="white-space: nowrap;"/>
+
+From version 1 of the app, there was an existing `node.js` backend that 
+generated and served a visualization of the wellbeing data stored on the 
+database. 
+
+Since we anticipated that we would need to make some changes or build some 
+additional features with it, we decided to rewrite it in `Go`. This is 
+preferable since it is strongly typed and generally more performant than node.js[^node-go]. 
+
+The core of the original (`node.js`) backend could fit into a single file, so 
+`node.js` may be suitable for the scope of the *original* idea. However, as the 
+complexity of our backend grew somewhat, we were only able to confidently 
+refactor and build features *due to the strength of the Go language*, which
+may not have been possible if we had stuck with `node.js`.
+
 ## References 
 
-(1) [Hackr.io: Flutter vs React](https://hackr.io/blog/react-native-vs-flutter)
+[^1]: [Hackr.io: Flutter vs React](https://hackr.io/blog/react-native-vs-flutter)
+[^node-go]: https://devathon.com/blog/node-js-vs-or-and-golang/
