@@ -101,7 +101,10 @@ We concluded that having a web app would not be very useful. Phone apps are more
 
 ### Devices 
 
-Our app can be deployed to both Android and iOS phones, as most people in the UK have these devices. As shown in the graph below: <div id="mobile_os_combined-GB-monthly-202002-202102" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/os-market-share/mobile/united-kingdom">StatCounter Global Stats - OS Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_os_combined-GB-monthly-202002-202102&chartWidth=600"></script> 
+Our app can be deployed to both Android and iOS phones, as most people in the UK have these devices. As 
+shown in the graph below: 
+
+<img width="800" alt="Market share of mobile devices" src="http://students.cs.ucl.ac.uk/2020/group26/images/mobileOS.png">
 
 We used Linux and Mac laptops to develop/test on each of these platforms.
 
