@@ -25,17 +25,17 @@ _Mental health/wellbeing phone app._
 
 It _tracks daily mood_ and allows users to _document_ how they are feeling using tags. It also provides _‘series’_ on factors that affect wellbeing, such as sleep, anxiety, work stress and depression. 
 
-These series include  
+These series include:  
 
-- Quizzes (e.g. "Exploring my anxiety")
+- Quizzes (e.g. "Exploring my anxiety").
 
 - Affirmations for different situations e.g. feeling insecure, anxious etc.
 
 - Video guides containing tips. These are free for 1 month. 
 
-- Options to set reminders for themselves 
+- Options to set reminders for themselves.
 
-- Options to track the factors mentioned amove (sleep, anxiety, exercise...) alongside daily mood 
+- Options to track the factors mentioned amove (sleep, anxiety, exercise...) alongside daily mood. 
 
 - External resources.  
 
@@ -64,7 +64,7 @@ It tracks steps, bpm, sleep based on data from FitBit watch. Users can also trac
 
 It provides the following: 
 
-- ‘Challenges’ e.g. certain number of steps or family step competitions
+- ‘Challenges’ e.g. completing a certain number of steps or family step competitions
 - 'FitBit coach’: exercise videos involving cardio, yoga etc. 
 - ‘Guided programs’: courses to encourage more exercise or a change of habits e.g. ‘Habits for restful sleep: a 2 week course’ and ‘Simple Beginner Running: 3 week course’ 
 
@@ -104,17 +104,6 @@ We concluded that having a web app would not be very useful. Phone apps are more
 Our app can be deployed to both Android and iOS phones, as most people in the UK have these devices. As shown in the graph below: <div id="mobile_os_combined-GB-monthly-202002-202102" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/os-market-share/mobile/united-kingdom">StatCounter Global Stats - OS Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_os_combined-GB-monthly-202002-202102&chartWidth=600"></script> 
 
 We used a Windows and Mac laptop to develop on both and test on each of these platforms.
-
-### Algorithms 
-
-The nudge algorithm sends a Nudge notification if: 
-
-* Step levels have not increased in 48 hours 
-
-* Wellbeing levels have dropped twice in the last 3 weeks. 
-
-These time frames were chosen because they were specified by the client as [Must Have requirements](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/about/).
-
 
 ### Programming languages, Frameworks and Libraries 
 <img width="800" alt="languages and frameworks" src="https://user-images.githubusercontent.com/55795994/111075143-7fffaa80-84de-11eb-89bb-605b5fd841bb.png">
