@@ -15,11 +15,11 @@ Our client is Dr Joseph Connor from CarefulAI and the NHS.
 alt="ixn logo" 
 width="250"/>
 
-Version one of this project was called CarerCare. CarerCare was a wellbeing app made for carers in South Wales that tracked their wellbeing and plotted it against their steps and the amount that they interacted with their support network. TThis app aimed to encourage carers to take care of their wellbeing.
+Version one of this project was called Carer Care. CarerCare was a wellbeing app made for carers in South Wales that tracked their wellbeing and plotted it against their steps and the amount that they interacted with their support network. This app aimed to encourage carers to take care of their wellbeing.
 
-Version 2: NudgeMe, is instead aimed at the _general UK public_, a change that was motivated by the COVID pandemic, which has greatly increased feelings of isolation and therefore has put the mental wellbeing of the general public at risk. We rebuilt Version 1, focusing only on wellbeing and steps as this was the most successful aspect of the previous version. We also implemented a feature where the user gets by a notification that ‘nudges’ them to walk when their score starts to drop.
+Version 2: NudgeMe is aimed instead at the general UK public, a change that was motivated by the COVID pandemic, which has greatly increased feelings of isolation and therefore has put the mental wellbeing of the general public at risk. We rebuilt Version 1, focusing only on wellbeing and steps as this was the most successful aspect of the previous version. We also implemented a feature where the user gets by a notification that ‘nudges’ them to walk when their score starts to drop.
 
-CarerCare's wellbeing scores were sent to a server used to represent scores from different regions on a map visually. We have adapted this server and map visualisation for NudgeMe. We hope that the NHS will benefit from monitoring the wellbeing of people across the country and how it is being affected by the COVID pandemic.
+CarerCare's wellbeing scores were sent to a server used to represent scores from different regions on a map visually. NudgeMe also has this feature. We hope that the NHS will benefit from monitoring the wellbeing of people across the country and how it is being affected by the COVID pandemic.
 
 Below are two graphs that display the effect of lockdown on UK adults' mental health and wellbeing [1].
 
@@ -35,19 +35,22 @@ width="600"/>
 
 
 ## Project Goals
-This project aimed to create an application that encourages people to look after themselves in a time where people are isolated and their mental wellbeing is suffering as a result.
+This project aimed to create an application that encourages people to look after themselves, especially in a time where people are isolated, and their mental wellbeing is suffering as a result.
 
-The ways in which NudgeMe does this are by:
+The ways in which NudgeMe does this include:
 * Allowing users to keep a weekly record of their wellbeing.
 * Encouraging users to go on walks to improve their wellbeing.
+    * By plotting their steps on a graph 
+    * Allowing them to share this information with their support network 
+    * Allowing them to set and receive goals for/from people in their support network 
 
 ## Requirements Gathering
 We gathered initial requirements over a few meetings with our client and confirmed our understanding by using resources from Version 1, such as the Figma of CarerCare.
 
-In short, these requirements outlined a cross-platform mobile app that tracks user’s wellbeing, plots it against their steps, and when their wellbeing drops - it 'nudges’ them to go on a walk. 
+In short, these requirements outlined a cross-platform mobile app that tracks user’s wellbeing, plots it against their steps, and when their wellbeing drops - it ‘nudges’ them to go on a walk.
 
 ### Survey
-We conducted a survey of structured questions to confirm these requirements were in the user's interests and  adapt them based on feedback. We carried this out remotely using Google Forms. 
+We conducted a survey of structured questions to confirm these requirements were in the user’s interests and adapt them based on feedback. We carried this out remotely using Google Forms.
 
 The questions we asked in the survey and the responses consisted of the following:
 
@@ -71,25 +74,23 @@ The following tables show the responses.
 |----------------------------------------------------|-----------|-----------|------------|
 | How likely would you be to monitor your wellbeing? | 30.8      | 53.8      | 15.4       |
 
-Common answers to _Question 4_ were texting/calling friends, various types of exercise, cooking, and various arts and crafts. The first answer, texting/calling friends, helped us land on the end-to-end encrypted, peer-to-peer wellbeing sharing as the additional feature to implement. We chose this to allow people to share their wellbeing with their friends or support network privately and quickly.
+Common answers to _Question 4_ were texting/calling friends, various types of exercise, cooking, and various arts and crafts. 
 
-During the second half of the project, we developed this feature and added the User Nudge, which allows users to send each other step goals. As we made this change later in the project, we created an updated User Flow Figma to ensure the client has an accurate mental map of the application. You can find this at the bottom of this page or [here](https://www.figma.com/proto/53Di5ADgodaHYWmMHXB8xv/NudgeMe-User-Flow?scaling=scale-down&node-id=1%3A10).
+The first answer, texting/calling friends, helped us land on the end-to-end encrypted, peer-to-peer wellbeing sharing as the additional feature to implement. We chose this to allow people to share their wellbeing with their friends or support network privately and quickly.
+
+During the second half of the project, we developed this feature and added the User Nudge, allowing users to send each other step goals. As we made this change later in the project, we created an updated User Flow Figma to ensure the client has an accurate mental map of the application. You can find this at the bottom of this page or[here](https://www.figma.com/proto/53Di5ADgodaHYWmMHXB8xv/NudgeMe-User-Flow?scaling=scale-down&node-id=1%3A10).
 
 ## Personas
-To create the personas, we tried to capture various personality types that would benefit from a wellbeing app without being too generic or unspecific, as the user group for NudgeMe is 13-99-year-olds (very broad).
+We began with some rough ideas of who our potential users could be (e.g. carers under duress) to create the personas. After clarifying our client's requirements, we discovered the application is aimed for use by the entire British population (between ages 13 and 99) who have been affected due to lockdown. Therefore, we tried to capture various personality types that would benefit from a wellbeing app without being too generic or unspecific. 
 
 Here are the personas that we created:
-
-
 <img src="https://user-images.githubusercontent.com/55795994/111051715-27cc9800-844d-11eb-9c74-27e1a9cc0eb7.png" 
 alt="Naima persona" 
 width="700"/>
 
-
 <img src="https://user-images.githubusercontent.com/55795994/111051710-256a3e00-844d-11eb-8c50-0cfa0a56c516.png" 
 alt="Dorris persona" 
 width="700"/>
-
 
 <img src="https://user-images.githubusercontent.com/55795994/111051714-27340180-844d-11eb-8971-709f0b8fe731.png" 
 alt="Dorris persona" 
