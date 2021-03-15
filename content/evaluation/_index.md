@@ -7,6 +7,57 @@ date: 2021-03-09
 draft: false
 ---
 # Summary of Achievements
+## Completion of Requirements 
+| Requirement                                                                                      | Must/should/could have?  | Completed?  | Contributors   |
+|--------------------------------------------------------------------------------------------------|--------------------------|-------------|----------------|
+| The system must have the same functionality as version 1, omitting features no longer relevant.  | Must have                | Yes         | Saachi, Chris  |
+| The system must have the same interface on Android & iOS.                                        | Must have                | Yes         | Saachi, Chris  |
+| Well documented codebase.                                                                        | Must have                | Yes         | Saachi, Chris  |
+| Easily maintainable codebase.                                                                    | Must have                | Yes         | Saachi, Chris  |
+| Nudge user to share their graph as a PDF if their score falls twice over any two weeks.          | Must have                | Yes         | Chris          |
+| Also nudge user if there is no step count in over two days.                                      | Must have                | Yes         | Chris          |
+| The weekly wellbeing score must be gathered from the user at Sunday 12pm (by default).           | Must have                | Yes         | Saachi, Chris  |
+| Ask the user for consent to collect their wellbeing data.                                        | Must have                | Yes         | Saachi, Chris  |
+| If consented, share the user’s wellbeing data by POSTing to a server.                            | Must have                | Yes         | Chris          |
+| Passively collect movement data from pedometer.                                                  | Should have              | Yes         | Saachi, Chris  |
+| Display a graph that cross references pedometer and wellbeing data.                              | Should have              | Yes         | Chris          |
+| Allow users to securely send their wellbeing data to other users (e.g. through e2e encryption).  | Could have               | Yes         | Chris          |
+| Facilitate adding users to their network in a convenient way, considering lockdown/remote work.  | Could have               | Yes         | Chris          |
+| Allow users to nudge other users through the app.                                                | Could have               | Yes         | Saachi, Chris  |
+| Design the system for a user aged between 13 & 99.                                               | Should have              | Yes         | Saachi, Chris  |
+| Present an accessible colour scheme to those who are colour-blind.                               | Could have               | Yes         | Saachi, Chris  |
+
+We have completed 100% of the functional requirements. 
+We have completed 100% of the non-functional requirements.
+
+## A list of known bugs
+We managed to fix almost all of the bugs that we encountered in our application. 
+
+However, two issues persist:
+
+* Occasionally, the Wellbeing circle coach mark will drag and end up off-centre. 
+
+* The weekly wellbeing check notification is dismissible, which means the user may accidentally close it without doing their weekly check. This could then lead to publishing old data to the server. 
+
+Our team used the GitHub issue tracker to keep track of bugs. As you can see from this screenshot of our issue list (taken on 15th March 2021), there are no open issues with the `bug` label.
+
+<img width="800" alt="bug" src="https://user-images.githubusercontent.com/55795994/111233555-2209ba80-85e5-11eb-89b0-67028a9e6d57.png">
+
+
+## Individual Contribution Distribution Table
+| Work package             | Saachi                                          | Chris                                            |
+|--------------------------|-------------------------------------------------|--------------------------------------------------|
+| Project partner Liaison  | 30                                              | 70                                               |
+| Requirement analysis     | 40                                              | 60                                               |
+| Research                 | 50                                              | 50                                               |
+| UI design                | 60                                              | 40                                               |
+| Programming              | 30                                              | 70                                               |
+| Testing                  | 10                                              | 90                                               |
+| Development blog         | 50                                              | 50                                               |
+| Website                  | 50                                              | 50                                               |
+| Video                    | 80                                              | 20                                               |
+| Overall contribution     | 45                                              | 55                                               |
+| Roles                    | Front End developer, UI Designer, Video Editor  | Client Liaison, Team Lead, Full Stack Developer  |
 
 # Critical Evaluation
 ## User interface
