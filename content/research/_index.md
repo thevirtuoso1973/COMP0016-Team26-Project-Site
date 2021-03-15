@@ -103,7 +103,8 @@ We concluded that having a web app would not be very useful. Phone apps are more
 
 Our app can be deployed to both Android and iOS phones, as most people in the UK have these devices. As shown in the graph below: <div id="mobile_os_combined-GB-monthly-202002-202102" width="600" height="400" style="width:600px; height: 400px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/os-market-share/mobile/united-kingdom">StatCounter Global Stats - OS Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_os_combined-GB-monthly-202002-202102&chartWidth=600"></script> 
 
-We used a Windows and Mac laptop to develop on both and test on each of these platforms.
+
+We used Linux and Mac laptops to develop/test on each of these platforms.
 
 ### Programming languages, Frameworks and Libraries 
 <img width="800" alt="languages and frameworks" src="https://user-images.githubusercontent.com/55795994/111075143-7fffaa80-84de-11eb-89bb-605b5fd841bb.png">
@@ -195,7 +196,7 @@ dependencies:
   flutter_slidable: ^0.5.7
   ```
 
-The _most significant libraries_ we used include the following. 
+Below are explanations of some of the libraries we used, and how we evaluated them.
 
 #### Utility Libraries
 
@@ -215,30 +216,54 @@ The _most significant libraries_ we used include the following.
       quality of the codebase.
 
 - [Encrypt](https://pub.dev/packages/encrypt) & [Pointy Castle](https://pub.dev/packages/pointycastle)
-  - TODO
-
+  - There are many cryptography libraries, and care has to be taken when
+    choosing one. With cryptography procedures, a single bug could void any security guarantees.
+  - We decided to go with `pointycastle` since it is a port of a well known cryptography library
+    from Java[^bouncy]. Since it is a port, there is less risk of bugs due to 'reinventing
+    the wheel'.
+  - We then used `encrypt` to provide higher-level APIs to perform the actual 
+    encryption/decryption. We chose `encrypt` since it runs on top of `pointycastle`.
+  
+[^bouncy]: http://bouncycastle.org/
+           https://en.wikipedia.org/wiki/Bouncy_Castle_(cryptography)
+    
 #### Data-related Libraries
 
 - [Provider](https://pub.dev/packages/provider)
-- [Shared preferences](https://pub.dev/packages/shared_preferences)
-    - We chose to use the shared preferences database as it is an extremely popular flutter package for storing data (over 2600 likes) and suited our needs. Data is stored and accessed using keys.
+  - The approach to managing state which is currently recommended[^state-docs] by Flutter.
+  - We also explored and researched other approaches such as `flutter_redux`[^redux] 
+    (inspired by the JavaScript state container), `BLoC`[^bloc], and `GetX`[^getx].
+  - `flutter_redux` would be a good choice if familiar with the original Redux JS library,
+    but we are not.
+  - `BLoC` is one of the more complex approaches, that additionally aims to separate business logic from 
+    presentation/UI. However, our business logic is relatively straightforward.
+  - `GetX` would be the second best choice since it has a very intuitive style
+    of managing state. However, it overhauls other parts of the API such as the `Navigator`,
+    but we were already satisfied with the existing approach to managing this.
+  - Therefore, we decided to use `provider`, which was also a perfect fit
+    for the part of the app state we were actually trying to manage - the databases.
+    (See the implementation section for further explanation.)
+- [Shared Preferences](https://pub.dev/packages/shared_preferences)
+  - A key-value store inspired by Android's SharedPreferences.
+  - Recommended by the Flutter team.
+
+[^state-docs]: https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple
+[^redux]: https://pub.dev/packages/flutter_redux
+[^bloc]: https://bloclibrary.dev/
+[^getx]: https://pub.dev/packages/get
 
 #### UI Libraries
 
-- [Flutter charts](https://pub.dev/packages/charts_flutter)
-    - <img src="https://user-images.githubusercontent.com/55795994/111074441-dbc83480-84da-11eb-924d-8ea915346dd8.png" alt="step progress circle" width="150"/>
-    - Write about why we used flutter charts instead of [FL chart](https://pub.dev/packages/fl_chart) if there was a particular reason
-
-- [Introduction screen](https://pub.dev/packages/introduction_screen)
-    - We chose this package because this introduction screen format seemed suitable for our onboarding process as it was popular, looked nice and seemed simple.
+- [Introduction Screen](https://pub.dev/packages/introduction_screen)
+    - We chose this package because this introduction screen format seemed suitable for our onboarding process, and fit the designs we had in mind.
     - We did encounter issues with widgets being cut off on smaller screens. We fixed this by [forking the repo](https://github.com/saachipahwa/introduction_screen) and wrapping the `IntroContent` (in the `IntroPage` file) with the `Scrollbar` widget. This widget presents a scrollbar on the side of the screen if there are widgets hidden from view. 
     - Below is an example of a page with a scroll bar.
 
         <img width="150" alt="scrollbar" src="https://user-images.githubusercontent.com/55795994/111074837-e4216f00-84dc-11eb-8ea7-ec7da22f4a80.png">
 
-    - Below is this code:
+    - Below is the relevant code:
     
-        ```
+        ``` dart
         child: Scrollbar(
                     isAlwaysShown: true,
                     controller: _scrollController,
@@ -247,17 +272,14 @@ The _most significant libraries_ we used include the following.
                         physics: const BouncingScrollPhysics(),
                         child: IntroContent(page: page),
         ```
-    - You can view this change on Github [here](https://github.com/saachipahwa/introduction_screen/commit/e08341c5d2955b24697c3fa4df2c766f1bc1701e).
+      You can view this change on Github [here](https://github.com/saachipahwa/introduction_screen/commit/e08341c5d2955b24697c3fa4df2c766f1bc1701e).
 
-- [Highlighter coachmark](https://pub.dev/packages/highlighter_coachmark)
-
-        
-    * <img width="175" alt="coach mark" src="https://user-images.githubusercontent.com/55795994/111074901-32cf0900-84dd-11eb-8771-ce0b7e5febcb.png">
-
+- [Highlighter Coachmark](https://pub.dev/packages/highlighter_coachmark)
+    <img width="175" alt="coach mark" src="https://user-images.githubusercontent.com/55795994/111074901-32cf0900-84dd-11eb-8771-ce0b7e5febcb.png">
     - These coach marks are the slides in the tutorials that play when users finish the introduction screen and view the main app pages for the first time, and when they press the information button on the wellbeing page. 
-    - We chose this package instead of Tutorial Coach Mark, despite this one having more likes, because Highlighter Coach Mark had a simpler look that better suited what we wanted. 
-
-- [QR flutter](https://pub.dev/packages/qr_flutter)
+    - We chose this package instead of Tutorial Coach Mark, despite that one having more likes, because we
+    preferred the API exposed by `highlighter_coachmark`. It was less verbose and allowed us to
+    define the tutorial with fewer lines of code, which contributes to readability.
 
 ## References 
 
