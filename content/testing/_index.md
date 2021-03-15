@@ -15,7 +15,7 @@ draft: false
 
 # User Acceptance Testing 
 
-We carried out 2 types of user acceptance testing: alpha and beta testing. 
+We carried out 2 types of user acceptance testing: alpha and beta testing. In both cases, we downloaded ipa’s onto the tester’s phones and asked them to send any feedback they had over the following 2 weeks (enough time for 2 wellbeing checks).  
 
 ## Alpha testing 
 
@@ -59,4 +59,4 @@ Feedback from testers included:
 Feedback from Joseph (our project partner) included that on the step goal progress page, the man should be moving clockwise rather than anticlockwise (view the step goal progress [here](https://user-images.githubusercontent.com/55795994/108628127-f6197000-7450-11eb-8627-5a13b88993bd.mov)). We had previously considered making this change but had to prioritise some other changes first and in the end, did not have time.  
 
 ## Sentry 
-We also used [Sentry](https://sentry.io/for/flutter/) to collect error reports. Using sentry helped us to find exceptions that we otherwise would not have found. It was especially useful when our project partner reported issues that we were not able to recreate on our devices, as we were at least able to access the error/exception messages. This helped us to better understand his feedback. 
+We also used [Sentry](https://sentry.io/for/flutter/) to collect error reports. Using sentry helped us to find exceptions that we otherwise would not have found. It was especially useful when our project partner or testers reported issues, as we had access to the appropriate error/exception messages. This helped us to better understand the issues. 

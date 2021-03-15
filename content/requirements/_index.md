@@ -107,7 +107,7 @@ Our use case table can be found [on Google Drive](https://drive.google.com/file/
 
 ## MoSCoW list
 
-| Functional Requirement                                                                              | Must/Should/Could have? |
+| Functional Requirements                                                                              | Must/Should/Could have? |
 |-----------------------------------------------------------------------------------------------------|-------------------------|
 | The system must have the same functionality as version 1, omitting features no longer relevant. *   | Must have               |
 | The system must have the same interface on Android & iOS.                                           | Must have               |
