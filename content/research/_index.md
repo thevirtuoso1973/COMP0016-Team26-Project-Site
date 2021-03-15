@@ -206,7 +206,7 @@ dependencies:
   flutter_slidable: ^0.5.7
   ```
 
-The _most significant libraries_ we used include the following. 
+Below are explanations of the libraries we used, and how we evaluated them.
 
 #### Utility Libraries
 
@@ -226,13 +226,41 @@ The _most significant libraries_ we used include the following.
       quality of the codebase.
 
 - [Encrypt](https://pub.dev/packages/encrypt) & [Pointy Castle](https://pub.dev/packages/pointycastle)
-  - TODO
-
+  - There are many cryptography libraries, and care has to be taken when
+    choosing one. With cryptography procedures, a single bug could void any security guarantees.
+  - We decided to go with `pointycastle` since it is a port of a well known cryptography library
+    from Java[^bouncy]. Since it is a port, there is less risk of bugs due to 'reinventing
+    the wheel'.
+  - We then used `encrypt` to provide higher-level APIs to perform the actual 
+    encryption/decryption. We chose `encrypt` since it runs on top of `pointycastle`.
+  
+[^bouncy]: http://bouncycastle.org/
+           https://en.wikipedia.org/wiki/Bouncy_Castle_(cryptography)
+    
 #### Data-related Libraries
 
 - [Provider](https://pub.dev/packages/provider)
-- [Shared preferences](https://pub.dev/packages/shared_preferences)
-    - We chose to use the shared preferences database as it is an extremely popular flutter package for storing data (over 2600 likes) and suited our needs. Data is stored and accessed using keys.
+  - The approach to managing state which is currently recommended[^state-docs] by Flutter.
+  - We also explored and researched other approaches such as `flutter_redux`[^redux] 
+    (inspired by the JavaScript state container), `BLoC`[^bloc], and `GetX`[^getx].
+  - `flutter_redux` would be a good choice if familiar with the original Redux JS library,
+    but we are not.
+  - `BLoC` is one of the more complex approaches, that additionally aims to separate business logic from 
+    presentation/UI. However, our business logic is relatively straightforward.
+  - `GetX` would be the second best choice since it has a very intuitive style
+    of managing state. However, it overhauls other parts of the API such as the `Navigator`,
+    but we were already satisfied with the existing approach to managing this.
+  - Therefore, we decided to use `provider`, which was also a perfect fit
+    for the part of the app state we were actually trying to manage - the databases.
+    (See the implementation section for further explanation.)
+- [Shared Preferences](https://pub.dev/packages/shared_preferences)
+  - A key-value store inspired by Android's SharedPreferences.
+  - Recommended by the Flutter team.
+
+[^state-docs]: https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple
+[^redux]: https://pub.dev/packages/flutter_redux
+[^bloc]: https://bloclibrary.dev/
+[^getx]: https://pub.dev/packages/get
 
 #### UI Libraries
 
