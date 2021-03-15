@@ -121,18 +121,45 @@ These time frames were chosen because they were specified by the client as [Must
 
 The _programming languages and frameworks_ that we considered using included: 
 
+- _Multiplatform Kotlin_ for shared business logic, _Kotlin/Swift_ for Android/iOS UI code
 - _Javascript/React Native_ for both Android and iOS 
-
-- (Multiplatform) _Kotlin_ for shared business logic, _Kotlin/Swift_ for Android/iOS UI code
-
 - _Dart/Flutter_ for both Android and iOS, which we used.
 
 Multiplatform Kotlin development is a good choice for handling applications with complex logic, and constantly changing business requirements. The downside is the need to write custom UI code in Kotlin (for Android) and Swift (for iOS), which would require carefully co-ordinated UI designs between sub-teams. These two points directly oppose our actual development use cases: our requirements are (mostly) fixed, with (relatively) simple business logic yet it is a strong requirement to have high quality, consistent interfaces between platforms. 
 
-The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance [1]. Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
+The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed more suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance[^1]. Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
+
+#### Back-end
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1920px-Node.js_logo.svg.png" 
+alt="Node.js logo" 
+width="200" style="white-space: nowrap;"/>
+*versus*
+<img src="http://cdn.codesamplez.com/wp-content/uploads/2015/12/golang.png" 
+alt="Golang Mascot" 
+width="200" style="white-space: nowrap;"/>
+
+From version 1 of the app, there was an existing `node.js` backend that 
+generated and served a visualization of the wellbeing data stored on the 
+database. 
+
+Since we anticipated that we would need to make some changes or build some 
+additional features with it, we decided to rewrite it in `Go`. This is 
+preferable since it is strongly typed and generally more performant than node.js[^node-go]. 
+
+The core of the original (`node.js`) backend could fit into a single file, so 
+`node.js` may be suitable for the scope of the *original* idea. However, as the 
+complexity of our backend grew somewhat, we were only able to confidently 
+refactor and build features *due to the strength of the Go language*, which
+may not have been possible if we had stuck with `node.js`.
+
+#### Libraries
 
 The code below is from our `pubspec.yaml` file. This contains the names and versions of all the Flutter libraries that we used, separated into the categories util, data-related and UI. 
 
+The Flutter *community* (not necessarily the Flutter dev team) are the main source
+of development for these libraries, so we carefully evaluated the use of each one
+to ensure they were maintained and of high quality.
 ```
 dependencies:
   flutter:
@@ -181,43 +208,36 @@ dependencies:
 
 The _most significant libraries_ we used include the following. 
 
-In Util: 
-    
+#### Utility Libraries
+
 - [Flutter local notifications](https://pub.dev/packages/flutter_local_notifications)
-
-    - <img src="https://user-images.githubusercontent.com/55795994/111074226-f1892a00-84d9-11eb-8026-2c63e4e54f18.png" alt="notification screenshot" width="250"/>
-
-    * Most popular flutter library used to implement push notifications on both platforms (has over 1400 likes). 
-    * We chose this due to its popularity and clear, extensive documentation.  
-
+    <img src="https://user-images.githubusercontent.com/55795994/111074226-f1892a00-84d9-11eb-8026-2c63e4e54f18.png" alt="notification screenshot" width="250"/>
+    - A popular flutter library used to schedule push notifications on both platforms.
+    - We chose this due to its popularity and clear, extensive documentation.
+    - It is also part of the 'Flutter Favorites'[^fav] program, which means Flutter recommendeds using it.
         
 - [Pedometer](https://pub.dev/packages/pedometer)
+    <img src="https://user-images.githubusercontent.com/55795994/111074369-812ed880-84da-11eb-9071-cfae7dd98922.png" alt="step progress circle" width="150"/>
+    - We initially considered writing our own native code to deal with the step counter, however, we found `pedometer` instead.
+    - It provides access to the cumulative steps through a stream.
+    - After evaluating the codebase of this plugin, we determined that it was simple enough to allow us to dig into the codebase
+      and make our own changes if it was needed. 
+    - We needed to verify this since it was not a particularly well-known or popular plugin, so we double-checked the
+      quality of the codebase.
 
-    - <img src="https://user-images.githubusercontent.com/55795994/111074369-812ed880-84da-11eb-9071-cfae7dd98922.png" alt="step progress circle" width="150"/>
+- [Encrypt](https://pub.dev/packages/encrypt) & [Pointy Castle](https://pub.dev/packages/pointycastle)
+  - TODO
 
-    - We used this package to count the user’s steps as this was the only prominent way of using a pedometer in a flutter app that I could find.  
-    - It only provides access to the cumulative steps through a stream.  
-    -  At first, to access weekly steps, we used logic from [this blog post](https://blog.maskys.com/implementing-a-daily-step-count-pedometer-in-flutter/) that essentially logs the step count stream once a week, and calculates the weekly steps by negating the count last week from the count this week. However, this did not work on Android devices so we simplified the logic and adapted it for our use. 
-
-- [Permission handler](https://pub.dev/packages/permission_handler)
-
-- [Contacts services](https://pub.dev/packages/contacts_service)/[Flutter SMS](https://pub.dev/packages/flutter_sms)  
-
-- [Sentry](https://pub.dev/packages/sentry)? or we can talk about Sentry elsewhere 
-
-In data-related: 
+#### Data-related Libraries
 
 - [Provider](https://pub.dev/packages/provider)
-
 - [Shared preferences](https://pub.dev/packages/shared_preferences)
     - We chose to use the shared preferences database as it is an extremely popular flutter package for storing data (over 2600 likes) and suited our needs. Data is stored and accessed using keys.
 
-In UI: 
+#### UI Libraries
 
-- [Flutter charts](https://pub.dev/packages/charts_flutter)         
-
+- [Flutter charts](https://pub.dev/packages/charts_flutter)
     - <img src="https://user-images.githubusercontent.com/55795994/111074441-dbc83480-84da-11eb-924d-8ea915346dd8.png" alt="step progress circle" width="150"/>
-
     - Write about why we used flutter charts instead of [FL chart](https://pub.dev/packages/fl_chart) if there was a particular reason
 
 - [Introduction screen](https://pub.dev/packages/introduction_screen)
@@ -252,4 +272,6 @@ In UI:
 
 ## References 
 
-(1) [Hackr.io: Flutter vs React](https://hackr.io/blog/react-native-vs-flutter)
+[^1]: [Hackr.io: Flutter vs React](https://hackr.io/blog/react-native-vs-flutter)
+[^node-go]: https://devathon.com/blog/node-js-vs-or-and-golang/
+[^fav]: https://flutter.dev/docs/development/packages-and-plugins/favorites
