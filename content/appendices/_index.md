@@ -96,9 +96,35 @@ Environment="DOMAIN_NAME=comp0016.cyberchris.xyz"
 [Install]
 WantedBy=multi-user.target
 ```
+
 # Legal Issues & Processes
 
-TODO
+There are two distinct ways in which data is involved in our application:
+data is collected for a visualization, and data is stored temporarily to pass
+onto another mobile client.
+
+## Data for Wellbeing Visualization
+
+NudgeMe passively collects wellbeing data & steps, after the user has consented.
+They can revoke their consent at any time in the Settings page.
+
+The data collected is anonymised such that there is no way to determine with
+certainty who the original individual was, given some data point.
+Therefore, since the data subject is no longer identifiable, the GDPR
+does not apply[^data].
+
+[^data]: https://www.ucl.ac.uk/data-protection/guidance-staff-students-and-researchers/practical-data-protection-guidance-notices/anonymisation-and
+
+## Network Sharing
+
+We use end-to-end encryption when sharing wellbeing data with others
+in their network to give the user reassurance that no-one except the desired
+receiver can read that piece of data.
+
+This reassurance is useful if, for example, a user suspected a server was 
+(maliciously or otherwise) logging their IP addresses.
+However, we do not do this, and therefore have no personal data stored on the
+server.
 
 # Development Blog
 
