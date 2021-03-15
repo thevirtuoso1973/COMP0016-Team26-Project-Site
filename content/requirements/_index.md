@@ -9,7 +9,7 @@ draft: false
 
 ## Project Background & Client
 
-Our client is Dr Joseph Connor from CarefullAI and the NHS.
+Our client is Dr Joseph Connor from CarefulAI and the NHS.
 
 <img src="https://user-images.githubusercontent.com/55795994/111075490-0d8fca00-84e0-11eb-9e38-16cd2f262421.png" 
 alt="ixn logo" 
@@ -35,11 +35,11 @@ width="600"/>
 
 
 ## Project Goals
-The aim of this project was to create an application that encourages people to look after themselves, especially in this time where people are isolated and their mental wellbeing is suffering as a result.
+The aim of this project was to create an application that encourages people to look after themselves, especially in this time where people are isolated, and their mental wellbeing is suffering as a result.
 
 The ways in which we were asked to do this is:
-* allowing users to keep a weekly record of their wellbeing
-* encouraging users to go on walks to improve their wellbeing
+* allowing users to keep a weekly record of their wellbeing.
+* encouraging users to go on walks to improve their wellbeing.
 
 ## Requirements Gathering
 We gathered the requirements for NudgeMe over a few meetings with the client and using resources from Version 1, such as the Figma of the CarerCare.
@@ -76,7 +76,7 @@ Common answers to _Question 4_ were texting/calling friends, various types of ex
 During the second half of the project, we developed this feature and added the User Nudge which allows users to send each other step goals. As this change was made later in the project, we created an updaetd User Flow Figma that reflected the present NudgeMe user flow to ensure the client has an accurate mental map of the application. You can find this at the bottom of this page, or [here](https://www.figma.com/proto/53Di5ADgodaHYWmMHXB8xv/NudgeMe-User-Flow?scaling=scale-down&node-id=1%3A10).
 
 ## Personas
-To create the personas, we tried to capture a variety of different personality types that would benefit from an wellbeing app without being too generic or unspecific, as the user group for NudgeMe is 13-99 year olds (very broad).
+To create the personas, we tried to capture a variety of different personality types that would benefit from a wellbeing app without being too generic or unspecific, as the user group for NudgeMe is 13-99 year olds (very broad).
 
 Here are the personas that we created:
 

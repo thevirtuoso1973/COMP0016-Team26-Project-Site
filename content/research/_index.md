@@ -25,17 +25,17 @@ _Mental health/wellbeing phone app._
 
 It _tracks daily mood_ and allows users to _document_ how they are feeling using tags. It also provides _‘series’_ on factors that affect wellbeing, such as sleep, anxiety, work stress and depression. 
 
-These series include  
+These series include:  
 
-- Quizzes (e.g. "Exploring my anxiety")
+- Quizzes (e.g. "Exploring my anxiety").
 
 - Affirmations for different situations e.g. feeling insecure, anxious etc.
 
 - Video guides containing tips. These are free for 1 month. 
 
-- Options to set reminders for themselves 
+- Options to set reminders for themselves.
 
-- Options to track the factors mentioned amove (sleep, anxiety, exercise...) alongside daily mood 
+- Options to track the factors mentioned amove (sleep, anxiety, exercise...) alongside daily mood. 
 
 - External resources.  
 
@@ -64,7 +64,7 @@ It tracks steps, bpm, sleep based on data from FitBit watch. Users can also trac
 
 It provides the following: 
 
-- ‘Challenges’ e.g. certain number of steps or family step competitions
+- ‘Challenges’ e.g. completing a certain number of steps or family step competitions
 - 'FitBit coach’: exercise videos involving cardio, yoga etc. 
 - ‘Guided programs’: courses to encourage more exercise or a change of habits e.g. ‘Habits for restful sleep: a 2 week course’ and ‘Simple Beginner Running: 3 week course’ 
 
@@ -105,6 +105,7 @@ Our app can be deployed to both Android and iOS phones, as most people in the UK
 shown in the graph below: 
 
 <img width="800" alt="Market share of mobile devices" src="http://students.cs.ucl.ac.uk/2020/group26/images/mobileOS.png">
+
 
 We used Linux and Mac laptops to develop/test on each of these platforms.
 
