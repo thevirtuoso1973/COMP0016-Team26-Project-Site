@@ -100,7 +100,7 @@ small screen size to pick up this class of bugs.
 [^2]: Note that this 'virtual execution environment' is not quite an 'emulator', which
       is also why widget tests run much faster. Emulators are much slower.
 
-## Mocking
+## Flutter - Mocking with `mockito`
 
 For most widgets we are interested in testing, there is often some dependency that
 we want to remove to ensure that we are only testing a small snippet of code.
@@ -195,11 +195,215 @@ in the code that produced negative numbers when the step count was reset.)
 
 ## API Testing
 
+The Go web framework that we used, `echo`[^3], supports API testing. This allows us
+to create requests and record responses, asserting whether they match our
+expectations. We use the `testify`[^4] toolkit for assertions and mock testing 
+in Go.
+
+[^3]: https://echo.labstack.com/
+[^4]: https://github.com/stretchr/testify
+
+### Go - Mocking with `testify`
+
+As usual, the main object we wish to mock is the database helper object.
+
+We have some interface that some type needs to implement to act as a database helper:
+``` go
+// interface that defines the methods needed to interact with database
+type DataSource interface {
+  DoesUserExist(identifier string) (bool, error)
+
+  // @param password is plaintext
+  isValidPassword(identifier string, password string) (bool, error)
+  
+  // etc...
+```
+
+So in addition to our actual database helper that implements these (elsewhere in the 
+code), we have a `FakeDB`:
+``` go
+// mocked object that implements DataSource
+type FakeDB struct {
+  // including `mock.Mock` gives access to the mock object tracking
+  mock.Mock
+}
+
+func (db *FakeDB) DoesUserExist(identifier string) (bool, error) {
+  // notify the mocking tracker that we were called with `identifier`
+  args := db.Called(identifier)
+  // these behave as strongly typed getters
+  return args.Bool(0), args.Error(1)
+}
+
+func (mydb *FakeDB) InsertUser(identifier string, digest []byte) error {
+  args := mydb.Called(identifier, digest)
+  return args.Error(0)
+}
+
+// etc...
+```
+
+Note that in the `mockito` package for Flutter, it performs this 'tracking'
+automatically, but here we have to specify when a function was called and
+with certain arguments, etc[^5].
+
+Now we can setup the mocked return values on an instance of `FakeDB` with
+`fakeDB.On` and `fakeDB.Return`.
+
+[^5]: There *is* a way to auto generate it but this involves modifying our
+      development build process.
+
+### Example API Test
+
+``` go
+func TestDoesNotAddExistingUser(t *testing.T) {
+  identifier := "user"
+  password := "battery horse staple"
+  body := "{\"identifier\":\"" + identifier + "\", \"password\": \""+ password +"\"}"
+
+  // setup the return value for the FakeDB
+  fakeDB := new(FakeDB)
+  fakeDB.On("DoesUserExist", identifier).Return(true, nil)
+
+  // new reuest to the /user/new endpoint, using `body` as the request body
+  req := httptest.NewRequest(http.MethodPost, "/user/new", strings.NewReader(body))
+  req.Header.Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
+  rec := httptest.NewRecorder()
+  // the echo framework uses contexts to determine the current state (e.g. the 
+  // parameters of the currennt request):
+  c := echo.New().NewContext(req, rec)
+
+  if assert.NoError(t, handleAddUser(fakeDB)(c)) {
+    // assert expectations related to the mocked object:
+    fakeDB.AssertExpectations(t)
+    fakeDB.AssertNotCalled(t, "InsertUser", identifier, mock.AnythingOfType("[]uint8"))
+
+    // assert expectations related to API response:
+    assert.Equal(t, http.StatusBadRequest, rec.Code)
+    assert.Contains(t, rec.Body.String(), "\"success\":false")
+  }
+}
+```
+
+The key part above is that we are using `AssertNotCalled` to ensure that the mocked object
+(the database) was not asked to add the new user during the execution of `handleAddUser`.
+(In this case, we expect this because we are specifying that the user already exists.)
+
 ## Continuous Integration
+
+We used Github actions to run a series of steps on any pull request or push to
+master. We only merged pull requests into the master branch when all the checks
+were passing. Here are the steps we ran (from `.github/workflows/flutter.yml`):
+
+``` yaml
+# setup branches, docker image, etc. omitted
+
+    # run these 4 steps on new PRs
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Print Flutter version
+        run: flutter --version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze project source
+        run: flutter analyze
+
+      - name: Run tests
+        run: flutter test
+```
+
+`flutter analyze` runs static analysis on our codebase, and picks up common
+errors like missing imports. `flutter test` runs our own test suite.
+
+We set up a similar workflow for the Go/backend repo.
 
 # Integration testing
 
+<video width="900" controls>
+<source src="https://user-images.githubusercontent.com/46009390/109393978-860d5d00-791c-11eb-98c0-afa96c6547c0.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+
+Integration testing allows for the automated running of tests on a physical or
+emulated device. This is the slowest method of testing, but is useful to identify
+bugs that may not appear when running in Flutter's widget testing execution 
+environment.
+
+We need to use a separate main function to *drive* integration tests, from
+`integration_test.dart`:
+``` dart
+import 'package:integration_test/integration_test_driver.dart';
+
+Future<void> main() => integrationDriver();
+```
+
+_The actual tests are found in the `integration_test/` directory and are defined similarly
+to the existing widget tests._
+
 # Performance Testing & Profiling
+
+## Flutter App - FPS Targets
+
+After using [watchPerformance](https://api.flutter.dev/flutter/package-integration_test_integration_test/IntegrationTestWidgetsFlutterBinding/watchPerformance.html)
+to generate performance data, we inspect the `integration_response_data.json` to
+determine if the performance of the app is meeting our targets. Although we have
+not been set explicit requirements, we aim for an average of 60fps to provide the 
+users with a smooth UI. Here is a snippet of the data:
+``` json
+{
+  "performance": {
+    "average_frame_build_time_millis": 6.704,
+    "90th_percentile_frame_build_time_millis": 8.904,
+    "99th_percentile_frame_build_time_millis": 63.525,
+    "worst_frame_build_time_millis": 81.152,
+    "missed_frame_build_budget_count": 8,
+    "average_frame_rasterizer_time_millis": 9.668,
+    "90th_percentile_frame_rasterizer_time_millis": 10.654,
+    "99th_percentile_frame_rasterizer_time_millis": 97.241,
+    "worst_frame_rasterizer_time_millis": 143.301,
+    "missed_frame_rasterizer_budget_count": 11,
+    "frame_count": 188,
+    "frame_build_times": [
+      842,
+      764,
+```
+
+From the Flutter docs:
+> For 60fps, frames need to render approximately every 16ms.
+> <cite>Flutter Performance Profiling[^6]</cite>
+
+So we can see that NudgeMe achieves the target, since the
+`90th_percentile_frame_build_time_millis` is 8.904ms. (So 90% of the frames
+displayed to the user were built in 8.904ms or less.)
+
+[^6]: https://flutter.dev/docs/perf/rendering/ui-performance
+
+## Go Backend - Web Performance
+
+It's important to test our website's performance since our back-end server is also
+doing more things (message passing, serving the add-friend page, etc.). We need to 
+confirm that it's not under too much load.
+
+To test our website visualization performance, we compared it to the previous
+version using GTmetrix (which uses Google's Lighthouse). 
+[Here](https://gtmetrix.com/compare/GuLpPqIq/41l95Qub/HD8iNpa1) is the full report.
+
+<img width="960" 
+  src="https://user-images.githubusercontent.com/46009390/111151761-ce1cb880-8587-11eb-8844-008fc808297f.png"
+  alt="Sequence diagram of wellbeing sharing"
+/>
+
+_Our website, previous version, and Google maps (from left-to-right)._
+
+As you can see, we have notably improved performance compared to the old version.
+In addition, we have better performance versus Google Maps, beating it in all
+criteria except for "Cumulative Layout Shift"[^7].
+
+[^7]: The reason we include this is to demonstrate the unavoidable performance
+      penalty that including the Google Maps API into a website incurs.
 
 # User Acceptance Testing 
 
