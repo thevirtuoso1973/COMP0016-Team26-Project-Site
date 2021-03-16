@@ -12,6 +12,22 @@ of our repo. [Here](https://github.com/UCLComputerScience/COMP0016_2020_21_Team2
 is the latest APK (at the time of writing). Our deployment manual is located below, so you can build the APK or IPA
 yourself.
 
+# Individual Contribution Distribution Table
+
+| Work package            | Saachi                                           | Chris                                                 |
+|-------------------------|--------------------------------------------------|-------------------------------------------------------|
+| Project Partner Liaison | 30                                               | 70                                                    |
+| Requirement analysis    | 40                                               | 60                                                    |
+| Research                | 50                                               | 50                                                    |
+| UI design               | 60                                               | 40                                                    |
+| Programming             | 30                                               | 70                                                    |
+| Testing                 | 10                                               | 90                                                    |
+| Development blog        | 50                                               | 50                                                    |
+| Report Website          | 50                                               | 50                                                    |
+| Video Production        | 80                                               | 20                                                    |
+| Overall contribution    | 45                                               | 55                                                    |
+| Roles                   | Front End developer, UI Designer, & Video Editor | Full Stack Developer, Software Architect, & Team Lead |
+
 # User Manual
 
 Located [here](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/pdfs/usermanual.pdf).

@@ -31,30 +31,6 @@ draft: false
 We have completed 100% of the key requirements ('must have' and 'should have'). 
 We have completed 100% of the optional requirements ('could have').
 
-## A list of known bugs
-
-We managed to fix almost all of the bugs that we encountered in our application. 
-
-However, two issues remain due to time limitations:
-1. Occasionally, the Wellbeing circle coach mark will drag and end up off-centre. - _Low Priority_
-2. The weekly wellbeing check notification is dismissible, which means the user 
-may accidentally close it without doing their weekly check. This could then lead to publishing old data to the server. - _Medium Priority_
-
-## Individual Contribution Distribution Table
-| Work package            | Saachi                                           | Chris                                                 |
-|-------------------------|--------------------------------------------------|-------------------------------------------------------|
-| Project Partner Liaison | 30                                               | 70                                                    |
-| Requirement analysis    | 40                                               | 60                                                    |
-| Research                | 50                                               | 50                                                    |
-| UI design               | 60                                               | 40                                                    |
-| Programming             | 30                                               | 70                                                    |
-| Testing                 | 10                                               | 90                                                    |
-| Development blog        | 50                                               | 50                                                    |
-| Report Website          | 50                                               | 50                                                    |
-| Video Production        | 80                                               | 20                                                    |
-| Overall contribution    | 45                                               | 55                                                    |
-| Roles                   | Front End developer, UI Designer, & Video Editor | Full Stack Developer, Software Architect, & Team Lead |
-
 # Critical Evaluation
 ## User interface
  <img width="200" alt="ui 2" src="https://user-images.githubusercontent.com/55795994/111216907-e2cf6f80-85cc-11eb-99ff-c3e9a4113399.PNG"> <img width="200" alt="ui 2" src="https://user-images.githubusercontent.com/55795994/111216913-e3680600-85cc-11eb-8e2f-e97395f932da.PNG"> <img width="200" alt="ui 1" src="https://user-images.githubusercontent.com/55795994/111216916-e4993300-85cc-11eb-80a5-1e13c3ef6699.PNG"> <img width="200" alt="ui 1" src="https://user-images.githubusercontent.com/55795994/111216896-e19e4280-85cc-11eb-8f3e-6b1c871f2019.PNG">
@@ -185,3 +161,12 @@ deeplink generation and URL shortening. This would be an overhaul of the
 architecture, potentially removing the need for our backend Go server.
 
 <img width="360" alt="Firebase logo" src="https://firebase.google.com/images/brand-guidelines/logo-standard.png">
+
+## A list of known bugs
+
+We managed to fix almost all of the bugs that we encountered in our application. 
+
+However, two issues remain due to time limitations:
+1. Occasionally, the Wellbeing circle coach mark will drag and end up off-centre. - _Low Priority_
+2. The weekly wellbeing check notification is dismissible, which means the user 
+may accidentally close it without doing their weekly check. This could then lead to publishing old data to the server. - _Medium Priority_
