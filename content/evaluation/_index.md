@@ -69,11 +69,13 @@ Overall, we believe our UI is _good_.
 
 ## Functionality
 
-The application we are delivering covers 100% of the MoSCoW requirements. The 
-application has been tested on users and the team and feedback has shown that NudgeMe fulfils the intended functionality. 
-
-We proposed and delivered an innovative way to connect with others privately 
+- The application we are delivering covers 100% of the MoSCoW requirements. The 
+application has been tested on users by the team and feedback has shown that NudgeMe fulfils the intended functionality. 
+- We proposed and delivered an innovative way to connect with others privately 
 (through our network sharing architecture), which extended the scope of the original requirement. 
+- We provide multiple ways in which the user could engage in the main interactions of our app. For example,
+to add a friend they can scan a QR code or they can tap on their friend's deeplink. To share their
+wellbeing graph, they can share a generated PDF or share it in-app with someone in their network.
 
 Therefore, we believe the functionality of our app is _very good_.
 
@@ -123,7 +125,21 @@ top level files serving as utility code, the model directory holding database
 helpers, the pages directory holding widgets that display pages, etc. Our 
 tests also mirror this structure. 
 
-Therefore, we believe NudgeMe’s maintainability is quite good. 
+We have commented the codebase thoroughly, and given particular detail to
+any sections that may contain subtle or unusual bits of logic.
+For one example, we 
+[gave a short paragraph of description](https://github.com/UCLComputerScience/COMP0016_2020_21_Team26/blob/67106460bcc6e293d6148fe3e248db245c969455/lib/pages/support_page.dart#L166-L171)
+to explain the use of a certain widget on the support page.
+
+One possible inconvenience that may arise from maintaining or extending
+our codebase is that it *may* first need to be migrated to use the latest
+Flutter/Dart null safety features before any changes could be made. This is because
+the null safety feature was released *after* we had finished our development 
+process (early March 2021). Regardless, it's not *necessary* to be migrated, but
+would be recommended to take advantage of the latest bug fixes or features
+from the *dependencies* we use.
+
+Overall, we believe NudgeMe’s maintainability is quite good.
 
 ## Project Management
 
@@ -161,9 +177,11 @@ such as 90%. (Flutter only generates line coverage.)
 deeplinks more user friendly. This could be done by performing an API call to bitly to
 shorten the existing deeplink before sending the SMS message or opening the
 native “Sharesheet”.
-<img style="padding-top: 20px;" width="240" alt="Bitly logo" 
+
+<img style="padding-top: 20px; padding-left: 25px;" width="240" alt="Bitly logo" 
 src="https://cdn.freebiesupply.com/images/large/2x/bitly-logo-transparent.png">
 - Possibly integrate Google’s Firebase service for real time push notifications,
 deeplink generation and URL shortening. This would be an overhaul of the
 architecture, potentially removing the need for our backend Go server.
+
 <img width="360" alt="Firebase logo" src="https://firebase.google.com/images/brand-guidelines/logo-standard.png">
