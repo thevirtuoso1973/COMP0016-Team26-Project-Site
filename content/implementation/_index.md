@@ -2,7 +2,7 @@
 title: "💻 Implementation"
 description: "How we implemented key aspects of NudgeMe."
 layout: single
-image: "images/system-design/gears.png"
+image: "images/implementation/flutter-go.png"
 date: 2021-03-09
 draft: false
 ---

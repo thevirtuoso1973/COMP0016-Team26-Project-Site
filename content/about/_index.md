@@ -6,4 +6,4 @@ author_signature : "images/logo.png"
 draft: false
 ---
 
-This is the project website for our COMP0016 project.
+This is the project website for Team 26, undertaken as part of a module - COMP0016, Systems Engineering.
