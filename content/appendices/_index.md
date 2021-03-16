@@ -7,6 +7,11 @@ date: 2021-03-09
 draft: false
 ---
 
+Our build(s) are located in the [Github releases](https://github.com/UCLComputerScience/COMP0016_2020_21_Team26/releases)
+of our repo. [Here](https://github.com/UCLComputerScience/COMP0016_2020_21_Team26/releases/download/v1.4.4/app-release.apk)
+is the latest APK (at the time of writing). Our deployment manual is located below, so you can build the APK or IPA
+yourself.
+
 # User Manual
 
 Located [here](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/pdfs/usermanual.pdf).

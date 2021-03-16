@@ -7,13 +7,26 @@ banner:
 # about
 about:
   enable : true
-  content : "We're building a cross platform (Android & iOS) mobile
-  application to give the UK population a digital nudge. NudgeMe is a
-  privacy-focused wellbeing app."
+  content : "According to a survey of UK adults which took place nine months into the
+  COVID pandemic, one in four adults reported that they had felt lonely in the last 2 weeks.
+  A year of isolation and a huge decrease in movement has evidently had a negative effect
+  on the mental health of the UK public.
+
+  \n_NudgeMe is a cross-platform mobile wellbeing app that encourages you to look after yourself._
+
+  \nWe have created an application that allows users to keep and share a weekly record of
+  their wellbeing to understand the importance of movement in their life. It
+  also allows users to optionally contribute to a map visualisation that the NHS can use to monitor wellbeing across regions of the UK.
+
+  \nNudgeMe has delivered on 100% of the MoSCow requirements and testers of the
+  application have reported that NudgeMe has improved their wellbeing by
+  encouraging them to walk more. Additionally, we hope to help the NHS better
+  understand the effect of isolation on mental health using our back-end data visualisation.
+  "
   button:
     enable : true
-    label : "Get to know the team"
-    URL : "about"
+    label : "Check the Requirements"
+    URL : "requirements"
 
 # team
 team:
