@@ -122,14 +122,27 @@ does not apply[^data].
 
 ## Network Sharing
 
-We use end-to-end encryption when sharing wellbeing data with others
-in their network to give the user reassurance that no-one except the desired
+We use end-to-end encryption when users share wellbeing data with others
+in their network, to give the user reassurance that no-one except the desired
 receiver can read that piece of data.
-
 This reassurance is useful if, for example, a user suspected a server was 
 (maliciously or otherwise) logging their IP addresses.
-However, we do not do this, and therefore have no personal data stored on the
-server.
+However, we do not do this (log IP addresses or similar data), and therefore have no 
+personal data stored on the server. (Of course, many users may not trust that previous
+sentence which is why we have e2e encryption in the first place.)
+
+Furthermore, even if all *data* was unencrypted and stored on the server. The
+*identifiers* we use are random strings generated from that installation[^fingerprint] of
+NudgeMe. This can therefore be treated as pseudonymization.
+However, the mobile client/user themselves are initially the only party that can *re-identify*
+the data (i.e. reverse the pseudonymization). By design, if two users add each other
+to their network, they can "re-identify" each other, but we (the server) are unable 
+to make that link between the identifier string and an actual person.
+
+[^fingerprint]: Specifically, after NudgeMe is set up, a keypair is generated
+                and the user's identifier is derived from the public key
+                as a fingerprint. Since the initial public key is random,
+                the fingerprint or identifier is essentially random.
 
 # Development Blog
 
