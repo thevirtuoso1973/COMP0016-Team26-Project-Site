@@ -85,7 +85,7 @@ The performance of our map visualisation is very good.
 ## Compatability
 <img width="800" alt="ui 1" src="https://user-images.githubusercontent.com/55795994/111227051-e74e5500-85d9-11eb-9d31-b6dc1d35bf79.png">
 
-Flutter supports iOS 8 and above, and API 16 and above. Throughout development, we tested the application on 2 iPhone 6's with iOS 13.6 and iOS 14.4, and 2 Android devices. Our testers also had different versions of iPhones. On all these devices, we ensured the UI and functionality were preserved. Since we did not have devices older than these and the simulators only support newer phones, we could not test on older devices than these and if we had, this would have slowed down the development process. 
+Flutter supports versions upward of iOS 8 and API 20. Throughout development, we tested the application on 2 iPhone 6's with iOS 13.6 and iOS 14.4, and 2 Android devices. Our testers also had different versions of iPhones. On all these devices, we ensured the UI and functionality were preserved. Since we did not have devices older than these and the simulators only support newer phones, we could not test on older devices than these and if we had, this would have slowed down the development process. 
 
 Therefore, we believe NudgeMe's compatibility is _good_. 
 
