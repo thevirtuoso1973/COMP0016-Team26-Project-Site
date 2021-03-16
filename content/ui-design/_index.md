@@ -87,7 +87,7 @@ On both the website and the app, we confirmed that the colour schemed we used we
 
  <img width="800" alt="palettes for colour blind accessibility" src="https://user-images.githubusercontent.com/55795994/111082078-43dc4200-84fe-11eb-8717-32c8e494d73d.png"> 
 
-The circled colours in the image above are the colours we chose for [the map](nudgeshare.org/Map). They were chosen in order to appear different to people with deuteranopia, protanopia and tritanopia.
+The circled colours in the image above are the colours we chose for the map which might be found [here](nudgeshare.org/Map) or [here](https://comp0016.cyberchris.xyz/map). They were chosen in order to appear different to people with deuteranopia, protanopia and tritanopia.
 
 We only used 4 colours in the mobile app, the dark purple and blue that can be seen in the buttons below, a lighter purple background and grey headings. Blue and purple is not a sensitive colour combination for the 3 most common types of colour blindness. 
 
