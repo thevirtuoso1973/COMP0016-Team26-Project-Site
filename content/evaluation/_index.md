@@ -96,3 +96,26 @@ Therefore, we believe NudgeMe's compatibility is _good_.
 
 
 # Future work
+
+Given additional development we could perform the following improvements: 
+
+- We could expand the application to track further attributes of a user. One of 
+the goals of NudgeMe is to assist the user in determining what parts of their 
+life may improve their wellbeing. We initially did not track metrics such as 
+number of phone calls or messages, since these kinds of data may be considered 
+sensitive to the user. However, with the development of our e2e encrypted data 
+sharing, the user may be more comfortable sending and receiving sensitive data. 
+- We would migrate our application to use Dart’s new null safety feature, 
+eliminating a significant class of bugs.
+- We could integrate a continuous testing service, like coveralls.io, to display
+branch coverage and expand our test suite to hit some branch coverage target,
+such as 90%. (Flutter only generates line coverage.)
+- Use a URL shortening service like [bitly](https://bitly.com) to make our
+deeplinks more user friendly. This could be done by performing an API call to bitly to
+shorten the existing deeplink before sending the SMS message or opening the
+native “Sharesheet”.
+<img width="240" alt="Bitly logo" src="https://cdn.freebiesupply.com/images/large/2x/bitly-logo-transparent.png">
+- Possibly integrate Google’s Firebase service for real time push notifications,
+deeplink generation and URL shortening. This would be an overhaul of the
+architecture, potentially removing the need for our backend Go server.
+<img width="360" alt="Firebase logo" src="https://firebase.google.com/images/brand-guidelines/logo-standard.png">
