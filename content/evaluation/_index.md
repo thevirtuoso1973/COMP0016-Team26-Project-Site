@@ -40,8 +40,6 @@ However, two issues remain due to time limitations:
 2. The weekly wellbeing check notification is dismissible, which means the user 
 may accidentally close it without doing their weekly check. This could then lead to publishing old data to the server. - _Medium Priority_
 
-Our team used the GitHub issue tracker to keep track of bugs.
-
 ## Individual Contribution Distribution Table
 | Work package            | Saachi                                           | Chris                                                 |
 |-------------------------|--------------------------------------------------|-------------------------------------------------------|
