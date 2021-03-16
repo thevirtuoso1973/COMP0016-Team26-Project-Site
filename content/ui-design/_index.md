@@ -3,7 +3,7 @@ title: "UI Design"
 description: "Explanation of our UI design choices"
 layout: ui_design
 date: 2021-03-13
-image: "images/ui-design/phone.png"
+image: "images/ui-design/small-ui.png"
 draft: false
 ---
 

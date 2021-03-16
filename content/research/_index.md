@@ -4,7 +4,7 @@ description: "Researching ideas."
 date: 2021-03-01
 draft: false
 layout: single
-image: "images/clients-logo/carefulai.png"
+image: "images/research/small-research.png"
 ---
 
 ## Related Projects Review
