@@ -21,7 +21,7 @@ Version 2: NudgeMe is aimed instead at the general UK public, a change that was 
 
 CarerCare's wellbeing scores were sent to a server used to represent scores from different regions on a map visually. NudgeMe also has this feature. We hope that the NHS will benefit from monitoring the wellbeing of people across the country and how it is being affected by the COVID pandemic.
 
-Below are two graphs that display the effect of lockdown on UK adults' mental health and wellbeing [1].
+Below are two graphs that display the effect of lockdown on UK adults' mental health and wellbeing[^1].
 
 The graph below shows the increasing rates of loneliness and hopelessness in the UK since mid-March 2020.
 <img src="https://user-images.githubusercontent.com/55795994/111076321-c6a3d380-84e3-11eb-8f10-a3ae00ad82e4.png" 
@@ -108,30 +108,32 @@ Our use case table can be found [on Google Drive](https://drive.google.com/file/
 
 ## MoSCoW list
 
-| Functional Requirements                                                                              | Must/Should/Could have? |
-|-----------------------------------------------------------------------------------------------------|-------------------------|
-| The system must have the same functionality as version 1, omitting features no longer relevant. *   | Must have               |
-| The system must have the same interface on Android & iOS.                                           | Must have               |
-| Well documented codebase.                                                                           | Must have               |
-| Easily maintainable codebase.                                                                       | Must have               |
-| Nudge user to share their graph as a PDF if their score falls twice over any two weeks.             | Must have               |
-| Also nudge user if there is no step count in over two days.                                         | Must have               |
-| The weekly wellbeing score must be gathered from the user at Sunday 12pm (by default).              | Must have               |
-| Ask the user for consent to collect their wellbeing data.                                           | Must have               |
-| If consented, share the user's wellbeing data by POSTing to a server.                               | Must have               |
-| Passively collect movement data from pedometer.                                                     | Should have             |
-| Display a graph that cross references pedometer and wellbeing data.                                 | Should have             |
-| Allow users to *securely* send their wellbeing data to other users (e.g. through e2e encryption).   | Could have              |
-| Facilitate adding users to their network in a convenient way, considering lockdown/remote work.     | Could have              |
-| Allow users to nudge other users through the app.                                                   | Could have              |
+| Functional Requirements                                                                           | Must/Should/Could have? |
+|---------------------------------------------------------------------------------------------------|-------------------------|
+| The system must have the same functionality as version 1, omitting features no longer relevant.*  | Must have               |
+| The system must have the same interface on Android & iOS.                                         | Must have               |
+| Well documented codebase.                                                                         | Must have               |
+| Easily maintainable codebase.                                                                     | Must have               |
+| Nudge user to share their graph as a PDF if their score falls twice over any two weeks.           | Must have               |
+| Also nudge user if there is no step count in over two days.                                       | Must have               |
+| The weekly wellbeing score must be gathered from the user at Sunday 12pm (by default).            | Must have               |
+| Ask the user for consent to collect their wellbeing data.                                         | Must have               |
+| If consented, share the user's wellbeing data by POSTing to a server.                             | Must have               |
+| Passively collect movement data from pedometer.                                                   | Should have             |
+| Display a graph that cross references pedometer and wellbeing data.                               | Should have             |
+| Allow users to *securely* send their wellbeing data to other users (e.g. through e2e encryption). | Could have              |
+| Facilitate adding users to their network in a convenient way, considering lockdown/remote work.   | Could have              |
+| Allow users to nudge other users through the app.                                                 | Could have              |
 
 | Non functional Requirements                                                                         | Must/Should/Could have? |
 |-----------------------------------------------------------------------------------------------------|-------------------------|
 | Design the system for a user aged between 13 & 99.                                                  | Should have             |
 | Present an accessible color scheme to those who are colorblind.                                     | Could have              |
 
-\* Since we were adapting the application for a wider audience (general UK population) and for a different purpose (to assist the public in maintaining their wellbeing), some of the features designed specifically for carers in the Welsh area were no longer relevant.
+\*_Since we were adapting the application for a wider audience (general UK 
+population) and for a different purpose (to assist the public in maintaining 
+their wellbeing), some of the features designed specifically for carers in the Welsh area were no longer relevant._
 
 ## References 
 
-(1) [Mental Health FoundationL 9 Month Study](https://www.mentalhealth.org.uk/news/nine-month-study-reveals-pandemics-worsening-emotional-impacts-uk-adults)
+[^1]: [Mental Health Foundation - 9 Month Study](https://www.mentalhealth.org.uk/news/nine-month-study-reveals-pandemics-worsening-emotional-impacts-uk-adults)
