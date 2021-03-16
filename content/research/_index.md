@@ -12,7 +12,6 @@ image: "images/research/small-research.png"
 There are 2 phone applications that bore a resemblance to our NudgeMe requirements. 
 
 One is a free mental wellbeing app called *MyPossibleSelf*, available on both iOS and Android. 
-
 <img src="https://user-images.githubusercontent.com/55795994/111070617-75d3b100-84ca-11eb-9bd2-4ea23d899fe9.png" 
 alt="MyPossibleSelf" 
 width="700"/>
