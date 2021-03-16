@@ -8,6 +8,7 @@ draft: false
 ---
 # Summary of Achievements
 ## Completion of Requirements 
+
 | Requirement                                                                                      | Must/should/could have?  | Completed?  | Contributors   |
 |--------------------------------------------------------------------------------------------------|--------------------------|-------------|----------------|
 | The system must have the same functionality as version 1, omitting features no longer relevant.  | Must have                | Yes         | Saachi, Chris  |
@@ -27,37 +28,34 @@ draft: false
 | Design the system for a user aged between 13 & 99.                                               | Should have              | Yes         | Saachi, Chris  |
 | Present an accessible colour scheme to those who are colour-blind.                               | Could have               | Yes         | Saachi, Chris  |
 
-We have completed 100% of the functional requirements. 
-We have completed 100% of the non-functional requirements.
+We have completed 100% of the key requirements ('must have' and 'should have'). 
+We have completed 100% of the optional requirements ('could have').
 
 ## A list of known bugs
+
 We managed to fix almost all of the bugs that we encountered in our application. 
 
-However, two issues persist:
+However, two issues remain due to time limitations:
+1. Occasionally, the Wellbeing circle coach mark will drag and end up off-centre. - _Low Priority_
+2. The weekly wellbeing check notification is dismissible, which means the user 
+may accidentally close it without doing their weekly check. This could then lead to publishing old data to the server. - _Medium Priority_
 
-* Occasionally, the Wellbeing circle coach mark will drag and end up off-centre. 
-
-* The weekly wellbeing check notification is dismissible, which means the user may accidentally close it without doing their weekly check. This could then lead to publishing old data to the server. 
-
-Our team used the GitHub issue tracker to keep track of bugs. As you can see from this screenshot of our issue list (taken on 15th March 2021), there are no open issues with the `bug` label.
-
-<img width="800" alt="bug" src="https://user-images.githubusercontent.com/55795994/111233555-2209ba80-85e5-11eb-89b0-67028a9e6d57.png">
-
+Our team used the GitHub issue tracker to keep track of bugs.
 
 ## Individual Contribution Distribution Table
-| Work package             | Saachi                                          | Chris                                            |
-|--------------------------|-------------------------------------------------|--------------------------------------------------|
-| Project partner Liaison  | 30                                              | 70                                               |
-| Requirement analysis     | 40                                              | 60                                               |
-| Research                 | 50                                              | 50                                               |
-| UI design                | 60                                              | 40                                               |
-| Programming              | 30                                              | 70                                               |
-| Testing                  | 10                                              | 90                                               |
-| Development blog         | 50                                              | 50                                               |
-| Website                  | 50                                              | 50                                               |
-| Video                    | 80                                              | 20                                               |
-| Overall contribution     | 45                                              | 55                                               |
-| Roles                    | Front End developer, UI Designer, Video Editor  | Client Liaison, Team Lead, Full Stack Developer  |
+| Work package            | Saachi                                           | Chris                                                 |
+|-------------------------|--------------------------------------------------|-------------------------------------------------------|
+| Project Partner Liaison | 30                                               | 70                                                    |
+| Requirement analysis    | 40                                               | 60                                                    |
+| Research                | 50                                               | 50                                                    |
+| UI design               | 60                                               | 40                                                    |
+| Programming             | 30                                               | 70                                                    |
+| Testing                 | 10                                               | 90                                                    |
+| Development blog        | 50                                               | 50                                                    |
+| Report Website          | 50                                               | 50                                                    |
+| Video Production        | 80                                               | 20                                                    |
+| Overall contribution    | 45                                               | 55                                                    |
+| Roles                   | Front End developer, UI Designer, & Video Editor | Full Stack Developer, Software Architect, & Team Lead |
 
 # Critical Evaluation
 ## User interface
@@ -72,15 +70,42 @@ Since our application’s target group has a broad range of ages including older
 Overall, we believe our UI is _good_.
 
 ## Functionality
-The application we are delivering covers 100% of the MoSCow requirements. The code is readable, and the backend is easy-to-use and extendable. The application has been tested on users and the team and feedback has shown that NudgeMe fulfils the intended functionality. 
+
+The application we are delivering covers 100% of the MoSCoW requirements. The 
+application has been tested on users and the team and feedback has shown that NudgeMe fulfils the intended functionality. 
+
+We proposed and delivered an innovative way to connect with others privately 
+(through our network sharing architecture), which extended the scope of the original requirement. 
 
 Therefore, we believe the functionality of our app is _very good_.
 
 ## Stability
 
-## Efficiency
-The performance of our map visualisation is very good.
+As we walked through and tested the application, we ensured that even minor 
+rendering bugs (e.g., due to screen sizes), were fixed. In addition, although 
+we have not migrated to using Dart’s null safety (due to it being released 
+near the end of the project), Sentry’s remote error reporting allowed us to 
+track and fix many null pointer issues. Therefore, the final application is 
+very stable and does not suffer from any crashes. 
 
+We believe the application’s stability is _very good_. 
+
+## Efficiency
+
+We profiled the mobile application using integration tests with Flutter. This 
+provided us with concrete data to determine if the application UI rendered 
+smoothly. (In this case, ‘efficiency’ would directly translate to a smoother 
+UI.) Our results showed that we had average build times of less than 16ms, 
+translating to a framerate of about 60 FPS. One area of improvement may be to 
+perform more profiling extensive tests, as there are parts of the UI we did 
+not test rigorously (i.e., analysing frame build times). 
+
+For the back-end visualization, we were pleased with the GTmetrix score of a 
+B, which is much higher than the previous version. Having Google Maps embedded in a 
+webpage usually reduces performances noticeably, which is why a score of “B” 
+is more than satisfactory. 
+
+Therefore, we believe the efficiency of the overall system is very good. 
 
 ## Compatability
 <img width="800" alt="ui 1" src="https://user-images.githubusercontent.com/55795994/111227051-e74e5500-85d9-11eb-9d31-b6dc1d35bf79.png">
@@ -91,9 +116,35 @@ Therefore, we believe NudgeMe's compatibility is _good_.
 
 ## Maintainability
 
+The core of maintainability is to set up a codebase in such a way that it is 
+clear how the architecture of the system works. This makes it easier to 
+refactor and/or extend. We believe we have done that. 
+
+The structure of our Flutter codebase is split up into distinct parts, with 
+top level files serving as utility code, the model directory holding database 
+helpers, the pages directory holding widgets that display pages, etc. Our 
+tests also mirror this structure. 
+
+Therefore, we believe NudgeMe’s maintainability is quite good. 
 
 ## Project Management
 
+We heavily utilised GitHub’s issue tracker on the central repository. We had 
+custom labels defined, such as “priority-high” or “bug”, to quickly assess the 
+importance and general workload pending for that week. As you can see 
+from this screenshot of our issue list (taken on 15th March 2021), there are 
+no other open issues with the `bug` label.
+
+<img width="800" alt="bug" src="https://user-images.githubusercontent.com/55795994/111233555-2209ba80-85e5-11eb-89b0-67028a9e6d57.png">
+
+We also self-enforced a pull request + code review strategy when adding code 
+to the main repository. This helped pick up any bugs and ensured that the 
+other team member was aware of the change. 
+
+In addition, we held a weekly stand-up to self-evaluate our progress for that 
+week, assign tasks for the next week and re-evaluate the long-term goal of the project, if needed. 
+
+We believe our project management was very good. 
 
 # Future work
 
@@ -114,7 +165,8 @@ such as 90%. (Flutter only generates line coverage.)
 deeplinks more user friendly. This could be done by performing an API call to bitly to
 shorten the existing deeplink before sending the SMS message or opening the
 native “Sharesheet”.
-<img width="240" alt="Bitly logo" src="https://cdn.freebiesupply.com/images/large/2x/bitly-logo-transparent.png">
+<img style="padding-top: 20px;" width="240" alt="Bitly logo" 
+src="https://cdn.freebiesupply.com/images/large/2x/bitly-logo-transparent.png">
 - Possibly integrate Google’s Firebase service for real time push notifications,
 deeplink generation and URL shortening. This would be an overhaul of the
 architecture, potentially removing the need for our backend Go server.
