@@ -177,9 +177,11 @@ such as 90%. (Flutter only generates line coverage.)
 deeplinks more user friendly. This could be done by performing an API call to bitly to
 shorten the existing deeplink before sending the SMS message or opening the
 native “Sharesheet”.
-<img style="padding-top: 20px;" width="240" alt="Bitly logo" 
+
+<img style="padding-top: 20px; padding-left: 25px;" width="240" alt="Bitly logo" 
 src="https://cdn.freebiesupply.com/images/large/2x/bitly-logo-transparent.png">
 - Possibly integrate Google’s Firebase service for real time push notifications,
 deeplink generation and URL shortening. This would be an overhaul of the
 architecture, potentially removing the need for our backend Go server.
+
 <img width="360" alt="Firebase logo" src="https://firebase.google.com/images/brand-guidelines/logo-standard.png">
