@@ -125,7 +125,21 @@ top level files serving as utility code, the model directory holding database
 helpers, the pages directory holding widgets that display pages, etc. Our 
 tests also mirror this structure. 
 
-Therefore, we believe NudgeMe’s maintainability is quite good. 
+We have commented the codebase thoroughly, and given particular detail to
+any sections that may contain subtle or unusual bits of logic.
+For one example, we 
+[gave a short paragraph of description](https://github.com/UCLComputerScience/COMP0016_2020_21_Team26/blob/67106460bcc6e293d6148fe3e248db245c969455/lib/pages/support_page.dart#L166-L171)
+to explain the use of a certain widget on the support page.
+
+One possible inconvenience that may arise from maintaining or extending
+our codebase is that it *may* first need to be migrated to use the latest
+Flutter/Dart null safety features before any changes could be made. This is because
+the null safety feature was released *after* we had finished our development 
+process (early March 2021). Regardless, it's not *necessary* to be migrated, but
+would be recommended to take advantage of the latest bug fixes or features
+from the *dependencies* we use.
+
+Overall, we believe NudgeMe’s maintainability is quite good.
 
 ## Project Management
 
