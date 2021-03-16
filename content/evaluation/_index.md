@@ -69,11 +69,13 @@ Overall, we believe our UI is _good_.
 
 ## Functionality
 
-The application we are delivering covers 100% of the MoSCoW requirements. The 
-application has been tested on users and the team and feedback has shown that NudgeMe fulfils the intended functionality. 
-
-We proposed and delivered an innovative way to connect with others privately 
+- The application we are delivering covers 100% of the MoSCoW requirements. The 
+application has been tested on users by the team and feedback has shown that NudgeMe fulfils the intended functionality. 
+- We proposed and delivered an innovative way to connect with others privately 
 (through our network sharing architecture), which extended the scope of the original requirement. 
+- We provide multiple ways in which the user could engage in the main interactions of our app. For example,
+to add a friend they can scan a QR code or they can tap on their friend's deeplink. To share their
+wellbeing graph, they can share a generated PDF or share it in-app with someone in their network.
 
 Therefore, we believe the functionality of our app is _very good_.
 
