@@ -176,3 +176,24 @@ alt="ER diagram of the back-end database."/>
 
 The scores table is where we store data used for the wellbeing visualization.
 The other tables are used for network sharing.
+
+## Deployment Strategy
+
+The main part that needs to be 'deployed' is the back-end Go server, which needs to be
+running before end-users install and setup the Flutter mobile application. (The
+mobile application doesn't *need* to be deployed to app stores, since one could
+just distribute pre-built APKs or APIs.)
+
+Since there only needs to be a single server, we don't need to use container
+orchestration like Kubernetes, and consequently do not need to dockerize the
+backend.
+
+However, we still need a convenient way to manage redeployments instead of finding
+and killing the PID and manually executing the binary again. Therefore, we
+decided to use `systemd` to manage a service called `nudgeme.service`, which we define.
+(The previous version/team appeared to use GNU `screen` but this would be dependent on
+SSH sessions.)
+Using `systemd` is also useful for these reasons:
+- Automatic restart in case our program crashed.
+- Restarts our program in case the server rebooted.
+- Holds relevant environment variables in one specific file (the unit file).
