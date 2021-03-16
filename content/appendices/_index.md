@@ -1,5 +1,5 @@
 ---
-title: "Appendics"
+title: "Appendices"
 description: "Miscellaneous content."
 layout: single
 image: "images/manual.png"
