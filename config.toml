@@ -75,11 +75,6 @@ URL = "appendices"
 name = "Appendices"
 weight = 9
 
-[[menu.main]]
-URL = "about"
-name = "About"
-weight = 10
-
 # default parameters
 [params]
 home = "Home"

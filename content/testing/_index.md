@@ -2,7 +2,7 @@
 title: "🧪 Testing"
 description: "Testing strategies for NudgeMe."
 layout: single
-image: "images/system-design/gears.png"
+image: "images/testing/test-image.jpg"
 date: 2021-03-09
 draft: false
 ---

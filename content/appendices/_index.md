@@ -2,7 +2,7 @@
 title: "Appendics"
 description: "Miscellaneous content."
 layout: single
-image: "images/system-design/gears.png"
+image: "images/manual.png"
 date: 2021-03-09
 draft: false
 ---
