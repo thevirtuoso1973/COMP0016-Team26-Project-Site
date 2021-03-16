@@ -129,9 +129,7 @@ Therefore, we believe NudgeMe’s maintainability is quite good.
 
 We heavily utilised GitHub’s issue tracker on the central repository. We had 
 custom labels defined, such as “priority-high” or “bug”, to quickly assess the 
-importance and general workload pending for that week. As you can see 
-from this screenshot of our issue list (taken on 15th March 2021), there are 
-no other open issues with the `bug` label.
+importance and general workload pending for that week.
 
 <img width="800" alt="bug" src="https://user-images.githubusercontent.com/55795994/111233555-2209ba80-85e5-11eb-89b0-67028a9e6d57.png">
 
