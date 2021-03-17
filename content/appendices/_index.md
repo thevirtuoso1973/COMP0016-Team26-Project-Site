@@ -35,18 +35,55 @@ Located [here](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/pdfs
 
 # Legal Issues & Processes
 
-There are two distinct ways in which data is involved in our application:
-data is collected for a visualization, and data is stored temporarily to pass
-onto another mobile client.
-
 ## Software License
 
 All of the *build dependencies* for our mobile client are licensed
 under (either) MIT, Apache or BSD (permissive licenses).
 NudgeMe itself is licensed under AGPL-3.0, which includes the Go backend
-and the Flutter mobile app.
+and the Flutter mobile app. Here is the full list of dependencies:
+
+| Package Name                | License |
+|-----------------------------|---------|
+| http                        | BSD     |
+| flutter_local_notifications | BSD     |
+| pedometer                   | MIT     |
+| timezone                    | BSD     |
+| workmanager                 | MIT     |
+| pdf                         | Apache  |
+| printing                    | Apache  |
+| clock                       | Apache  |
+| permission_handler          | MIT     |
+| encrypt                     | BSD     |
+| pointycastle                | MIT     |
+| random_string               | BSD     |
+| qr_code_scanner             | BSD     |
+| cron                        | BSD     |
+| sentry_flutter              | MIT     |
+| url_launcher                | BSD     |
+| uni_links                   | BSD     |
+| share                       | BSD     |
+| settings_ui                 | Apache  |
+| contacts_service            | MIT     |
+| flutter_sms                 | MIT     |
+| provider                    | MIT     |
+| shared_preferences          | BSD     |
+| sqflite                     | MIT     |
+| charts_flutter              | Apache  |
+| introduction_screen         | MIT     |
+| highlighter_coachmark       | MIT     |
+| qr_flutter                  | BSD     |
+| liquid_pull_to_refresh      | MIT     |
+| convex_bottom_bar           | Apache  |
+| sleek_circular_slider       | MIT     |
+| flutter_slidable            | MIT     |
+| cupertino_icons             | MIT     |
+| testify                     | MIT     |
 
 ## Data Protection/GDPR
+
+There are two distinct ways in which data is involved in our application:
+data is collected for a visualization, and data is stored temporarily to pass
+onto another mobile client.
 
 ### Data for Wellbeing Visualization
 
@@ -71,11 +108,11 @@ However, we do not do this (log IP addresses or similar data), and therefore hav
 personal data stored on the server. (Of course, many users may not trust that previous
 sentence which is why we have e2e encryption in the first place.)
 
-Furthermore, even if all *data* was unencrypted and stored on the server. The
+Furthermore, even if all data was unencrypted and stored on the server. The
 *identifiers* we use are random strings generated from that installation[^fingerprint] of
 NudgeMe. This can therefore be treated as pseudonymization.
-However, the mobile client/user themselves are initially the only party that can *re-identify*
-the data (i.e. reverse the pseudonymization). By design, if two users add each other
+However, the mobile client/user *themselves* are initially *the only party that can re-identify
+the data* (i.e. reverse the pseudonymization). By design, if two users add each other
 to their network, they can "re-identify" each other, but we (the server) are unable 
 to make that link between the identifier string and an actual person.
 
