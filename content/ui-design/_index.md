@@ -83,7 +83,7 @@ We also narrowed down the number of pages to 4:
 The Publish page in the Figma was removed from the app at the request of our project partner, and the Checkup page is accessed through a notification rather than from the navigation bar.
 
 ### Colours
-On both the website and the app, we confirmed that the colour schemed we used were colour blind accessible using the resource below [3].
+On both the website and the app, we confirmed that the colour schemed we used were colour blind accessible using the resource below [1].
 
  <img width="800" alt="palettes for colour blind accessibility" src="https://user-images.githubusercontent.com/55795994/111082078-43dc4200-84fe-11eb-8717-32c8e494d73d.png"> 
 
