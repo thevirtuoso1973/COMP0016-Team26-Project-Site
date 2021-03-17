@@ -278,7 +278,7 @@ Below are explanations of some of the libraries we used, and how we evaluated th
 
 - [Highlighter Coachmark](https://pub.dev/packages/highlighter_coachmark)
     <img width="175" alt="coach mark" src="https://user-images.githubusercontent.com/55795994/111074901-32cf0900-84dd-11eb-8771-ce0b7e5febcb.png">
-    - These coach marks are the slides in the tutorials that play when users finish the introduction screen and view the main app pages for the first time, and when they press the information button on the wellbeing page. 
+    - These coach marks are the slides in the tutorials that play when users finish the introduction screen and views the main app pages for the first time and when they press the information button on the Wellbeing page. 
     - We chose this package instead of Tutorial Coach Mark, despite that one having more likes, because we
     preferred the API exposed by `highlighter_coachmark`. It was less verbose and allowed us to
     define the tutorial with fewer lines of code, which contributes to readability.
