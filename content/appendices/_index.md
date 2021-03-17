@@ -39,7 +39,16 @@ There are two distinct ways in which data is involved in our application:
 data is collected for a visualization, and data is stored temporarily to pass
 onto another mobile client.
 
-## Data for Wellbeing Visualization
+## Software License
+
+All of the *build dependencies* for our mobile client are licensed
+under (either) MIT, Apache or BSD (permissive licenses).
+NudgeMe itself is licensed under AGPL-3.0, which includes the Go backend
+and the Flutter mobile app.
+
+## Data Protection/GDPR
+
+### Data for Wellbeing Visualization
 
 NudgeMe passively collects wellbeing data & steps, after the user has consented.
 They can revoke their consent at any time in the Settings page.
@@ -51,7 +60,7 @@ does not apply[^data].
 
 [^data]: https://www.ucl.ac.uk/data-protection/guidance-staff-students-and-researchers/practical-data-protection-guidance-notices/anonymisation-and
 
-## Network Sharing
+### Network Sharing
 
 We use end-to-end encryption when users share wellbeing data with others
 in their network, to give the user reassurance that no-one except the desired

@@ -233,7 +233,7 @@ If you have both of these and have installed flutter (type 'flutter doctor' in t
 
 ## Back-end
 
-_It is currently deployed on our client's server._
+_Note: it is currently deployed on our client's server._
 
 You need an installation of `go` (e.g. using your package manager). You can verify
 you have it with `go version`.
@@ -246,8 +246,11 @@ binary just created. The relevant variable is `ExecStart`.
 - Start with `sudo systemdctl start nudgeme` or restart the systemd service with
 `sudo systemctl restart nudgeme` (*if it is already running*).
 
-Of course, this can be done on any server, but you'd need to set up your own
-`nudgeme.service` file.
+Of course, this can be done on any server, but *you'd need to set up your own
+`nudgeme.service` file and SQL database connection*. An example `nudgeme.service`
+file is given below. For the SQL database, see the backend database schema. If
+you wish to change the server which hosts the SQL database, please modify the
+`ADDRESS` variable in `main.go`.
 
 You can modify the nudgeme.service just like any systemd service, e.g. if you want to change
 where it searches for the binary.
