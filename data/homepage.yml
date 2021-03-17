@@ -25,7 +25,7 @@ about:
   "
   button:
     enable : true
-    label : "Check the Requirements"
+    label : "Check the Project Requirements"
     URL : "requirements"
 
 # team
