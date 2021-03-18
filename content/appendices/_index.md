@@ -15,19 +15,19 @@ Our deployment manual is located on the system design page.
 
 # Individual Contribution Distribution Table
 
-| Work package            | Saachi                                           | Chris                                                 |
-|-------------------------|--------------------------------------------------|-------------------------------------------------------|
-| Project Partner Liaison | 30                                               | 70                                                    |
-| Requirement analysis    | 40                                               | 60                                                    |
-| Research                | 50                                               | 50                                                    |
-| UI design               | 60                                               | 40                                                    |
-| Programming             | 30                                               | 70                                                    |
-| Testing                 | 10                                               | 90                                                    |
-| Development blog        | 50                                               | 50                                                    |
-| Report Website          | 50                                               | 50                                                    |
-| Video Production        | 80                                               | 20                                                    |
-| Overall contribution    | 45                                               | 55                                                    |
-| Roles                   | Front End developer, UI Designer, & Video Editor | Full Stack Developer, Software Architect, & Team Lead |
+| Work package             | Saachi                                            | Chris                                                 |
+|--------------------------|---------------------------------------------------|-------------------------------------------------------|
+| Project partner Liaison  | 30                                                | 70                                                    |
+| Requirement analysis     | 40                                                | 60                                                    |
+| Research                 | 50                                                | 50                                                    |
+| UI design                | 60                                                | 40                                                    |
+| Programming              | 30                                                | 70                                                    |
+| Testing                  | 10                                                | 90                                                    |
+| Development blog         | 50                                                | 50                                                    |
+| Website                  | 50                                                | 50                                                    |
+| Video                    | 80                                                | 20                                                    |
+| Overall contribution     | 45                                                | 55                                                    |
+| Roles                    | Front End Developer, Project Manager, UI Designer | Full Stack Developer, Software Architect, Team Lead   |
 
 # User Manual
 
