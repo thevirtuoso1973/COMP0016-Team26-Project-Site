@@ -83,14 +83,19 @@ During the second half of the project, we developed this feature and added the U
 ## Personas
 We began with some rough ideas of who our potential users could be (e.g. carers under duress) to create the personas. After clarifying our client's requirements, we discovered the application is aimed for use by the entire British population (between ages 13 and 99) who have been affected due to lockdown. Therefore, we tried to capture various personality types that would benefit from a wellbeing app without being too generic or unspecific. 
 
-Here are the personas that we created:
-<img src="https://user-images.githubusercontent.com/55795994/111051715-27cc9800-844d-11eb-9c74-27e1a9cc0eb7.png" 
-alt="Naima persona" 
-width="700"/>
+Here are the scenarios and personas that we created:
+
+* _Naima Sultana_ is feeling lonely. She is struggling doing university work by herself without peer support​. She Would like some way for her friends to keep track of her wellbeing.  
+
+<img src="https://user-images.githubusercontent.com/55795994/111051715-27cc9800-844d-11eb-9c74-27e1a9cc0eb7.png" alt="Naima persona" width="700"/>
+
+* _Dorris Dibb_'s mother has a bad memory. Dorris' mother needs to be reminded to keep her steps up, and sometimes gets lonely in her nursing home.​ It would be useful for Dorris to be able to remind her to move and to see how she is feeling.​
 
 <img src="https://user-images.githubusercontent.com/55795994/111051710-256a3e00-844d-11eb-8c50-0cfa0a56c516.png" 
 alt="Dorris persona" 
 width="700"/>
+
+* _John Smith_ has been laid-off due to budget cuts caused by the COVID-19 pandemic. He is experiencing higher stress + cortisol levels that is decreasing his cognitive performance, thereby further reducing the chance of acquiring future jobs.​ He needs a way to monitor his wellbeing.​
 
 <img src="https://user-images.githubusercontent.com/55795994/111051714-27340180-844d-11eb-8971-709f0b8fe731.png" 
 alt="Dorris persona" 

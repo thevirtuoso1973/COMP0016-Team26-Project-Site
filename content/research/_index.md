@@ -9,10 +9,11 @@ image: "images/research/small-research.png"
 
 ## Related Projects Review
 
-There are 2 phone applications that bore a resemblance to our NudgeMe requirements. 
+We found two phone applications that bore a resemblance to our NudgeMe requirements. 
 
 One is a free mental wellbeing app called *MyPossibleSelf*, available on both iOS and Android. 
-<img src="https://user-images.githubusercontent.com/55795994/111070617-75d3b100-84ca-11eb-9bd2-4ea23d899fe9.png" 
+
+<img src="https://user-images.githubusercontent.com/55795994/111619117-11bc3000-87dd-11eb-85cf-a15c0e43e75f.png" 
 alt="MyPossibleSelf" 
 width="700"/>
 
@@ -28,9 +29,9 @@ These series include:
 
 - Quizzes (e.g. "Exploring my anxiety").
 
-- Affirmations for different situations e.g. feeling insecure, anxious etc.
+- Affirmations for different situations (e.g. feeling insecure, anxious etc.)
 
-- Video guides containing tips. These are free for 1 month. 
+- Video guides containing tips. These are free  dfor 1 month. 
 
 - Options to set reminders for themselves.
 
@@ -40,13 +41,13 @@ These series include:
 
 #### What we learned from MyPossibleSelf
 
-- Using notifications to remind users encourages consistent/daily use. This is useful for applications that rely on users logging how they are feeling.
+- Using notifications to remind users encourages consistent/daily use. Notifications are useful for applications that rely on users logging how they are feeling.
 
-- Tracking 4 or 5 things daily can take up a lot of the user's time and energy, which can discourage users from using the app.
+- Daily tracking 4 to 5 things can take up a lot of the user’s time and energy, which can be discouraging.
 
 - Too many colours and sections can be confusing. It is hard to remember the path to each section. 
 
-- Free services become in-app purchases after a period of time. This is not widely accessible.
+- Free services become in-app purchases after some time, which makes the application not widely accessible.
 
 
 The second is a free app available on both iOS and Android that connects to the popular fitness smart-watch, the FitBit.
@@ -119,7 +120,7 @@ The _programming languages and frameworks_ that we considered using included:
 
 Multiplatform Kotlin development is a good choice for handling applications with complex logic, and constantly changing business requirements. The downside is the need to write custom UI code in Kotlin (for Android) and Swift (for iOS), which would require carefully co-ordinated UI designs between sub-teams. These two points directly oppose our actual development use cases: our requirements are (mostly) fixed, with (relatively) simple business logic yet it is a strong requirement to have high quality, consistent interfaces between platforms. 
 
-The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed more suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library which is closer to machine language and therefore has better native performance[^1]. Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. The language Dart within the Flutter framework therefore seemed to be the most suitable for building NudgeMe. 
+The other two options were Dart/Flutter and React Native. While both seemed like good options, Flutter seemed more suitable for this project, as our team consisted of people with varying experience (some in front-end, some in back-end) and languages (Python, Dart, Kotlin, Swift, React Native).  Additionally, while React Native has a much bigger community of programmers and consequently better online support, Flutter is compiled with a C library, which is closer to machine language and therefore has better native performance[^1]. Lastly, the whole team either wanted to learn Flutter or to gain more experience with Flutter. Thus the language Dart within the Flutter framework seemed to be the most suitable for building NudgeMe. 
 
 #### Back-end
 

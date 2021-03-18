@@ -421,9 +421,7 @@ Testers:
 
 Feedback from testers included: 
 
-* During the development process, Naima informed us of small bugs associated with the step count and the graph. She also provided feedback on the various colour changes, for example with the wellbeing score circle on the home page and the change of navigation bar design. Some positive feedback from Naima included that the UI was not clustered, the buttons were clear, the colours were pleasing to look at and the pages were easy to navigate to.
-
-    <img width="500" src="https://user-images.githubusercontent.com/55795994/111519048-9ad85600-874e-11eb-9e8e-dfdcebfaa4fb.png" alt="Naima alpha testing"/>
+* During the development process, Naima informed us of small bugs associated with the step count and the graph. She also provided feedback on the various colour changes, for example with the wellbeing score circle on the home page and the change of navigation bar design. 
 
 * Vishnu responded about the minute and second drop down buttons (in the notification time selector), saying that it was confusing. This was because the single digit numbers were not formatted with preceding 0’s (the minute options included 1, 2, 3 etc. rather than 01, 02, 03 etc.). He also expressed that it was not clear where users can scroll down and suggested adding a scroll bar to make this more obvious. Additionally, he asked that we add the option to change the sharing data permissions after the introduction screen, so we added this to the Settings page.
 
