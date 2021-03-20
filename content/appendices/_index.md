@@ -36,3 +36,11 @@ Located [here](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/pdfs
 # Development Blog
 
 Can be found [here](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/).
+
+# Acknowledgements
+
+- System developed by: Chris Tomy & Saachi Pahwa
+- Clients and organisations: Dr Joseph Connor, CarefulAI
+- Supervisors and Teaching Assistants: Binghao Chai
+
+_University College London_
