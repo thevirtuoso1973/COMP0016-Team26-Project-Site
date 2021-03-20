@@ -71,9 +71,14 @@ name = "Evaluation"
 weight = 8
 
 [[menu.main]]
+URL = "legal-statement"
+name = "Legal Statement"
+weight = 9
+
+[[menu.main]]
 URL = "appendices"
 name = "Appendices"
-weight = 9
+weight = 10
 
 # default parameters
 [params]
