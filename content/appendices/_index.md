@@ -33,7 +33,12 @@ Our deployment manual is located on the system design page.
 
 Located [here](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/pdfs/usermanual.pdf).
 
-# Legal Issues & Processes
+# Legal Statement
+
+_The software is an early proof of concept for development purposes and should 
+not be used as-is in a live environment without further redevelopment and/or 
+testing. No warranty is given and no real data or personally identifiable data 
+should be stored. Usage and its liabilities are your own._
 
 ## Software License
 
@@ -42,42 +47,42 @@ under (either) MIT, Apache or BSD (permissive licenses).
 NudgeMe itself is licensed under AGPL-3.0, which includes the Go backend
 and the Flutter mobile app. Here is the full list of dependencies:
 
-| Package Name                | License |
-|-----------------------------|---------|
-| http                        | BSD     |
-| flutter_local_notifications | BSD     |
-| pedometer                   | MIT     |
-| timezone                    | BSD     |
-| workmanager                 | MIT     |
-| pdf                         | Apache  |
-| printing                    | Apache  |
-| clock                       | Apache  |
-| permission_handler          | MIT     |
-| encrypt                     | BSD     |
-| pointycastle                | MIT     |
-| random_string               | BSD     |
-| qr_code_scanner             | BSD     |
-| cron                        | BSD     |
-| sentry_flutter              | MIT     |
-| url_launcher                | BSD     |
-| uni_links                   | BSD     |
-| share                       | BSD     |
-| settings_ui                 | Apache  |
-| contacts_service            | MIT     |
-| flutter_sms                 | MIT     |
-| provider                    | MIT     |
-| shared_preferences          | BSD     |
-| sqflite                     | MIT     |
-| charts_flutter              | Apache  |
-| introduction_screen         | MIT     |
-| highlighter_coachmark       | MIT     |
-| qr_flutter                  | BSD     |
-| liquid_pull_to_refresh      | MIT     |
-| convex_bottom_bar           | Apache  |
-| sleek_circular_slider       | MIT     |
-| flutter_slidable            | MIT     |
-| cupertino_icons             | MIT     |
-| testify                     | MIT     |
+| Package Name                                                                        | License |
+|-------------------------------------------------------------------------------------|---------|
+| [http](https://pub.dev/packages/http)                                               | BSD     |
+| [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) | BSD     |
+| [pedometer](https://pub.dev/packages/pedometer)                                     | MIT     |
+| [timezone](https://pub.dev/packages/timezone)                                       | BSD     |
+| [workmanager](https://pub.dev/packages/workmanager)                                 | MIT     |
+| [pdf](https://pub.dev/packages/pdf)                                                 | Apache  |
+| [printing](https://pub.dev/packages/printing)                                       | Apache  |
+| [clock](https://pub.dev/packages/clock)                                             | Apache  |
+| [permission_handler](https://pub.dev/packages/permission_handler)                   | MIT     |
+| [encrypt](https://pub.dev/packages/encrypt)                                         | BSD     |
+| [pointycastle](https://pub.dev/packages/pointycastle)                               | MIT     |
+| [random_string](https://pub.dev/packages/random_string)                             | BSD     |
+| [qr_code_scanner](https://pub.dev/packages/qr_code_scanner)                         | BSD     |
+| [cron](https://pub.dev/packages/cron)                                               | BSD     |
+| [sentry_flutter](https://pub.dev/packages/sentry_flutter)                           | MIT     |
+| [url_launcher](https://pub.dev/packages/url_launcher)                               | BSD     |
+| [uni_links](https://pub.dev/packages/uni_links)                                     | BSD     |
+| [share](https://pub.dev/packages/share)                                             | BSD     |
+| [settings_ui](https://pub.dev/packages/settings_ui)                                 | Apache  |
+| [contacts_service](https://pub.dev/packages/contacts_service)                       | MIT     |
+| [flutter_sms](https://pub.dev/packages/flutter_sms)                                 | MIT     |
+| [provider](https://pub.dev/packages/provider)                                       | MIT     |
+| [shared_preferences](https://pub.dev/packages/shared_preferences)                   | BSD     |
+| [sqflite](https://pub.dev/packages/sqflite)                                         | MIT     |
+| [charts_flutter](https://pub.dev/packages/charts_flutter)                           | Apache  |
+| [introduction_screen](https://pub.dev/packages/introduction_screen)                 | MIT     |
+| [highlighter_coachmark](https://pub.dev/packages/highlighter_coachmark)             | MIT     |
+| [qr_flutter](https://pub.dev/packages/qr_flutter)                                   | BSD     |
+| [liquid_pull_to_refresh](https://pub.dev/packages/liquid_pull_to_refresh)           | MIT     |
+| [convex_bottom_bar](https://pub.dev/packages/convex_bottom_bar)                     | Apache  |
+| [sleek_circular_slider](https://pub.dev/packages/sleek_circular_slider)             | MIT     |
+| [flutter_slidable](https://pub.dev/packages/flutter_slidable)                       | MIT     |
+| [cupertino_icons](https://pub.dev/packages/cupertino_icons)                         | MIT     |
+| [testify](https://github.com/stretchr/testify)                                      | MIT     |
 
 ## Data Protection/GDPR
 
@@ -124,3 +129,11 @@ to make that link between the identifier string and an actual person.
 # Development Blog
 
 Can be found [here](https://uclcomputerscience.github.io/COMP0016_2020_21_Team26/).
+
+# Acknowledgements
+
+- System developed by: Chris Tomy & Saachi Pahwa
+- Clients and organisations: Dr Joseph Connor, CarefulAI
+- Supervisors and Teaching Assistants: Binghao Chai
+
+_University College London_

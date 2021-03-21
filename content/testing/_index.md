@@ -7,14 +7,17 @@ date: 2021-03-09
 draft: false
 ---
 
-Although we experimented and used various ways to test our system, our main testing
+Although we experimented and used various methods to test our system, our main testing
 strategy composed of user acceptance testing, to get feedback on the end user 
-experience, and widget testing, to verify specific outcomes depending on
-certain branches of logic.
+experience, and widget testing (which is a form of *white-box* testing), to 
+verify specific outcomes depending on certain branches of logic. Also,
+we frequently carried out our own *black-box* testing to ensure the system
+behaves as expected.
 
 Flutter supports three main testing strategies - unit, widget and integration testing -
 and after evaluating all of them, widget testing was the most useful
-for our app.
+for our app. (These strategies are all white-box testing, since of course you 
+do not need special tooling to carry out black-box testing.)
 
 Flutter being a (mostly) declarative UI framework eliminates some classes of bugs
 so we were able to focus on testing the parts that *do* have more complex logic.

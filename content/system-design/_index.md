@@ -83,7 +83,7 @@ requests, the user must send this password to authenticate themselves.
 Users can add each other in two ways, but these are specific to the use of
 encryption, so will be described in the next section.
 
-Now, if User 1 wishes to send data to User 2, User 1 sends POSTs to an
+Now, if User 1 wishes to send data to User 2, User 1 POSTs to an
 endpoint on the server with the following contained in the JSON
 request data:
 1. Sender's identifier

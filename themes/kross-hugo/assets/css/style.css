@@ -83,7 +83,7 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 80px
+  font-size: 70px
 }
 
 @media(max-width:991px) {
@@ -96,7 +96,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 60px
+  font-size: 50px
 }
 
 @media(max-width:991px) {
@@ -109,12 +109,12 @@ h2,
 
 h3,
 .h3 {
-  font-size: 40px
+  font-size: 35px
 }
 
 h4,
 .h4 {
-  font-size: 22px
+  font-size: 20px
 }
 
 h5,
