@@ -31,6 +31,8 @@ draft: false
 We have completed 100% of the key requirements ('must have' and 'should have'). 
 We have completed 100% of the optional requirements ('could have').
 
+Our individual contribution table can be found on the [Appendices page](http://students.cs.ucl.ac.uk/2020/group26/appendices/).
+
 # Critical Evaluation
 ## User interface
  <img width="200" alt="ui 2" src="https://user-images.githubusercontent.com/55795994/111216907-e2cf6f80-85cc-11eb-99ff-c3e9a4113399.PNG"> <img width="200" alt="ui 2" src="https://user-images.githubusercontent.com/55795994/111216913-e3680600-85cc-11eb-8e2f-e97395f932da.PNG"> <img width="200" alt="ui 1" src="https://user-images.githubusercontent.com/55795994/111216916-e4993300-85cc-11eb-80a5-1e13c3ef6699.PNG"> <img width="200" alt="ui 1" src="https://user-images.githubusercontent.com/55795994/111216896-e19e4280-85cc-11eb-8f3e-6b1c871f2019.PNG">
