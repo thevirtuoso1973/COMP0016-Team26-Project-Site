@@ -40,6 +40,7 @@ This project aimed to create an application that encourages people to look after
 The ways in which NudgeMe does this include:
 * Allowing users to keep a weekly record of their wellbeing.
 * Encouraging users to go on walks to improve their wellbeing.
+
     * By plotting their steps on a graph 
     * Allowing them to share this information with their support network 
     * Allowing them to set and receive goals for/from people in their support network 
@@ -78,7 +79,7 @@ Common answers to _Question 4_ were texting/calling friends, various types of ex
 
 The first answer, texting/calling friends, helped us land on the end-to-end encrypted, peer-to-peer wellbeing sharing as the additional feature to implement. We chose this to allow people to share their wellbeing with their friends or support network privately and quickly.
 
-During the second half of the project, we developed this feature and added the User Nudge, allowing users to send each other step goals. As we made this change later in the project, we created an updated User Flow Figma to ensure the client has an accurate mental map of the application. You can find this at the bottom of this page or[here](https://www.figma.com/proto/53Di5ADgodaHYWmMHXB8xv/NudgeMe-User-Flow?scaling=scale-down&node-id=1%3A10).
+During the second half of the project, we developed this feature and added the User Nudge, allowing users to send each other step goals. As we made this change later in the project, we created an updated User Flow Figma to ensure the client has an accurate mental map of the application. You can find this at the bottom of this page or [here](https://www.figma.com/proto/53Di5ADgodaHYWmMHXB8xv/NudgeMe-User-Flow?scaling=scale-down&node-id=1%3A10).
 
 ## Personas
 We began with some rough ideas of who our potential users could be (e.g. carers under duress) to create the personas. After clarifying our client's requirements, we discovered the application is aimed for use by the entire British population (between ages 13 and 99) who have been affected due to lockdown. Therefore, we tried to capture various personality types that would benefit from a wellbeing app without being too generic or unspecific. 
