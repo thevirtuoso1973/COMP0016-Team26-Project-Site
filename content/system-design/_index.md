@@ -182,7 +182,7 @@ The other tables are used for network sharing.
 The main part that needs to be 'deployed' is the back-end Go server, which needs to be
 running before end-users install and setup the Flutter mobile application. (The
 mobile application doesn't *need* to be deployed to app stores, since one could
-just distribute pre-built APKs or APIs.)
+just distribute pre-built APKs or IPAs.)
 
 Since there only needs to be a single server, we don't need to use container
 orchestration like Kubernetes, and consequently do not need to dockerize the
